@@ -1,0 +1,35 @@
+# Retrieval settings used by scripts/prepare_data.py and scripts/build_index.py.
+# Relative paths are resolved against the project root (the folder holding this configs/ dir).
+
+data:
+  dataset_id: FareedKhan/1k_stories_100_genre
+  stories_path: data/stories.parquet   # local copy, so later steps never need the Hub
+  splits_path: data/splits.json        # shared with Task 2; same 7/1/2 stratified split, seed 42
+  metadata_path: data/story_metadata.json    # Contain the Genres and Titles unique values for retrival matching
+  seed: 42
+  val_frac: 0.1
+  test_frac: 0.2
+
+embedding:
+  model: nomic-ai/modernbert-embed-base
+  doc_prefix: "search_document: "      # dense vectors only; BM25 never sees these prefixes
+  query_prefix: "search_query: "
+  max_ctx: 8192                        # late chunking: whole story in one pass
+  baseline_max_length: 1100            # prefix baseline: must cover whole_story_max + context line
+  batch_size: 16
+  fp16: true                           # on CUDA only
+
+chunking:
+  chunk_tokens: 400
+  overlap_tokens: 50
+  whole_story_max: 1000                # stories up to this many tokens stay one chunk
+
+sparse:
+  model: Qdrant/bm25
+
+qdrant:
+  path: qdrant_data                    # Qdrant database folder (local on-disk mode); set url: to use a server instead
+  url: null
+  chunks_collection: story_chunks
+  stories_collection: stories
+  upsert_batch: 256

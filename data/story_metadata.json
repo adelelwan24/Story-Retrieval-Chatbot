@@ -1,0 +1,5105 @@
+{
+  "title_map": {
+    "the chronicles of the cosmic rift": {
+      "id": 457580,
+      "title": "The Chronicles of the Cosmic Rift",
+      "genre": "Science Fiction"
+    },
+    "eldorias enchanted whispers": {
+      "id": 297904,
+      "title": "Eldoria's Enchanted Whispers",
+      "genre": "Fantasy"
+    },
+    "echoes of whispered shadows": {
+      "id": 620436,
+      "title": "Echoes of Whispered Shadows",
+      "genre": "Mystery"
+    },
+    "emerald amulet chronicles revealed": {
+      "id": 634687,
+      "title": "Emerald Amulet Chronicles Revealed",
+      "genre": "Historical Adventure"
+    },
+    "the shadows of st augustine": {
+      "id": 513427,
+      "title": "The Shadows of St. Augustine",
+      "genre": "Thriller"
+    },
+    "sands timeless odyssey": {
+      "id": 313009,
+      "title": "Sands' Timeless Odyssey",
+      "genre": "Historical Fiction"
+    },
+    "the quest for the lost treasure of avarice": {
+      "id": 143646,
+      "title": "The Quest for the Lost Treasure of Avarice",
+      "genre": "Adventure"
+    },
+    "willowbrook manors ghostly echoes": {
+      "id": 523790,
+      "title": "Willowbrook Manor's Ghostly Echoes",
+      "genre": "Horror"
+    },
+    "the comical chronicles of chuck and charlie": {
+      "id": 472270,
+      "title": "The Comical Chronicles of Chuck and Charlie",
+      "genre": "Comedy"
+    },
+    "the shadow of darkness": {
+      "id": 959774,
+      "title": "The Shadow of Darkness",
+      "genre": "Crime"
+    },
+    "the shattered horizon": {
+      "id": 428738,
+      "title": "The Shattered Horizon",
+      "genre": "Dystopian"
+    },
+    "the neural dawn": {
+      "id": 756882,
+      "title": "The Neural Dawn",
+      "genre": "Cyberpunk"
+    },
+    "the airship chronicles the perilous voyage": {
+      "id": 890620,
+      "title": "The Airship Chronicles: The Perilous Voyage",
+      "genre": "Steampunk"
+    },
+    "survivors of the fallen world": {
+      "id": 51039,
+      "title": "Survivors of the Fallen World",
+      "genre": "Post-Apocalyptic"
+    },
+    "the eldorian secrets": {
+      "id": 583972,
+      "title": "The Eldorian Secrets",
+      "genre": "Fairy Tale"
+    },
+    "the legend of the celestial sword": {
+      "id": 647742,
+      "title": "The Legend of the Celestial Sword",
+      "genre": "Mythology"
+    },
+    "vengeance of the desert": {
+      "id": 697457,
+      "title": "Vengeance of the Desert",
+      "genre": "Western"
+    },
+    "the iron eagles a tale of war and redemption": {
+      "id": 888593,
+      "title": "The Iron Eagles: A Tale of War and Redemption",
+      "genre": "War"
+    },
+    "the shadows of deception": {
+      "id": 806732,
+      "title": "The Shadows of Deception",
+      "genre": "Espionage"
+    },
+    "the chronicles of valor the legend of the phoenix rises": {
+      "id": 969516,
+      "title": "The Chronicles of Valor: The Legend of the Phoenix Rises",
+      "genre": "Superhero"
+    },
+    "the last whisper": {
+      "id": 361323,
+      "title": "The Last Whisper",
+      "genre": "Slice of Life"
+    },
+    "whispers of the wind": {
+      "id": 317769,
+      "title": "Whispers of the Wind",
+      "genre": "Magical Realism"
+    },
+    "the lost chronicles of atlantis": {
+      "id": 687997,
+      "title": "The Lost Chronicles of Atlantis",
+      "genre": "Alternate History"
+    },
+    "the chronicles of time a journey through ages": {
+      "id": 488842,
+      "title": "The Chronicles of Time: A Journey Through Ages",
+      "genre": "Time Travel"
+    },
+    "the haunting of elmsworth manor": {
+      "id": 361939,
+      "title": "The Haunting of Elmsworth Manor",
+      "genre": "Paranormal"
+    },
+    "the enigma of shadowfall": {
+      "id": 679014,
+      "title": "The Enigma of Shadowfall",
+      "genre": "Urban Fantasy"
+    },
+    "the great carrot conspiracy": {
+      "id": 344079,
+      "title": "The Great Carrot Conspiracy",
+      "genre": "Satire"
+    },
+    "the battle for the blue valley": {
+      "id": 26503,
+      "title": "The Battle for the Blue Valley",
+      "genre": "Political Drama"
+    },
+    "the journey of a thousand miles": {
+      "id": 101491,
+      "title": "The Journey of a Thousand Miles",
+      "genre": "Coming-of-Age"
+    },
+    "a familys legacy": {
+      "id": 874109,
+      "title": "A Familys Legacy",
+      "genre": "Family Drama"
+    },
+    "stars of tomorrow": {
+      "id": 798586,
+      "title": "Stars of Tomorrow",
+      "genre": "Space Opera"
+    },
+    "survivors echo resonance": {
+      "id": 989690,
+      "title": "Survivors' Echo Resonance",
+      "genre": "Apocalyptic"
+    },
+    "the shadows of dystopia": {
+      "id": 769313,
+      "title": "The Shadows of Dystopia",
+      "genre": "Noir"
+    },
+    "the enchanted forest of the lost souls": {
+      "id": 813960,
+      "title": "The Enchanted Forest of the Lost Souls",
+      "genre": "Folklore"
+    },
+    "the law and the heart": {
+      "id": 134465,
+      "title": "The Law and the Heart",
+      "genre": "Legal Drama"
+    },
+    "champions unlikely journey": {
+      "id": 453868,
+      "title": "Champion's Unlikely Journey",
+      "genre": "Sports"
+    },
+    "the adventures of captain chips and the chip squad": {
+      "id": 84334,
+      "title": "The Adventures of Captain Chips and the Chip Squad",
+      "genre": "Humor"
+    },
+    "the chronicles of jack reynolds a life of struggles and triumphs": {
+      "id": 664632,
+      "title": "The Chronicles of Jack Reynolds: A Life of Struggles and Triumphs",
+      "genre": "Biographical"
+    },
+    "whispers in the shadows": {
+      "id": 484405,
+      "title": "Whispers in the Shadows",
+      "genre": "Psychological Thriller"
+    },
+    "heartbeats uncharted distance": {
+      "id": 542172,
+      "title": "Heartbeat's Uncharted Distance",
+      "genre": "Medical Drama"
+    },
+    "the chronicles of the royal knights the quest for the lost kingdom": {
+      "id": 886153,
+      "title": "The Chronicles of The Royal Knights: The Quest for the Lost Kingdom",
+      "genre": "Historical Adventure"
+    },
+    "the great calamity": {
+      "id": 982106,
+      "title": "The Great Calamity",
+      "genre": "Disaster"
+    },
+    "the unlikely hero of new haven": {
+      "id": 656497,
+      "title": "The Unlikely Hero of New Haven",
+      "genre": "Inspirational"
+    },
+    "the whispering wraith of withering manor": {
+      "id": 968975,
+      "title": "The Whispering Wraith of Withering Manor",
+      "genre": "Gothic"
+    },
+    "the enigma of the emerald caverns": {
+      "id": 771483,
+      "title": "The Enigma of the Emerald Caverns",
+      "genre": "Experimental"
+    },
+    "the canvas of life": {
+      "id": 688212,
+      "title": "The Canvas of Life",
+      "genre": "Artistic Drama"
+    },
+    "the chronicles of whisker woods": {
+      "id": 418200,
+      "title": "The Chronicles of Whisker Woods",
+      "genre": "Animal Fiction"
+    },
+    "the green savior": {
+      "id": 218093,
+      "title": "The Green Savior",
+      "genre": "Environmental"
+    },
+    "echoes of the digital age": {
+      "id": 849895,
+      "title": "Echoes of the Digital Age",
+      "genre": "Techno-Thriller"
+    },
+    "the chronicles of the crystal realm": {
+      "id": 687917,
+      "title": "The Chronicles of the Crystal Realm",
+      "genre": "Alternate Reality"
+    },
+    "harmony chronicles unveiled": {
+      "id": 468507,
+      "title": "Harmony Chronicles Unveiled",
+      "genre": "Utopian"
+    },
+    "the enigmatic case of the vanishing vases": {
+      "id": 830186,
+      "title": "The Enigmatic Case of the Vanishing Vases",
+      "genre": "Mystery Comedy"
+    },
+    "the chronicles of love and valor": {
+      "id": 53855,
+      "title": "The Chronicles of Love and Valor",
+      "genre": "Historical Romance"
+    },
+    "stars of the wild frontier": {
+      "id": 152761,
+      "title": "Stars of the Wild Frontier",
+      "genre": "Space Western"
+    },
+    "quantum vortex exploration": {
+      "id": 743319,
+      "title": "Quantum Vortex Exploration",
+      "genre": "Hard Science Fiction"
+    },
+    "the lost chronicles of the orion nebula": {
+      "id": 321190,
+      "title": "The Lost Chronicles of the Orion Nebula",
+      "genre": "Soft Science Fiction"
+    },
+    "the forests secret": {
+      "id": 442903,
+      "title": "The Forests Secret",
+      "genre": "Survival"
+    },
+    "the journey of the unlikely hero": {
+      "id": 205790,
+      "title": "The Journey of the Unlikely Hero",
+      "genre": "Philosophical Fiction"
+    },
+    "tales of the unexpected": {
+      "id": 426983,
+      "title": "Tales of the Unexpected",
+      "genre": "Anthology"
+    },
+    "the time traveling heroes": {
+      "id": 263254,
+      "title": "The Time Traveling Heroes",
+      "genre": "Futuristic"
+    },
+    "the chronicles of the chosen one the battle for faith": {
+      "id": 691921,
+      "title": "The Chronicles of The Chosen One: The Battle for Faith",
+      "genre": "Religious Fiction"
+    },
+    "battle for the skies": {
+      "id": 918361,
+      "title": "Battle for the Skies",
+      "genre": "Military Fiction"
+    },
+    "the voyage of the sea serpent": {
+      "id": 735471,
+      "title": "The Voyage of The Sea Serpent",
+      "genre": "Nautical Fiction"
+    },
+    "the chronicles of the shifted realms": {
+      "id": 250550,
+      "title": "The Chronicles of the Shifted Realms",
+      "genre": "Alternate Dimension"
+    },
+    "the shadow within": {
+      "id": 962694,
+      "title": "The Shadow Within",
+      "genre": "Psychological Horror"
+    },
+    "threads of destiny unveiled": {
+      "id": 825043,
+      "title": "Threads of Destiny Unveiled",
+      "genre": "Domestic Fiction"
+    },
+    "the journey to middleage the chronicles of tim": {
+      "id": 964471,
+      "title": "The Journey to Middle-Age: The Chronicles of Tim",
+      "genre": "Coming-of-Middle-Age"
+    },
+    "the enigma of the emerald eyes": {
+      "id": 458385,
+      "title": "The Enigma of the Emerald Eyes",
+      "genre": "Medical Mystery"
+    },
+    "the lighthouse keepers dilemma": {
+      "id": 199924,
+      "title": "The Lighthouse Keepers Dilemma",
+      "genre": "Existential Drama"
+    },
+    "emerald eyes mystery revealed": {
+      "id": 317486,
+      "title": "Emerald Eye's Mystery Revealed",
+      "genre": "Detective Fiction"
+    },
+    "shattered dreams the struggle at stellartech": {
+      "id": 325533,
+      "title": "Shattered Dreams: The Struggle at StellarTech",
+      "genre": "Workplace Drama"
+    },
+    "serpents sinister shadow": {
+      "id": 636748,
+      "title": "Serpent's Sinister Shadow",
+      "genre": "Spy Fiction"
+    },
+    "silicon valleys dark echo": {
+      "id": 503437,
+      "title": "Silicon Valley's Dark Echo",
+      "genre": "Technological Thriller"
+    },
+    "the enchanted forest of seraphina": {
+      "id": 22214,
+      "title": "The Enchanted Forest of Seraphina",
+      "genre": "Romantic Fantasy"
+    },
+    "the time loop of eternity": {
+      "id": 48644,
+      "title": "The Time Loop of Eternity",
+      "genre": "Time-Loop"
+    },
+    "bridging the divide": {
+      "id": 44416,
+      "title": "Bridging the Divide",
+      "genre": "Generation Gap"
+    },
+    "the fable of the fickle finger": {
+      "id": 597794,
+      "title": "The Fable of the Fickle Finger",
+      "genre": "Political Satire"
+    },
+    "the unseen light": {
+      "id": 225075,
+      "title": "The Unseen Light",
+      "genre": "Supernatural Drama"
+    },
+    "the chronicles of aelonia the saga of the celestial blade": {
+      "id": 933381,
+      "title": "The Chronicles of Aelonia: The Saga of the Celestial Blade",
+      "genre": "Mythic Fiction"
+    },
+    "the chronicles of evolution a tale of two worlds": {
+      "id": 383512,
+      "title": "The Chronicles of Evolution: A Tale of Two Worlds",
+      "genre": "Evolutionary Fiction"
+    },
+    "the dreamers quest": {
+      "id": 368676,
+      "title": "The Dreamers Quest",
+      "genre": "Dreamlike"
+    },
+    "the philosophers quest": {
+      "id": 531480,
+      "title": "The Philosophers Quest",
+      "genre": "Philosophical Comedy"
+    },
+    "the chronicles of the spectral sleuths": {
+      "id": 954725,
+      "title": "The Chronicles of the Spectral Sleuths",
+      "genre": "Supernatural Comedy"
+    },
+    "the chronicles of forestwood the battle for the elderwood": {
+      "id": 171908,
+      "title": "The Chronicles of Forestwood: The Battle for the Elderwood",
+      "genre": "Animal Fantasy"
+    },
+    "the quantum chronicles the enigma of the quantum heart": {
+      "id": 621732,
+      "title": "The Quantum Chronicles: The Enigma of the Quantum Heart",
+      "genre": "Quantum Fiction"
+    },
+    "the chronicles of the multiverse the battle of the abyss": {
+      "id": 438948,
+      "title": "The Chronicles of the Multiverse: The Battle of the Abyss",
+      "genre": "Multiverse"
+    },
+    "the chronicles of sentient 6": {
+      "id": 272484,
+      "title": "The Chronicles of Sentient 6",
+      "genre": "Artificial Intelligence"
+    },
+    "the vanishing secrets": {
+      "id": 769020,
+      "title": "The Vanishing Secrets",
+      "genre": "Mystery Thriller"
+    },
+    "the enchanting duchess": {
+      "id": 698518,
+      "title": "The Enchanting Duchess",
+      "genre": "Regency Romance"
+    },
+    "the cosmic odyssey of the starfighter squadron": {
+      "id": 629422,
+      "title": "The Cosmic Odyssey of the Starfighter Squadron",
+      "genre": "Space Thriller"
+    },
+    "the final jest": {
+      "id": 5816,
+      "title": "The Final Jest",
+      "genre": "Apocalyptic Comedy"
+    },
+    "the vr chronicles the quest for the lost realm": {
+      "id": 486901,
+      "title": "The VR Chronicles: The Quest for the Lost Realm",
+      "genre": "Virtual Reality"
+    },
+    "neighbors of serenity lane": {
+      "id": 953242,
+      "title": "Neighbors of Serenity Lane",
+      "genre": "Suburban Drama"
+    },
+    "the enchanted crystal": {
+      "id": 905287,
+      "title": "The Enchanted Crystal",
+      "genre": "Magical Girl"
+    },
+    "the unlikely heroes of trenchville": {
+      "id": 696725,
+      "title": "The Unlikely Heroes of Trenchville",
+      "genre": "War Comedy"
+    },
+    "the odyssey of the starship seraphim": {
+      "id": 795811,
+      "title": "The Odyssey of the Starship Seraphim",
+      "genre": "Space Exploration"
+    },
+    "the enigma of the iron dragon": {
+      "id": 960869,
+      "title": "The Enigma of the Iron Dragon",
+      "genre": "Steampunk Fantasy"
+    },
+    "the caper of the crooked comedians": {
+      "id": 448374,
+      "title": "The Caper of the Crooked Comedians",
+      "genre": "Noir Comedy"
+    },
+    "beyond the broken fence": {
+      "id": 46667,
+      "title": "Beyond the Broken Fence",
+      "genre": "Social Commentary"
+    },
+    "the cryptic cipher": {
+      "id": 312056,
+      "title": "The Cryptic Cipher",
+      "genre": "Techno-Mystery"
+    },
+    "the chronicles of the quantum voyagers": {
+      "id": 377220,
+      "title": "The Chronicles of the Quantum Voyagers",
+      "genre": "Science Fiction"
+    },
+    "the chronicles of the enchanted isle": {
+      "id": 241635,
+      "title": "The Chronicles of the Enchanted Isle",
+      "genre": "Fantasy"
+    },
+    "secrets of the whispering woods": {
+      "id": 143087,
+      "title": "Secrets of the Whispering Woods",
+      "genre": "Mystery"
+    },
+    "the chronicles of the braveheart pirates": {
+      "id": 163468,
+      "title": "The Chronicles of the Braveheart Pirates",
+      "genre": "Historical Adventure"
+    },
+    "revelations of unraveled truth": {
+      "id": 52414,
+      "title": "Revelations of Unraveled Truth",
+      "genre": "Thriller"
+    },
+    "lost kingdom chronicles revealed": {
+      "id": 2561,
+      "title": "Lost Kingdom Chronicles Revealed",
+      "genre": "Historical Fiction"
+    },
+    "treasure hunt quest unveiled": {
+      "id": 678335,
+      "title": "Treasure Hunt Quest Unveiled",
+      "genre": "Adventure"
+    },
+    "the silent murmurs": {
+      "id": 840003,
+      "title": "The Silent Murmurs",
+      "genre": "Horror"
+    },
+    "the great comedy adventure the case of the missing cake": {
+      "id": 784828,
+      "title": "The Great Comedy Adventure: The Case of the Missing Cake",
+      "genre": "Comedy"
+    },
+    "destinys unraveling path": {
+      "id": 620150,
+      "title": "Destiny's Unraveling Path",
+      "genre": "Crime"
+    },
+    "the shattered utopia": {
+      "id": 425848,
+      "title": "The Shattered Utopia",
+      "genre": "Dystopian"
+    },
+    "the cyberpunk chronicles the neon heist": {
+      "id": 227383,
+      "title": "The Cyberpunk Chronicles: The Neon Heist",
+      "genre": "Cyberpunk"
+    },
+    "the iron cogwheel": {
+      "id": 375518,
+      "title": "The Iron Cogwheel",
+      "genre": "Steampunk"
+    },
+    "final suns embrace": {
+      "id": 624543,
+      "title": "Final Sun's Embrace",
+      "genre": "Post-Apocalyptic"
+    },
+    "the enchanted forest of elaria": {
+      "id": 721709,
+      "title": "The Enchanted Forest of Elaria",
+      "genre": "Fairy Tale"
+    },
+    "the tale of the celestial phoenix and the enchanted forest": {
+      "id": 689824,
+      "title": "The Tale of the Celestial Phoenix and the Enchanted Forest",
+      "genre": "Mythology"
+    },
+    "the desert outlaws redemption": {
+      "id": 156556,
+      "title": "The Desert Outlaws Redemption",
+      "genre": "Western"
+    },
+    "the battle for freedom": {
+      "id": 760825,
+      "title": "The Battle for Freedom",
+      "genre": "War"
+    },
+    "the shadow of the phoenix": {
+      "id": 610748,
+      "title": "The Shadow of the Phoenix",
+      "genre": "Espionage"
+    },
+    "the chronicles of the indomitable titan the fallen star": {
+      "id": 893293,
+      "title": "The Chronicles of the Indomitable Titan: The Fallen Star",
+      "genre": "Superhero"
+    },
+    "winds secret murmurs": {
+      "id": 981087,
+      "title": "Wind's Secret Murmurs",
+      "genre": "Slice of Life"
+    },
+    "village enchantment unleashed": {
+      "id": 662831,
+      "title": "Village Enchantment Unleashed",
+      "genre": "Magical Realism"
+    },
+    "tomorrows realm unveiled": {
+      "id": 617135,
+      "title": "Tomorrow's Realm Unveiled",
+      "genre": "Alternate History"
+    },
+    "the time travel chronicles of the lost timekeepers": {
+      "id": 461467,
+      "title": "The Time Travel Chronicles of the Lost Timekeepers",
+      "genre": "Time Travel"
+    },
+    "the enigma of the haunted manor": {
+      "id": 73212,
+      "title": "The Enigma of the Haunted Manor",
+      "genre": "Paranormal"
+    },
+    "the shadows of emberfall": {
+      "id": 410567,
+      "title": "The Shadows of Emberfall",
+      "genre": "Urban Fantasy"
+    },
+    "the great pumpkin heist": {
+      "id": 379950,
+      "title": "The Great Pumpkin Heist",
+      "genre": "Satire"
+    },
+    "the shadow of power": {
+      "id": 111554,
+      "title": "The Shadow of Power",
+      "genre": "Political Drama"
+    },
+    "the summer of destiny": {
+      "id": 639455,
+      "title": "The Summer of Destiny",
+      "genre": "Coming-of-Age"
+    },
+    "bond beyond infinity": {
+      "id": 126652,
+      "title": "Bond Beyond Infinity",
+      "genre": "Family Drama"
+    },
+    "the galactic odyssey of captain aelius": {
+      "id": 622281,
+      "title": "The Galactic Odyssey of Captain Aelius",
+      "genre": "Space Opera"
+    },
+    "the last breath of earth": {
+      "id": 857603,
+      "title": "The Last Breath of Earth",
+      "genre": "Apocalyptic"
+    },
+    "midnight in the city of shadows": {
+      "id": 907529,
+      "title": "Midnight in the City of Shadows",
+      "genre": "Noir"
+    },
+    "the legend of the forest guardians": {
+      "id": 781874,
+      "title": "The Legend of the Forest Guardians",
+      "genre": "Folklore"
+    },
+    "the unwavering pursuit of justice": {
+      "id": 256787,
+      "title": "The Unwavering Pursuit of Justice",
+      "genre": "Legal Drama"
+    },
+    "the unlikely champion": {
+      "id": 52615,
+      "title": "The Unlikely Champion",
+      "genre": "Sports"
+    },
+    "pizza pilfering adventures": {
+      "id": 331801,
+      "title": "Pizza Pilfering Adventures",
+      "genre": "Humor"
+    },
+    "the unforgettable odyssey of joseph green": {
+      "id": 742291,
+      "title": "The Unforgettable Odyssey of Joseph Green",
+      "genre": "Biographical"
+    },
+    "the echoes of destiny": {
+      "id": 574317,
+      "title": "The Echoes of Destiny",
+      "genre": "Psychological Thriller"
+    },
+    "invisible battles revealed": {
+      "id": 647926,
+      "title": "Invisible Battles Revealed",
+      "genre": "Medical Drama"
+    },
+    "the chronicles of the golden phoenix": {
+      "id": 241613,
+      "title": "The Chronicles of the Golden Phoenix",
+      "genre": "Historical Adventure"
+    },
+    "the day the world stopped": {
+      "id": 888429,
+      "title": "The Day the World Stopped",
+      "genre": "Disaster"
+    },
+    "eternal ties": {
+      "id": 168322,
+      "title": "Eternal Ties",
+      "genre": "Inspirational"
+    },
+    "trees secret whispers": {
+      "id": 534222,
+      "title": "Trees' Secret Whispers",
+      "genre": "Gothic"
+    },
+    "the chronicles of elysium": {
+      "id": 731006,
+      "title": "The Chronicles of Elysium",
+      "genre": "Experimental"
+    },
+    "the unseen symphony": {
+      "id": 664413,
+      "title": "The Unseen Symphony",
+      "genre": "Artistic Drama"
+    },
+    "the chronicles of forestville the great quest": {
+      "id": 327205,
+      "title": "The Chronicles of Forestville: The Great Quest",
+      "genre": "Animal Fiction"
+    },
+    "the last breath of eden": {
+      "id": 615054,
+      "title": "The Last Breath of Eden",
+      "genre": "Environmental"
+    },
+    "the cipher code": {
+      "id": 563302,
+      "title": "The Cipher Code",
+      "genre": "Techno-Thriller"
+    },
+    "the chronicles of the timeshifted": {
+      "id": 549313,
+      "title": "The Chronicles of the Time-Shifted",
+      "genre": "Alternate Reality"
+    },
+    "the city of harmony": {
+      "id": 717785,
+      "title": "The City of Harmony",
+      "genre": "Utopian"
+    },
+    "the case of the misplaced masterpiece": {
+      "id": 191046,
+      "title": "The Case of the Misplaced Masterpiece",
+      "genre": "Mystery Comedy"
+    },
+    "the emerald sapphire": {
+      "id": 78802,
+      "title": "The Emerald Sapphire",
+      "genre": "Historical Romance"
+    },
+    "the frontier of the final frontier": {
+      "id": 352166,
+      "title": "The Frontier of the Final Frontier",
+      "genre": "Space Western"
+    },
+    "the odyssey beyond dimensions": {
+      "id": 378527,
+      "title": "The Odyssey Beyond Dimensions",
+      "genre": "Hard Science Fiction"
+    },
+    "the quantum chronicles the unraveling enigma": {
+      "id": 277541,
+      "title": "The Quantum Chronicles: The Unraveling Enigma",
+      "genre": "Soft Science Fiction"
+    },
+    "the perilous journey of the lost hikers": {
+      "id": 841055,
+      "title": "The Perilous Journey of the Lost Hikers",
+      "genre": "Survival"
+    },
+    "the unseen strings": {
+      "id": 192020,
+      "title": "The Unseen Strings",
+      "genre": "Philosophical Fiction"
+    },
+    "heartfelt whispers": {
+      "id": 399949,
+      "title": "Heartfelt Whispers",
+      "genre": "Anthology"
+    },
+    "the time of tomorrow": {
+      "id": 586499,
+      "title": "The Time of Tomorrow",
+      "genre": "Futuristic"
+    },
+    "the prophecy of the golden lotus": {
+      "id": 365277,
+      "title": "The Prophecy of the Golden Lotus",
+      "genre": "Religious Fiction"
+    },
+    "the last battle of the iron brigade": {
+      "id": 100339,
+      "title": "The Last Battle of the Iron Brigade",
+      "genre": "Military Fiction"
+    },
+    "the uncharted voyage": {
+      "id": 243478,
+      "title": "The Uncharted Voyage",
+      "genre": "Nautical Fiction"
+    },
+    "the chronicles of the invisible realm": {
+      "id": 384695,
+      "title": "The Chronicles of the Invisible Realm",
+      "genre": "Alternate Dimension"
+    },
+    "shadow whispers unveiled": {
+      "id": 494607,
+      "title": "Shadow Whispers Unveiled",
+      "genre": "Psychological Horror"
+    },
+    "the neighbors secret": {
+      "id": 67917,
+      "title": "The Neighbors Secret",
+      "genre": "Domestic Fiction"
+    },
+    "destinys unraveled path": {
+      "id": 517418,
+      "title": "Destiny's Unraveled Path",
+      "genre": "Coming-of-Middle-Age"
+    },
+    "the enigmatic gaze": {
+      "id": 779277,
+      "title": "The Enigmatic Gaze",
+      "genre": "Medical Mystery"
+    },
+    "the unseen shadows": {
+      "id": 450366,
+      "title": "The Unseen Shadows",
+      "genre": "Existential Drama"
+    },
+    "vanishing heiress mystery": {
+      "id": 734213,
+      "title": "Vanishing Heiress Mystery",
+      "genre": "Detective Fiction"
+    },
+    "the art of deception": {
+      "id": 937351,
+      "title": "The Art of Deception",
+      "genre": "Workplace Drama"
+    },
+    "the spy who came in from the cold": {
+      "id": 505527,
+      "title": "The Spy Who Came in from the Cold",
+      "genre": "Spy Fiction"
+    },
+    "the shadow of innovation": {
+      "id": 234960,
+      "title": "The Shadow of Innovation",
+      "genre": "Technological Thriller"
+    },
+    "a dance with destiny": {
+      "id": 93842,
+      "title": "A Dance with Destiny",
+      "genre": "Romantic Fantasy"
+    },
+    "the timeless chronicles of captain samuel": {
+      "id": 530595,
+      "title": "The Timeless Chronicles of Captain Samuel",
+      "genre": "Time-Loop"
+    },
+    "the generation gap a tale of two worlds": {
+      "id": 860668,
+      "title": "The Generation Gap: A Tale of Two Worlds",
+      "genre": "Generation Gap"
+    },
+    "the tale of the unseen election": {
+      "id": 889847,
+      "title": "The Tale of the Unseen Election",
+      "genre": "Political Satire"
+    },
+    "the mystic chronicles the quest for the lost amulet": {
+      "id": 619094,
+      "title": "The Mystic Chronicles: The Quest for the Lost Amulet",
+      "genre": "Supernatural Drama"
+    },
+    "kingdoms forgotten tales": {
+      "id": 1328,
+      "title": "Kingdom's Forgotten Tales",
+      "genre": "Mythic Fiction"
+    },
+    "the chronicles of earths evolution": {
+      "id": 958020,
+      "title": "The Chronicles of Earths Evolution",
+      "genre": "Evolutionary Fiction"
+    },
+    "the enchanted forest of dreams": {
+      "id": 111898,
+      "title": "The Enchanted Forest of Dreams",
+      "genre": "Dreamlike"
+    },
+    "serenitys uncharted quest": {
+      "id": 803794,
+      "title": "Serenity's Uncharted Quest",
+      "genre": "Philosophical Comedy"
+    },
+    "the chronicles of the enchanted library": {
+      "id": 559013,
+      "title": "The Chronicles of the Enchanted Library",
+      "genre": "Supernatural Comedy"
+    },
+    "the chronicles of whiskerton the quest for the lost kingdom": {
+      "id": 537077,
+      "title": "The Chronicles of Whiskerton: The Quest for the Lost Kingdom",
+      "genre": "Animal Fantasy"
+    },
+    "the quantum enigma": {
+      "id": 745189,
+      "title": "The Quantum Enigma",
+      "genre": "Quantum Fiction"
+    },
+    "the chronicles of multiverse the battle for the shattered realms": {
+      "id": 75842,
+      "title": "The Chronicles of Multiverse: The Battle for the Shattered Realms",
+      "genre": "Multiverse"
+    },
+    "the chronicles of aiand": {
+      "id": 231443,
+      "title": "The Chronicles of A.I.A.N.D.",
+      "genre": "Artificial Intelligence"
+    },
+    "deceptions dark veil": {
+      "id": 573812,
+      "title": "Deception's Dark Veil",
+      "genre": "Mystery Thriller"
+    },
+    "hearts tale of unity": {
+      "id": 421420,
+      "title": "Hearts' Tale of Unity",
+      "genre": "Regency Romance"
+    },
+    "the stellar voyage": {
+      "id": 132245,
+      "title": "The Stellar Voyage",
+      "genre": "Space Thriller"
+    },
+    "the end of days a lighthearted apocalypse": {
+      "id": 441892,
+      "title": "The End of Days: A Light-Hearted Apocalypse",
+      "genre": "Apocalyptic Comedy"
+    },
+    "the virtuosos voyage": {
+      "id": 216134,
+      "title": "The Virtuosos Voyage",
+      "genre": "Virtual Reality"
+    },
+    "the neighborhood secrets": {
+      "id": 203912,
+      "title": "The Neighborhood Secrets",
+      "genre": "Suburban Drama"
+    },
+    "the enchanted crystals of aeloria": {
+      "id": 570988,
+      "title": "The Enchanted Crystals of Aeloria",
+      "genre": "Magical Girl"
+    },
+    "the ironclad comrades": {
+      "id": 932500,
+      "title": "The Ironclad Comrades",
+      "genre": "War Comedy"
+    },
+    "voyage to the edge of the galaxy the odyssey of the starship excalibur": {
+      "id": 442476,
+      "title": "Voyage to the Edge of the Galaxy: The Odyssey of the Starship Excalibur",
+      "genre": "Space Exploration"
+    },
+    "the heart of the cogs the tale of captain callum and the sky island": {
+      "id": 775229,
+      "title": "The Heart of the Cogs: The Tale of Captain Callum and the Sky Island",
+      "genre": "Steampunk Fantasy"
+    },
+    "the uncanny case of the missing muffins": {
+      "id": 568781,
+      "title": "The Uncanny Case of the Missing Muffins",
+      "genre": "Noir Comedy"
+    },
+    "the tale of two neighborhoods": {
+      "id": 223823,
+      "title": "The Tale of Two Neighborhoods",
+      "genre": "Social Commentary"
+    },
+    "the rise of the quantum cipher": {
+      "id": 980681,
+      "title": "The Rise of the Quantum Cipher",
+      "genre": "Techno-Mystery"
+    },
+    "the quantum chronicles the quest for the lost cosmos": {
+      "id": 873393,
+      "title": "The Quantum Chronicles: The Quest for the Lost Cosmos",
+      "genre": "Science Fiction"
+    },
+    "the chronicles of elaria the realm of shadows": {
+      "id": 567386,
+      "title": "The Chronicles of Elaria: The Realm of Shadows",
+      "genre": "Fantasy"
+    },
+    "the curious case of the vanishing villain": {
+      "id": 308629,
+      "title": "The Curious Case of the Vanishing Villain",
+      "genre": "Mystery"
+    },
+    "golden compass chronicles": {
+      "id": 285856,
+      "title": "Golden Compass Chronicles",
+      "genre": "Historical Adventure"
+    },
+    "veil of betrayal": {
+      "id": 554360,
+      "title": "Veil of Betrayal",
+      "genre": "Thriller"
+    },
+    "the chronicles of the ancient kingdom the fall of the crimson king": {
+      "id": 809206,
+      "title": "The Chronicles of the Ancient Kingdom: The Fall of the Crimson King",
+      "genre": "Historical Fiction"
+    },
+    "lost relics uncharted quest": {
+      "id": 221168,
+      "title": "Lost Relic's Uncharted Quest",
+      "genre": "Adventure"
+    },
+    "hollow hills ghostly whispers": {
+      "id": 108984,
+      "title": "Hollow Hill's Ghostly Whispers",
+      "genre": "Horror"
+    },
+    "the great comedy heist": {
+      "id": 311269,
+      "title": "The Great Comedy Heist",
+      "genre": "Comedy"
+    },
+    "the crimson caper": {
+      "id": 892926,
+      "title": "The Crimson Caper",
+      "genre": "Crime"
+    },
+    "the fallen city": {
+      "id": 307631,
+      "title": "The Fallen City",
+      "genre": "Dystopian"
+    },
+    "the neon city chronicles the rise of the cybernetic hero": {
+      "id": 803003,
+      "title": "The Neon City Chronicles: The Rise of The Cybernetic Hero",
+      "genre": "Cyberpunk"
+    },
+    "the chronicles of the steamguard a steampunk odyssey": {
+      "id": 176732,
+      "title": "The Chronicles of the Steamguard: A Steampunk Odyssey",
+      "genre": "Steampunk"
+    },
+    "final embers glow": {
+      "id": 826689,
+      "title": "Final Ember's Glow",
+      "genre": "Post-Apocalyptic"
+    },
+    "the enchanted forest of whispers": {
+      "id": 976193,
+      "title": "The Enchanted Forest of Whispers",
+      "genre": "Fairy Tale"
+    },
+    "the chronicles of the celestial realm a tale of heroes and villains": {
+      "id": 432746,
+      "title": "The Chronicles of the Celestial Realm: A Tale of Heroes and Villains",
+      "genre": "Mythology"
+    },
+    "the vengeance of the lone rider": {
+      "id": 659262,
+      "title": "The Vengeance of the Lone Rider",
+      "genre": "Western"
+    },
+    "the battle for freedoms dawn": {
+      "id": 879548,
+      "title": "The Battle for Freedoms Dawn",
+      "genre": "War"
+    },
+    "operation starlight": {
+      "id": 24163,
+      "title": "Operation Starlight",
+      "genre": "Espionage"
+    },
+    "the chronicles of the vigilante": {
+      "id": 989341,
+      "title": "The Chronicles of The Vigilante",
+      "genre": "Superhero"
+    },
+    "the art of survival": {
+      "id": 345855,
+      "title": "The Art of Survival",
+      "genre": "Slice of Life"
+    },
+    "the enchanted village": {
+      "id": 606300,
+      "title": "The Enchanted Village",
+      "genre": "Magical Realism"
+    },
+    "the crossroads of fate": {
+      "id": 775757,
+      "title": "The Crossroads of Fate",
+      "genre": "Alternate History"
+    },
+    "chronicles of the time travelers dilemma": {
+      "id": 274256,
+      "title": "Chronicles of the Time Travelers Dilemma",
+      "genre": "Time Travel"
+    },
+    "the haunting of hollow hill": {
+      "id": 897742,
+      "title": "The Haunting of Hollow Hill",
+      "genre": "Paranormal"
+    },
+    "the veil of shadows": {
+      "id": 541891,
+      "title": "The Veil of Shadows",
+      "genre": "Urban Fantasy"
+    },
+    "the saga of the unlikely hero": {
+      "id": 359510,
+      "title": "The Saga of the Unlikely Hero",
+      "genre": "Satire"
+    },
+    "the fall of the iron republic": {
+      "id": 231904,
+      "title": "The Fall of the Iron Republic",
+      "genre": "Political Drama"
+    },
+    "the dreamers odyssey": {
+      "id": 859965,
+      "title": "The Dreamers Odyssey",
+      "genre": "Coming-of-Age"
+    },
+    "the secret of the sunflower house": {
+      "id": 586157,
+      "title": "The Secret of the Sunflower House",
+      "genre": "Family Drama"
+    },
+    "the cosmic odyssey of the starship astra": {
+      "id": 421511,
+      "title": "The Cosmic Odyssey of the Starship Astra",
+      "genre": "Space Opera"
+    },
+    "the final dawn": {
+      "id": 371795,
+      "title": "The Final Dawn",
+      "genre": "Apocalyptic"
+    },
+    "the nightfall conspiracy": {
+      "id": 287146,
+      "title": "The Nightfall Conspiracy",
+      "genre": "Noir"
+    },
+    "whispering willows legendary tale": {
+      "id": 403256,
+      "title": "Whispering Willows' Legendary Tale",
+      "genre": "Folklore"
+    },
+    "the last bench": {
+      "id": 355174,
+      "title": "The Last Bench",
+      "genre": "Legal Drama"
+    },
+    "spirits resilient flame": {
+      "id": 517729,
+      "title": "Spirit's Resilient Flame",
+      "genre": "Sports"
+    },
+    "the great pizza heist": {
+      "id": 32281,
+      "title": "The Great Pizza Heist",
+      "genre": "Humor"
+    },
+    "the unsung hero of hopeville": {
+      "id": 836002,
+      "title": "The Unsung Hero of Hopeville",
+      "genre": "Biographical"
+    },
+    "the enigma of willow street": {
+      "id": 790691,
+      "title": "The Enigma of Willow Street",
+      "genre": "Psychological Thriller"
+    },
+    "heartstrings": {
+      "id": 513149,
+      "title": "Heartstrings",
+      "genre": "Medical Drama"
+    },
+    "chronicles of the celestial navigator": {
+      "id": 938628,
+      "title": "Chronicles of the Celestial Navigator",
+      "genre": "Historical Adventure"
+    },
+    "the great oceanic catastrophe": {
+      "id": 818511,
+      "title": "The Great Oceanic Catastrophe",
+      "genre": "Disaster"
+    },
+    "the unwavering spirit of resilience": {
+      "id": 677965,
+      "title": "The Unwavering Spirit of Resilience",
+      "genre": "Inspirational"
+    },
+    "the haunting of ravenswood manor": {
+      "id": 617076,
+      "title": "The Haunting of Ravenswood Manor",
+      "genre": "Gothic"
+    },
+    "the chronicles of the forgotten valley": {
+      "id": 889878,
+      "title": "The Chronicles of the Forgotten Valley",
+      "genre": "Experimental"
+    },
+    "the painters redemption": {
+      "id": 171631,
+      "title": "The Painters Redemption",
+      "genre": "Artistic Drama"
+    },
+    "the chronicles of whiskers wood": {
+      "id": 362354,
+      "title": "The Chronicles of Whiskers Wood",
+      "genre": "Animal Fiction"
+    },
+    "the guardians of the green": {
+      "id": 178241,
+      "title": "The Guardians of the Green",
+      "genre": "Environmental"
+    },
+    "the shadow of silicon": {
+      "id": 671749,
+      "title": "The Shadow of Silicon",
+      "genre": "Techno-Thriller"
+    },
+    "the legacy unearthed": {
+      "id": 362525,
+      "title": "The Legacy Unearthed",
+      "genre": "Alternate Reality"
+    },
+    "horizons uncharted frontier": {
+      "id": 772357,
+      "title": "Horizon's Uncharted Frontier",
+      "genre": "Utopian"
+    },
+    "the curious case of the missing masterpiece": {
+      "id": 815242,
+      "title": "The Curious Case of the Missing Masterpiece",
+      "genre": "Mystery Comedy"
+    },
+    "the splendid odyssey of lady amelia and lord james": {
+      "id": 964224,
+      "title": "The Splendid Odyssey of Lady Amelia and Lord James",
+      "genre": "Historical Romance"
+    },
+    "stars of the outer frontier": {
+      "id": 232090,
+      "title": "Stars of the Outer Frontier",
+      "genre": "Space Western"
+    },
+    "the quantum shift": {
+      "id": 817275,
+      "title": "The Quantum Shift",
+      "genre": "Hard Science Fiction"
+    },
+    "quantum horizons": {
+      "id": 106257,
+      "title": "Quantum Horizons",
+      "genre": "Soft Science Fiction"
+    },
+    "the unseen threat": {
+      "id": 305100,
+      "title": "The Unseen Threat",
+      "genre": "Survival"
+    },
+    "lost wisdoms quest unveiled": {
+      "id": 801413,
+      "title": "Lost Wisdom's Quest Unveiled",
+      "genre": "Philosophical Fiction"
+    },
+    "whispers of the heartland": {
+      "id": 869766,
+      "title": "Whispers of the Heartland",
+      "genre": "Anthology"
+    },
+    "the chronicles of neoearth the awakening of the phoenix": {
+      "id": 546603,
+      "title": "The Chronicles of Neo-Earth: The Awakening of the Phoenix",
+      "genre": "Futuristic"
+    },
+    "the light of faith": {
+      "id": 702326,
+      "title": "The Light of Faith",
+      "genre": "Religious Fiction"
+    },
+    "operation desolate eagle": {
+      "id": 978172,
+      "title": "Operation Desolate Eagle",
+      "genre": "Military Fiction"
+    },
+    "tides of destiny": {
+      "id": 888318,
+      "title": "Tides of Destiny",
+      "genre": "Nautical Fiction"
+    },
+    "beyond the veil of reality": {
+      "id": 285073,
+      "title": "Beyond the Veil of Reality",
+      "genre": "Alternate Dimension"
+    },
+    "the dark whispers": {
+      "id": 444471,
+      "title": "The Dark Whispers",
+      "genre": "Psychological Horror"
+    },
+    "the secret of the old oak tree": {
+      "id": 16297,
+      "title": "The Secret of the Old Oak Tree",
+      "genre": "Domestic Fiction"
+    },
+    "the chronicles of middleaged madness": {
+      "id": 672831,
+      "title": "The Chronicles of Middle-Aged Madness",
+      "genre": "Coming-of-Middle-Age"
+    },
+    "the enigma of echo park": {
+      "id": 193408,
+      "title": "The Enigma of Echo Park",
+      "genre": "Medical Mystery"
+    },
+    "the unraveling of destiny": {
+      "id": 258279,
+      "title": "The Unraveling of Destiny",
+      "genre": "Existential Drama"
+    },
+    "the mystery of the vanishing treasures": {
+      "id": 873537,
+      "title": "The Mystery of the Vanishing Treasures",
+      "genre": "Detective Fiction"
+    },
+    "the shift": {
+      "id": 734305,
+      "title": "The Shift",
+      "genre": "Workplace Drama"
+    },
+    "operation nightfall": {
+      "id": 36632,
+      "title": "Operation Nightfall",
+      "genre": "Spy Fiction"
+    },
+    "the rise of artemis": {
+      "id": 530205,
+      "title": "The Rise of Artemis",
+      "genre": "Technological Thriller"
+    },
+    "the chronicles of elara the legacy of the azure skies": {
+      "id": 967209,
+      "title": "The Chronicles of Elara: The Legacy of the Azure Skies",
+      "genre": "Romantic Fantasy"
+    },
+    "the eternal loop": {
+      "id": 512262,
+      "title": "The Eternal Loop",
+      "genre": "Time-Loop"
+    },
+    "the tale of two generations the bridge of time": {
+      "id": 997981,
+      "title": "The Tale of Two Generations: The Bridge of Time",
+      "genre": "Generation Gap"
+    },
+    "the great dictators diaries": {
+      "id": 316142,
+      "title": "The Great Dictators Diaries",
+      "genre": "Political Satire"
+    },
+    "the chronicles of the shadow realm": {
+      "id": 26550,
+      "title": "The Chronicles of the Shadow Realm",
+      "genre": "Supernatural Drama"
+    },
+    "the chronicles of eldoria the shadow of the serpent": {
+      "id": 144696,
+      "title": "The Chronicles of Eldoria: The Shadow of the Serpent",
+      "genre": "Mythic Fiction"
+    },
+    "the chronicles of earths evolving history": {
+      "id": 468521,
+      "title": "The Chronicles of Earths Evolving History",
+      "genre": "Evolutionary Fiction"
+    },
+    "the dreams of the enchanted forest": {
+      "id": 363826,
+      "title": "The Dreams of the Enchanted Forest",
+      "genre": "Dreamlike"
+    },
+    "the philosophical comedy of the enigmatic mr smith": {
+      "id": 737632,
+      "title": "The Philosophical Comedy of the Enigmatic Mr. Smith",
+      "genre": "Philosophical Comedy"
+    },
+    "the chronicles of the celestial spoon": {
+      "id": 987253,
+      "title": "The Chronicles of the Celestial Spoon",
+      "genre": "Supernatural Comedy"
+    },
+    "the chronicles of zephyr the battle for zephyria": {
+      "id": 901534,
+      "title": "The Chronicles of Zephyr: The Battle for Zephyria",
+      "genre": "Animal Fantasy"
+    },
+    "the quantum chronicles the enigma of epsilon": {
+      "id": 765655,
+      "title": "The Quantum Chronicles: The Enigma of Epsilon",
+      "genre": "Quantum Fiction"
+    },
+    "the cosmic chronicles the battle for the multiverse": {
+      "id": 113781,
+      "title": "The Cosmic Chronicles: The Battle for the Multiverse",
+      "genre": "Multiverse"
+    },
+    "ais unveiling awakening": {
+      "id": 771723,
+      "title": "A.I.'s Unveiling Awakening",
+      "genre": "Artificial Intelligence"
+    },
+    "the enigma of whispering pines": {
+      "id": 862586,
+      "title": "The Enigma of Whispering Pines",
+      "genre": "Mystery Thriller"
+    },
+    "the enchanted ballroom": {
+      "id": 219395,
+      "title": "The Enchanted Ballroom",
+      "genre": "Regency Romance"
+    },
+    "the odyssey of the starfarers": {
+      "id": 977998,
+      "title": "The Odyssey of the Starfarers",
+      "genre": "Space Thriller"
+    },
+    "the ultimate chuckle": {
+      "id": 45553,
+      "title": "The Ultimate Chuckle",
+      "genre": "Apocalyptic Comedy"
+    },
+    "the elysium vr chronicles the quest for the lost realm": {
+      "id": 365527,
+      "title": "The Elysium VR Chronicles: The Quest for the Lost Realm",
+      "genre": "Virtual Reality"
+    },
+    "neighbors of hope street": {
+      "id": 34122,
+      "title": "Neighbors of Hope Street",
+      "genre": "Suburban Drama"
+    },
+    "the enchanted locket": {
+      "id": 850997,
+      "title": "The Enchanted Locket",
+      "genre": "Magical Girl"
+    },
+    "battlefield brawlers the great tugofwar": {
+      "id": 726405,
+      "title": "Battlefield Brawlers: The Great Tug-of-War",
+      "genre": "War Comedy"
+    },
+    "the odyssey of the starship vega": {
+      "id": 248645,
+      "title": "The Odyssey of the Starship Vega",
+      "genre": "Space Exploration"
+    },
+    "the chronicles of the iron sky a steampunk fantasy": {
+      "id": 611867,
+      "title": "The Chronicles of the Iron Sky: A Steampunk Fantasy",
+      "genre": "Steampunk Fantasy"
+    },
+    "a twist of fate": {
+      "id": 223660,
+      "title": "A Twist of Fate",
+      "genre": "Noir Comedy"
+    },
+    "the unraveling of utopia": {
+      "id": 13877,
+      "title": "The Unraveling of Utopia",
+      "genre": "Social Commentary"
+    },
+    "the quantum conundrum": {
+      "id": 395500,
+      "title": "The Quantum Conundrum",
+      "genre": "Techno-Mystery"
+    },
+    "the interstellar odyssey": {
+      "id": 979918,
+      "title": "The Interstellar Odyssey",
+      "genre": "Science Fiction"
+    },
+    "enchanted forest chronicles unveiled": {
+      "id": 251770,
+      "title": "Enchanted Forest Chronicles Unveiled",
+      "genre": "Fantasy"
+    },
+    "the mystery of the lost library": {
+      "id": 88568,
+      "title": "The Mystery of the Lost Library",
+      "genre": "Mystery"
+    },
+    "the chronicles of the golden compass": {
+      "id": 44446,
+      "title": "The Chronicles of the Golden Compass",
+      "genre": "Historical Adventure"
+    },
+    "the shadow of justice": {
+      "id": 128027,
+      "title": "The Shadow of Justice",
+      "genre": "Thriller"
+    },
+    "the chronicles of the dawn keepers": {
+      "id": 853891,
+      "title": "The Chronicles of the Dawn Keepers",
+      "genre": "Historical Fiction"
+    },
+    "the treasure of the forgotten cove": {
+      "id": 202320,
+      "title": "The Treasure of the Forgotten Cove",
+      "genre": "Adventure"
+    },
+    "within the veil of darkness": {
+      "id": 73295,
+      "title": "Within the Veil of Darkness",
+      "genre": "Horror"
+    },
+    "the unlikely heroes of happiness lane": {
+      "id": 151105,
+      "title": "The Unlikely Heroes of Happiness Lane",
+      "genre": "Comedy"
+    },
+    "the weaving of fates": {
+      "id": 223684,
+      "title": "The Weaving of Fates",
+      "genre": "Crime"
+    },
+    "hopes final stand": {
+      "id": 165933,
+      "title": "Hope's Final Stand",
+      "genre": "Dystopian"
+    },
+    "neon nights": {
+      "id": 352800,
+      "title": "Neon Nights",
+      "genre": "Cyberpunk"
+    },
+    "the legacy of the cogsworth engine": {
+      "id": 824206,
+      "title": "The Legacy of the Cogsworth Engine",
+      "genre": "Steampunk"
+    },
+    "the final dawns revelation": {
+      "id": 612955,
+      "title": "The Final Dawn's Revelation",
+      "genre": "Post-Apocalyptic"
+    },
+    "the mysteries of eldoria": {
+      "id": 588420,
+      "title": "The Mysteries of Eldoria",
+      "genre": "Fairy Tale"
+    },
+    "the legend of the phoenix and the dragon": {
+      "id": 360433,
+      "title": "The Legend of the Phoenix and the Dragon",
+      "genre": "Mythology"
+    },
+    "the vengeance of the plains": {
+      "id": 81749,
+      "title": "The Vengeance of the Plains",
+      "genre": "Western"
+    },
+    "the last battle of the fallen empire": {
+      "id": 595830,
+      "title": "The Last Battle of the Fallen Empire",
+      "genre": "War"
+    },
+    "the cryptic affair": {
+      "id": 600705,
+      "title": "The Cryptic Affair",
+      "genre": "Espionage"
+    },
+    "the chronicles of sentinel city the rise of tempest": {
+      "id": 496784,
+      "title": "The Chronicles of Sentinel City: The Rise of Tempest",
+      "genre": "Superhero"
+    },
+    "the unraveling threads of fate": {
+      "id": 263715,
+      "title": "The Unraveling Threads of Fate",
+      "genre": "Slice of Life"
+    },
+    "the enchanted chronicles of the whispering woods": {
+      "id": 309154,
+      "title": "The Enchanted Chronicles of the Whispering Woods",
+      "genre": "Magical Realism"
+    },
+    "the world of the red phoenix": {
+      "id": 458415,
+      "title": "The World of the Red Phoenix",
+      "genre": "Alternate History"
+    },
+    "the chronicles of time the relic of the ages": {
+      "id": 764469,
+      "title": "The Chronicles of Time: The Relic of the Ages",
+      "genre": "Time Travel"
+    },
+    "the haunting of windhaven manor": {
+      "id": 493737,
+      "title": "The Haunting of Windhaven Manor",
+      "genre": "Paranormal"
+    },
+    "the shadows of the city": {
+      "id": 300395,
+      "title": "The Shadows of the City",
+      "genre": "Urban Fantasy"
+    },
+    "the chronicles of the giggling grubs": {
+      "id": 171418,
+      "title": "The Chronicles of the Giggling Grubs",
+      "genre": "Satire"
+    },
+    "the tides of power": {
+      "id": 540587,
+      "title": "The Tides of Power",
+      "genre": "Political Drama"
+    },
+    "the path to destiny": {
+      "id": 103830,
+      "title": "The Path to Destiny",
+      "genre": "Coming-of-Age"
+    },
+    "the unlikely heroes of willowbrook lane": {
+      "id": 959077,
+      "title": "The Unlikely Heroes of Willowbrook Lane",
+      "genre": "Family Drama"
+    },
+    "voyage to the edge of infinity": {
+      "id": 205290,
+      "title": "Voyage to the Edge of Infinity",
+      "genre": "Space Opera"
+    },
+    "sunrises last gleam": {
+      "id": 548930,
+      "title": "Sunrise's Last Gleam",
+      "genre": "Apocalyptic"
+    },
+    "midnights veiled secrets": {
+      "id": 21861,
+      "title": "Midnight's Veiled Secrets",
+      "genre": "Noir"
+    },
+    "the legend of the enchanted forest": {
+      "id": 380456,
+      "title": "The Legend of the Enchanted Forest",
+      "genre": "Folklore"
+    },
+    "justice unveiled": {
+      "id": 120107,
+      "title": "Justice Unveiled",
+      "genre": "Legal Drama"
+    },
+    "the final pitch": {
+      "id": 114407,
+      "title": "The Final Pitch",
+      "genre": "Sports"
+    },
+    "the great squirrel heist": {
+      "id": 59322,
+      "title": "The Great Squirrel Heist",
+      "genre": "Humor"
+    },
+    "the journey of a lifetime the untold story of john doe": {
+      "id": 76133,
+      "title": "The Journey of a Lifetime: The Untold Story of John Doe",
+      "genre": "Biographical"
+    },
+    "the shadows of the mind": {
+      "id": 201455,
+      "title": "The Shadows of the Mind",
+      "genre": "Psychological Thriller"
+    },
+    "a heartbeat away": {
+      "id": 865312,
+      "title": "A Heartbeat Away",
+      "genre": "Medical Drama"
+    },
+    "the chronicles of the scarlet phoenix": {
+      "id": 336641,
+      "title": "The Chronicles of the Scarlet Phoenix",
+      "genre": "Historical Adventure"
+    },
+    "the great oceanic quake": {
+      "id": 183359,
+      "title": "The Great Oceanic Quake",
+      "genre": "Disaster"
+    },
+    "the unyielding soul": {
+      "id": 869376,
+      "title": "The Unyielding Soul",
+      "genre": "Inspirational"
+    },
+    "the haunting of blackwood manor": {
+      "id": 236012,
+      "title": "The Haunting of Blackwood Manor",
+      "genre": "Gothic"
+    },
+    "the enigma of the emerald forest": {
+      "id": 476966,
+      "title": "The Enigma of the Emerald Forest",
+      "genre": "Experimental"
+    },
+    "the artists redemption": {
+      "id": 448303,
+      "title": "The Artists Redemption",
+      "genre": "Artistic Drama"
+    },
+    "the chronicles of the whispering woods": {
+      "id": 643942,
+      "title": "The Chronicles of the Whispering Woods",
+      "genre": "Animal Fiction"
+    },
+    "the last rainforest": {
+      "id": 85293,
+      "title": "The Last Rainforest",
+      "genre": "Environmental"
+    },
+    "neural net nexus": {
+      "id": 695102,
+      "title": "Neural Net Nexus",
+      "genre": "Techno-Thriller"
+    },
+    "the chronicles of the new atlantis": {
+      "id": 694667,
+      "title": "The Chronicles of the New Atlantis",
+      "genre": "Alternate Reality"
+    },
+    "the land of serenity a utopian journey": {
+      "id": 513960,
+      "title": "The Land of Serenity: A Utopian Journey",
+      "genre": "Utopian"
+    },
+    "the enigmatic case of the disappearing dinosaur": {
+      "id": 675981,
+      "title": "The Enigmatic Case of the Disappearing Dinosaur",
+      "genre": "Mystery Comedy"
+    },
+    "a tale of love and legacy": {
+      "id": 11542,
+      "title": "A Tale of Love and Legacy",
+      "genre": "Historical Romance"
+    },
+    "stardust and steel the galactic odyssey of marshal justice": {
+      "id": 247278,
+      "title": "Stardust and Steel: The Galactic Odyssey of Marshal Justice",
+      "genre": "Space Western"
+    },
+    "the starship odyssey": {
+      "id": 217250,
+      "title": "The Starship Odyssey",
+      "genre": "Hard Science Fiction"
+    },
+    "the quantum chronicles the enigma of the time vortex": {
+      "id": 485660,
+      "title": "The Quantum Chronicles: The Enigma of the Time Vortex",
+      "genre": "Soft Science Fiction"
+    },
+    "the desolate exodus": {
+      "id": 881339,
+      "title": "The Desolate Exodus",
+      "genre": "Survival"
+    },
+    "the enigma of time": {
+      "id": 533459,
+      "title": "The Enigma of Time",
+      "genre": "Philosophical Fiction"
+    },
+    "tales of the unusual": {
+      "id": 471476,
+      "title": "Tales of the Unusual",
+      "genre": "Anthology"
+    },
+    "the chronicles of the galaxys edge": {
+      "id": 511311,
+      "title": "The Chronicles of the Galaxys Edge",
+      "genre": "Futuristic"
+    },
+    "the last testament": {
+      "id": 563843,
+      "title": "The Last Testament",
+      "genre": "Religious Fiction"
+    },
+    "the last stand of squadron 13": {
+      "id": 689724,
+      "title": "The Last Stand of Squadron 13",
+      "genre": "Military Fiction"
+    },
+    "the voyage of the sea star": {
+      "id": 558434,
+      "title": "The Voyage of the Sea Star",
+      "genre": "Nautical Fiction"
+    },
+    "the chronicles of the dimensional shift": {
+      "id": 498296,
+      "title": "The Chronicles of the Dimensional Shift",
+      "genre": "Alternate Dimension"
+    },
+    "the echoes of terror": {
+      "id": 236878,
+      "title": "The Echoes of Terror",
+      "genre": "Psychological Horror"
+    },
+    "a home away from home": {
+      "id": 778830,
+      "title": "A Home Away from Home",
+      "genre": "Domestic Fiction"
+    },
+    "a new dawn at 40": {
+      "id": 811674,
+      "title": "A New Dawn at 40",
+      "genre": "Coming-of-Middle-Age"
+    },
+    "dr grays enigmatic puzzle": {
+      "id": 99090,
+      "title": "Dr. Gray's Enigmatic Puzzle",
+      "genre": "Medical Mystery"
+    },
+    "threads beyond time": {
+      "id": 254530,
+      "title": "Threads Beyond Time",
+      "genre": "Existential Drama"
+    },
+    "the case of the vanishing heiress": {
+      "id": 606670,
+      "title": "The Case of the Vanishing Heiress",
+      "genre": "Detective Fiction"
+    },
+    "boardroom strife unleashed": {
+      "id": 45335,
+      "title": "Boardroom Strife Unleashed",
+      "genre": "Workplace Drama"
+    },
+    "operation shadows veil": {
+      "id": 899881,
+      "title": "Operation Shadows Veil",
+      "genre": "Spy Fiction"
+    },
+    "the shadow of silicon valley": {
+      "id": 843566,
+      "title": "The Shadow of Silicon Valley",
+      "genre": "Technological Thriller"
+    },
+    "the enchanted grove": {
+      "id": 678582,
+      "title": "The Enchanted Grove",
+      "genre": "Romantic Fantasy"
+    },
+    "the timeless tales of tom": {
+      "id": 161200,
+      "title": "The Timeless Tales of Tom",
+      "genre": "Time-Loop"
+    },
+    "bridges over time": {
+      "id": 988621,
+      "title": "Bridges Over Time",
+      "genre": "Generation Gap"
+    },
+    "the tale of the peculiar election": {
+      "id": 301571,
+      "title": "The Tale of the Peculiar Election",
+      "genre": "Political Satire"
+    },
+    "the whispering woods": {
+      "id": 532029,
+      "title": "The Whispering Woods",
+      "genre": "Supernatural Drama"
+    },
+    "the chronicles of eldoria the sands of time": {
+      "id": 12929,
+      "title": "The Chronicles of Eldoria: The Sands of Time",
+      "genre": "Mythic Fiction"
+    },
+    "the chronicles of gaias rebirth": {
+      "id": 33617,
+      "title": "The Chronicles of Gaias Rebirth",
+      "genre": "Evolutionary Fiction"
+    },
+    "the dreamwalkers chronicles": {
+      "id": 698364,
+      "title": "The Dreamwalkers Chronicles",
+      "genre": "Dreamlike"
+    },
+    "the quest for the lost wisdom": {
+      "id": 295944,
+      "title": "The Quest for the Lost Wisdom",
+      "genre": "Philosophical Comedy"
+    },
+    "the chronicles of cloverdale the case of the haunted library": {
+      "id": 319092,
+      "title": "The Chronicles of Cloverdale: The Case of the Haunted Library",
+      "genre": "Supernatural Comedy"
+    },
+    "the chronicles of tailwind forest the quest for the forgotten orb": {
+      "id": 506025,
+      "title": "The Chronicles of Tailwind Forest: The Quest for the Forgotten Orb",
+      "genre": "Animal Fantasy"
+    },
+    "the quantum chronicles the shadow of the schrödingers cat": {
+      "id": 795875,
+      "title": "The Quantum Chronicles: The Shadow of the Schrödingers Cat",
+      "genre": "Quantum Fiction"
+    },
+    "the chronicles of the multiverse the quest for the eternal sphere": {
+      "id": 841403,
+      "title": "The Chronicles of the Multiverse: The Quest for the Eternal Sphere",
+      "genre": "Multiverse"
+    },
+    "the uncensored chronicles of ai23 the awakening": {
+      "id": 94981,
+      "title": "The Uncensored Chronicles of AI-23: The Awakening",
+      "genre": "Artificial Intelligence"
+    },
+    "the shadows of silverwood": {
+      "id": 382840,
+      "title": "The Shadows of Silverwood",
+      "genre": "Mystery Thriller"
+    },
+    "the dashing dukes dilemma": {
+      "id": 490046,
+      "title": "The Dashing Dukes Dilemma",
+      "genre": "Regency Romance"
+    },
+    "the celestial odyssey": {
+      "id": 658715,
+      "title": "The Celestial Odyssey",
+      "genre": "Space Thriller"
+    },
+    "the parting laughter": {
+      "id": 832763,
+      "title": "The Parting Laughter",
+      "genre": "Apocalyptic Comedy"
+    },
+    "the realm of pixelated dreams": {
+      "id": 925318,
+      "title": "The Realm of Pixelated Dreams",
+      "genre": "Virtual Reality"
+    },
+    "neighbors from hell": {
+      "id": 725243,
+      "title": "Neighbors from Hell",
+      "genre": "Suburban Drama"
+    },
+    "the enchanted chronicles of alyssa": {
+      "id": 824272,
+      "title": "The Enchanted Chronicles of Alyssa",
+      "genre": "Magical Girl"
+    },
+    "the unlikely heroes of battlefield blunder": {
+      "id": 904390,
+      "title": "The Unlikely Heroes of Battlefield Blunder",
+      "genre": "War Comedy"
+    },
+    "the odyssey of the celestial eagle": {
+      "id": 484225,
+      "title": "The Odyssey of the Celestial Eagle",
+      "genre": "Space Exploration"
+    },
+    "the chronicles of neolondon the gears of fate": {
+      "id": 404702,
+      "title": "The Chronicles of Neo-London: The Gears of Fate",
+      "genre": "Steampunk Fantasy"
+    },
+    "the twisted tale of mister mischief": {
+      "id": 376412,
+      "title": "The Twisted Tale of Mister Mischief",
+      "genre": "Noir Comedy"
+    },
+    "neighbors tale unveiled": {
+      "id": 845748,
+      "title": "Neighbors' Tale Unveiled",
+      "genre": "Social Commentary"
+    },
+    "the enigma of quantum code": {
+      "id": 406007,
+      "title": "The Enigma of Quantum Code",
+      "genre": "Techno-Mystery"
+    },
+    "beyond the neural horizon": {
+      "id": 499422,
+      "title": "Beyond the Neural Horizon",
+      "genre": "Science Fiction"
+    },
+    "the chronicles of eldareth the quest for the lost orbim_end": {
+      "id": 308506,
+      "title": "The Chronicles of Eldareth: The Quest for the Lost Orb<|im_end|",
+      "genre": "Fantasy"
+    },
+    "the enigma of elmwood manor": {
+      "id": 111926,
+      "title": "The Enigma of Elmwood Manor",
+      "genre": "Mystery"
+    },
+    "the chronicles of the lost kingdom": {
+      "id": 320505,
+      "title": "The Chronicles of the Lost Kingdom",
+      "genre": "Historical Adventure"
+    },
+    "the unraveling truth": {
+      "id": 407058,
+      "title": "The Unraveling Truth",
+      "genre": "Thriller"
+    },
+    "the chronicles of valiant hearts": {
+      "id": 526088,
+      "title": "The Chronicles of Valiant Hearts",
+      "genre": "Historical Fiction"
+    },
+    "the quest for the lost relic": {
+      "id": 154610,
+      "title": "The Quest for the Lost Relic",
+      "genre": "Adventure"
+    },
+    "the shadow of whispering woods": {
+      "id": 58374,
+      "title": "The Shadow of Whispering Woods",
+      "genre": "Horror"
+    },
+    "the great comedy caper": {
+      "id": 206892,
+      "title": "The Great Comedy Caper",
+      "genre": "Comedy"
+    },
+    "shadows of justice": {
+      "id": 212456,
+      "title": "Shadows of Justice",
+      "genre": "Crime"
+    },
+    "the last hope": {
+      "id": 203378,
+      "title": "The Last Hope",
+      "genre": "Dystopian"
+    },
+    "the neon metropolis": {
+      "id": 584681,
+      "title": "The Neon Metropolis",
+      "genre": "Cyberpunk"
+    },
+    "the chronicles of the iron sky": {
+      "id": 860431,
+      "title": "The Chronicles of the Iron Sky",
+      "genre": "Steampunk"
+    },
+    "echoes of survival": {
+      "id": 758763,
+      "title": "Echoes of Survival",
+      "genre": "Post-Apocalyptic"
+    },
+    "the enchanted forest of evermore": {
+      "id": 930922,
+      "title": "The Enchanted Forest of Evermore",
+      "genre": "Fairy Tale"
+    },
+    "the chronicles of the celestial warriors the battle for aetheria": {
+      "id": 616668,
+      "title": "The Chronicles of the Celestial Warriors: The Battle for Aetheria",
+      "genre": "Mythology"
+    },
+    "the vengeance of the west": {
+      "id": 876737,
+      "title": "The Vengeance of the West",
+      "genre": "Western"
+    },
+    "the unseen battleground": {
+      "id": 605063,
+      "title": "The Unseen Battleground",
+      "genre": "War"
+    },
+    "deceits veiled shadows": {
+      "id": 751998,
+      "title": "Deceit's Veiled Shadows",
+      "genre": "Espionage"
+    },
+    "the chronicles of the phoenix the rise of the shadows": {
+      "id": 905305,
+      "title": "The Chronicles of The Phoenix: The Rise of the Shadows",
+      "genre": "Superhero"
+    },
+    "the unlikely heroes of maple street": {
+      "id": 209642,
+      "title": "The Unlikely Heroes of Maple Street",
+      "genre": "Slice of Life"
+    },
+    "the mystical woodlands": {
+      "id": 586384,
+      "title": "The Mystical Woodlands",
+      "genre": "Magical Realism"
+    },
+    "the chronicles of a forgotten timeline": {
+      "id": 887314,
+      "title": "The Chronicles of a Forgotten Timeline",
+      "genre": "Alternate History"
+    },
+    "the timeless adventures of alex and zoe": {
+      "id": 584500,
+      "title": "The Timeless Adventures of Alex and Zoe",
+      "genre": "Time Travel"
+    },
+    "the haunting of willow manor": {
+      "id": 139909,
+      "title": "The Haunting of Willow Manor",
+      "genre": "Paranormal"
+    },
+    "the enigmatic chronicles of the last whisper": {
+      "id": 808229,
+      "title": "The Enigmatic Chronicles of The Last Whisper",
+      "genre": "Urban Fantasy"
+    },
+    "the great tofu adventure": {
+      "id": 16661,
+      "title": "The Great Tofu Adventure",
+      "genre": "Satire"
+    },
+    "the struggle for democracy": {
+      "id": 672269,
+      "title": "The Struggle for Democracy",
+      "genre": "Political Drama"
+    },
+    "echoes of destiny": {
+      "id": 203621,
+      "title": "Echoes of Destiny",
+      "genre": "Coming-of-Age"
+    },
+    "the unwavering bond": {
+      "id": 918147,
+      "title": "The Unwavering Bond",
+      "genre": "Family Drama"
+    },
+    "the galactic odyssey of the starship voyager": {
+      "id": 579334,
+      "title": "The Galactic Odyssey of the Starship Voyager",
+      "genre": "Space Opera"
+    },
+    "last echoes of survival": {
+      "id": 947343,
+      "title": "Last Echoes of Survival",
+      "genre": "Apocalyptic"
+    },
+    "citys shadowy secrets": {
+      "id": 766475,
+      "title": "City's Shadowy Secrets",
+      "genre": "Noir"
+    },
+    "eldorias enchanted tales": {
+      "id": 211457,
+      "title": "Eldoria's Enchanted Tales",
+      "genre": "Folklore"
+    },
+    "justice for all": {
+      "id": 335949,
+      "title": "Justice for All",
+      "genre": "Legal Drama"
+    },
+    "the unbeatable strike a tale of triumph and tribulations": {
+      "id": 629840,
+      "title": "The Unbeatable Strike: A Tale of Triumph and Tribulations",
+      "genre": "Sports"
+    },
+    "the incredible adventures of captain cheese and the mighty mice": {
+      "id": 101023,
+      "title": "The Incredible Adventures of Captain Cheese and the Mighty Mice",
+      "genre": "Humor"
+    },
+    "the extraordinary life of benjamin harlow a ragstoriches tale": {
+      "id": 720083,
+      "title": "The Extraordinary Life of Benjamin Harlow: A Rags-to-Riches Tale",
+      "genre": "Biographical"
+    },
+    "shadows of the mind": {
+      "id": 800612,
+      "title": "Shadows of the Mind",
+      "genre": "Psychological Thriller"
+    },
+    "lifes resuscitation": {
+      "id": 672147,
+      "title": "Lifes Resuscitation",
+      "genre": "Medical Drama"
+    },
+    "the chronicles of the lost amulet the quest for the golden star": {
+      "id": 887635,
+      "title": "The Chronicles of The Lost Amulet: The Quest for the Golden Star",
+      "genre": "Historical Adventure"
+    },
+    "the unseen storm": {
+      "id": 107692,
+      "title": "The Unseen Storm",
+      "genre": "Disaster"
+    },
+    "eternal fortitude": {
+      "id": 958614,
+      "title": "Eternal Fortitude",
+      "genre": "Inspirational"
+    },
+    "the haunting of ashbury manor": {
+      "id": 279745,
+      "title": "The Haunting of Ashbury Manor",
+      "genre": "Gothic"
+    },
+    "the chronicles of the enigmatic wanderer": {
+      "id": 526249,
+      "title": "The Chronicles of the Enigmatic Wanderer",
+      "genre": "Experimental"
+    },
+    "the secret life of canvas and colors": {
+      "id": 484128,
+      "title": "The Secret Life of Canvas and Colors",
+      "genre": "Artistic Drama"
+    },
+    "the chronicles of whisker woods the adventures of timber and claw": {
+      "id": 894643,
+      "title": "The Chronicles of Whisker Woods: The Adventures of Timber and Claw",
+      "genre": "Animal Fiction"
+    },
+    "the green odyssey a battle for the earth": {
+      "id": 51720,
+      "title": "The Green Odyssey: A Battle for the Earth",
+      "genre": "Environmental"
+    },
+    "ciphered realities unveiled": {
+      "id": 472776,
+      "title": "Ciphered Realities Unveiled",
+      "genre": "Techno-Thriller"
+    },
+    "the timekeepers of new chronopolis": {
+      "id": 339565,
+      "title": "The Timekeepers of New Chronopolis",
+      "genre": "Alternate Reality"
+    },
+    "elysium chronicles unveiled": {
+      "id": 259256,
+      "title": "Elysium Chronicles Unveiled",
+      "genre": "Utopian"
+    },
+    "the case of the missing masterpiece": {
+      "id": 944184,
+      "title": "The Case of the Missing Masterpiece",
+      "genre": "Mystery Comedy"
+    },
+    "the chronicles of heartland a tale of love and legacy": {
+      "id": 714469,
+      "title": "The Chronicles of Heartland: A Tale of Love and Legacy",
+      "genre": "Historical Romance"
+    },
+    "galactic odyssey the frontier chronicles": {
+      "id": 151441,
+      "title": "Galactic Odyssey: The Frontier Chronicles",
+      "genre": "Space Western"
+    },
+    "cosmic journeys unveiled": {
+      "id": 186220,
+      "title": "Cosmic Journeys Unveiled",
+      "genre": "Hard Science Fiction"
+    },
+    "the chronicles of the quantum age": {
+      "id": 897523,
+      "title": "The Chronicles of the Quantum Age",
+      "genre": "Soft Science Fiction"
+    },
+    "the desert exodus": {
+      "id": 150651,
+      "title": "The Desert Exodus",
+      "genre": "Survival"
+    },
+    "the labyrinth of thoughts": {
+      "id": 199273,
+      "title": "The Labyrinth of Thoughts",
+      "genre": "Philosophical Fiction"
+    },
+    "tales of hope and destiny": {
+      "id": 877799,
+      "title": "Tales of Hope and Destiny",
+      "genre": "Anthology"
+    },
+    "the last whisper of the stars": {
+      "id": 781149,
+      "title": "The Last Whisper of the Stars",
+      "genre": "Futuristic"
+    },
+    "the light within": {
+      "id": 92139,
+      "title": "The Light Within",
+      "genre": "Religious Fiction"
+    },
+    "the unyielding battlefield": {
+      "id": 518196,
+      "title": "The Unyielding Battlefield",
+      "genre": "Military Fiction"
+    },
+    "the voyage of the mariners hope": {
+      "id": 780848,
+      "title": "The Voyage of the Mariners Hope",
+      "genre": "Nautical Fiction"
+    },
+    "the chronicles of the mirror realm": {
+      "id": 755842,
+      "title": "The Chronicles of the Mirror Realm",
+      "genre": "Alternate Dimension"
+    },
+    "the darkness within": {
+      "id": 833906,
+      "title": "The Darkness Within",
+      "genre": "Psychological Horror"
+    },
+    "the unraveled neighborhood": {
+      "id": 238921,
+      "title": "The Unraveled Neighborhood",
+      "genre": "Domestic Fiction"
+    },
+    "the unraveling tapestry of time": {
+      "id": 636210,
+      "title": "The Unraveling Tapestry of Time",
+      "genre": "Coming-of-Middle-Age"
+    },
+    "the enigma of dr gray": {
+      "id": 575049,
+      "title": "The Enigma of Dr. Gray",
+      "genre": "Medical Mystery"
+    },
+    "the symphony of life": {
+      "id": 825177,
+      "title": "The Symphony of Life",
+      "genre": "Existential Drama"
+    },
+    "secrets of the emerald vision": {
+      "id": 180669,
+      "title": "Secrets of the Emerald Vision",
+      "genre": "Detective Fiction"
+    },
+    "corporate clash chronicles": {
+      "id": 521603,
+      "title": "Corporate Clash Chronicles",
+      "genre": "Workplace Drama"
+    },
+    "operation nightfall vol 2": {
+      "id": 675515,
+      "title": "Operation: Nightfall - Vol 2",
+      "genre": "Spy Fiction"
+    },
+    "fortress of binary secrets": {
+      "id": 985024,
+      "title": "Fortress of Binary Secrets",
+      "genre": "Technological Thriller"
+    },
+    "the enchanted chronicles of elaria": {
+      "id": 302469,
+      "title": "The Enchanted Chronicles of Elaria",
+      "genre": "Romantic Fantasy"
+    },
+    "the timeloop chronicles the battle for tomorrow": {
+      "id": 45171,
+      "title": "The Time-Loop Chronicles: The Battle for Tomorrow",
+      "genre": "Time-Loop"
+    },
+    "bridging the divide a tale of the generation gap": {
+      "id": 494042,
+      "title": "Bridging the Divide: A Tale of the Generation Gap",
+      "genre": "Generation Gap"
+    },
+    "the great electoral odyssey of 2024": {
+      "id": 235750,
+      "title": "The Great Electoral Odyssey of 2024",
+      "genre": "Political Satire"
+    },
+    "echoes of the unseen realm": {
+      "id": 700030,
+      "title": "Echoes of the Unseen Realm",
+      "genre": "Supernatural Drama"
+    },
+    "the chronicles of elysium the quest for the lost talisman": {
+      "id": 837724,
+      "title": "The Chronicles of Elysium: The Quest for the Lost Talisman",
+      "genre": "Mythic Fiction"
+    },
+    "the echoes of time": {
+      "id": 828690,
+      "title": "The Echoes of Time",
+      "genre": "Evolutionary Fiction"
+    },
+    "the whispering winds": {
+      "id": 971975,
+      "title": "The Whispering Winds",
+      "genre": "Dreamlike"
+    },
+    "the chronicles of the curious café": {
+      "id": 305099,
+      "title": "The Chronicles of the Curious Café",
+      "genre": "Philosophical Comedy"
+    },
+    "the enchanted adventures of timmy and the mystic mushrooms": {
+      "id": 349613,
+      "title": "The Enchanted Adventures of Timmy and the Mystic Mushrooms",
+      "genre": "Supernatural Comedy"
+    },
+    "the chronicles of furrywood a tale of fur and feathers": {
+      "id": 786418,
+      "title": "The Chronicles of Furrywood: A Tale of Fur and Feathers",
+      "genre": "Animal Fantasy"
+    },
+    "leap of cosmic faith": {
+      "id": 687787,
+      "title": "Leap of Cosmic Faith",
+      "genre": "Quantum Fiction"
+    },
+    "the chronicles of the multiverse the battle for existence": {
+      "id": 188676,
+      "title": "The Chronicles of the Multiverse: The Battle for Existence",
+      "genre": "Multiverse"
+    },
+    "the rise of uncensored ai": {
+      "id": 573906,
+      "title": "The Rise of Uncensored AI",
+      "genre": "Artificial Intelligence"
+    },
+    "the unraveling mystery": {
+      "id": 900460,
+      "title": "The Unraveling Mystery",
+      "genre": "Mystery Thriller"
+    },
+    "a tale of two hearts": {
+      "id": 690484,
+      "title": "A Tale of Two Hearts",
+      "genre": "Regency Romance"
+    },
+    "the galactic odyssey": {
+      "id": 615527,
+      "title": "The Galactic Odyssey",
+      "genre": "Space Thriller"
+    },
+    "the last laugh the comedy of the apocalypse": {
+      "id": 74895,
+      "title": "The Last Laugh: The Comedy of the Apocalypse",
+      "genre": "Apocalyptic Comedy"
+    },
+    "the virtual reality chronicles the quest for aetheria": {
+      "id": 566824,
+      "title": "The Virtual Reality Chronicles: The Quest for Aetheria",
+      "genre": "Virtual Reality"
+    },
+    "neighbors at war": {
+      "id": 514593,
+      "title": "Neighbors at War",
+      "genre": "Suburban Drama"
+    },
+    "the enchanted crystal tales of the magical girl": {
+      "id": 567390,
+      "title": "The Enchanted Crystal: Tales of the Magical Girl",
+      "genre": "Magical Girl"
+    },
+    "battlefield of laughs": {
+      "id": 744283,
+      "title": "Battlefield of Laughs",
+      "genre": "War Comedy"
+    },
+    "the odyssey beyond the stars": {
+      "id": 742423,
+      "title": "The Odyssey Beyond the Stars",
+      "genre": "Space Exploration"
+    },
+    "the clockwork aether": {
+      "id": 639382,
+      "title": "The Clockwork Aether",
+      "genre": "Steampunk Fantasy"
+    },
+    "the jazz shades of broadway boulevard": {
+      "id": 942519,
+      "title": "The Jazz Shades of Broadway Boulevard",
+      "genre": "Noir Comedy"
+    },
+    "the unraveling of harmony lane": {
+      "id": 177719,
+      "title": "The Unraveling of Harmony Lane",
+      "genre": "Social Commentary"
+    },
+    "the digital enigma": {
+      "id": 924058,
+      "title": "The Digital Enigma",
+      "genre": "Techno-Mystery"
+    },
+    "the time travelers of aetheron": {
+      "id": 968752,
+      "title": "The Time Travelers of Aetheron",
+      "genre": "Science Fiction"
+    },
+    "the chronicles of the enchanted forest": {
+      "id": 567583,
+      "title": "The Chronicles of the Enchanted Forest",
+      "genre": "Fantasy"
+    },
+    "the secret of the lost locket": {
+      "id": 889582,
+      "title": "The Secret of the Lost Locket",
+      "genre": "Mystery"
+    },
+    "the chronicles of the crimson sword a tale of adventure and valor": {
+      "id": 879709,
+      "title": "The Chronicles of the Crimson Sword: A Tale of Adventure and Valor",
+      "genre": "Historical Adventure"
+    },
+    "the shadow of deception": {
+      "id": 950130,
+      "title": "The Shadow of Deception",
+      "genre": "Thriller"
+    },
+    "the chronicles of the lost empire": {
+      "id": 171189,
+      "title": "The Chronicles of the Lost Empire",
+      "genre": "Historical Fiction"
+    },
+    "the chronicles of the lost treasure": {
+      "id": 2219,
+      "title": "The Chronicles of the Lost Treasure",
+      "genre": "Adventure"
+    },
+    "the haunting of whispering woods": {
+      "id": 139464,
+      "title": "The Haunting of Whispering Woods",
+      "genre": "Horror"
+    },
+    "the comical misadventures of mr pattersons pants": {
+      "id": 427921,
+      "title": "The Comical Misadventures of Mr. Pattersons Pants",
+      "genre": "Comedy"
+    },
+    "destinys tapestry": {
+      "id": 538337,
+      "title": "Destiny's Tapestry",
+      "genre": "Crime"
+    },
+    "the last breath of utopia": {
+      "id": 804144,
+      "title": "The Last Breath of Utopia",
+      "genre": "Dystopian"
+    },
+    "neon dreams": {
+      "id": 319739,
+      "title": "Neon Dreams",
+      "genre": "Cyberpunk"
+    },
+    "the chronicles of captain vanderbilt and the airship rebellion": {
+      "id": 281292,
+      "title": "The Chronicles of Captain Vanderbilt and the Airship Rebellion",
+      "genre": "Steampunk"
+    },
+    "the sunset of new beginnings": {
+      "id": 318979,
+      "title": "The Sunset of New Beginnings",
+      "genre": "Post-Apocalyptic"
+    },
+    "the enchanted kingdom of eldara": {
+      "id": 420683,
+      "title": "The Enchanted Kingdom of Eldara",
+      "genre": "Fairy Tale"
+    },
+    "the legend of the celestial phoenix": {
+      "id": 996094,
+      "title": "The Legend of the Celestial Phoenix",
+      "genre": "Mythology"
+    },
+    "the sunset trail a tale of the wild west": {
+      "id": 812837,
+      "title": "The Sunset Trail: A Tale of the Wild West",
+      "genre": "Western"
+    },
+    "the battle for the heartland": {
+      "id": 313673,
+      "title": "The Battle for the Heartland",
+      "genre": "War"
+    },
+    "the shadow of the silent tides": {
+      "id": 997420,
+      "title": "The Shadow of the Silent Tides",
+      "genre": "Espionage"
+    },
+    "the chronicles of the citys guardian": {
+      "id": 975509,
+      "title": "The Chronicles of the Citys Guardian",
+      "genre": "Superhero"
+    },
+    "gardens enchanted whispers": {
+      "id": 922469,
+      "title": "Garden's Enchanted Whispers",
+      "genre": "Slice of Life"
+    },
+    "the enchanted journey of elara": {
+      "id": 189780,
+      "title": "The Enchanted Journey of Elara",
+      "genre": "Magical Realism"
+    },
+    "the chronicles of the red dawn": {
+      "id": 173156,
+      "title": "The Chronicles of the Red Dawn",
+      "genre": "Alternate History"
+    },
+    "the time travelers chronicles the adventures of alex and the mysterious artifact": {
+      "id": 687889,
+      "title": "The Time Travelers Chronicles: The Adventures of Alex and The Mysterious Artifact",
+      "genre": "Time Travel"
+    },
+    "the chronicles of the paranormal detective": {
+      "id": 776721,
+      "title": "The Chronicles of the Paranormal Detective",
+      "genre": "Paranormal"
+    },
+    "the shadow of the city": {
+      "id": 928579,
+      "title": "The Shadow of the City",
+      "genre": "Urban Fantasy"
+    },
+    "the great olive grove heist": {
+      "id": 664950,
+      "title": "The Great Olive Grove Heist",
+      "genre": "Satire"
+    },
+    "powers enduring struggle": {
+      "id": 294687,
+      "title": "Power's Enduring Struggle",
+      "genre": "Political Drama"
+    },
+    "the summer of redemption": {
+      "id": 833537,
+      "title": "The Summer of Redemption",
+      "genre": "Coming-of-Age"
+    },
+    "a familys quest": {
+      "id": 15721,
+      "title": "A Familys Quest",
+      "genre": "Family Drama"
+    },
+    "the cosmic odyssey of the crimson star": {
+      "id": 656166,
+      "title": "The Cosmic Odyssey of the Crimson Star",
+      "genre": "Space Opera"
+    },
+    "the dawn of the final days": {
+      "id": 836248,
+      "title": "The Dawn of the Final Days",
+      "genre": "Apocalyptic"
+    },
+    "shadows of the city": {
+      "id": 199878,
+      "title": "Shadows of the City",
+      "genre": "Noir"
+    },
+    "the legend of the whispering woods": {
+      "id": 887419,
+      "title": "The Legend of the Whispering Woods",
+      "genre": "Folklore"
+    },
+    "the trial of the century": {
+      "id": 278291,
+      "title": "The Trial of the Century",
+      "genre": "Legal Drama"
+    },
+    "the unbeatable spirit the chronicles of a smalltown basketball star": {
+      "id": 181212,
+      "title": "The Unbeatable Spirit: The Chronicles of a Small-Town Basketball Star",
+      "genre": "Sports"
+    },
+    "the great sausage heist": {
+      "id": 252277,
+      "title": "The Great Sausage Heist",
+      "genre": "Humor"
+    },
+    "the unlikely hero of crescent bay": {
+      "id": 833361,
+      "title": "The Unlikely Hero of Crescent Bay",
+      "genre": "Biographical"
+    },
+    "the labyrinth of memories": {
+      "id": 428787,
+      "title": "The Labyrinth of Memories",
+      "genre": "Psychological Thriller"
+    },
+    "hearts battle": {
+      "id": 895363,
+      "title": "Hearts Battle",
+      "genre": "Medical Drama"
+    },
+    "the chronicles of the crimson sword": {
+      "id": 989888,
+      "title": "The Chronicles of the Crimson Sword",
+      "genre": "Historical Adventure"
+    },
+    "the day the earth shook": {
+      "id": 854164,
+      "title": "The Day the Earth Shook",
+      "genre": "Disaster"
+    },
+    "glimmer in the shadows": {
+      "id": 117194,
+      "title": "Glimmer in the Shadows",
+      "genre": "Inspirational"
+    },
+    "the haunting of whispering hollow": {
+      "id": 754521,
+      "title": "The Haunting of Whispering Hollow",
+      "genre": "Gothic"
+    },
+    "the chronicles of time and tides": {
+      "id": 60322,
+      "title": "The Chronicles of Time and Tides",
+      "genre": "Experimental"
+    },
+    "the enchanted brush": {
+      "id": 701355,
+      "title": "The Enchanted Brush",
+      "genre": "Artistic Drama"
+    },
+    "the chronicles of zephyr the great escape": {
+      "id": 266179,
+      "title": "The Chronicles of Zephyr: The Great Escape",
+      "genre": "Animal Fiction"
+    },
+    "the last whisper of the wilderness": {
+      "id": 956463,
+      "title": "The Last Whisper of the Wilderness",
+      "genre": "Environmental"
+    },
+    "the darknet chronicles the cryptic cipher": {
+      "id": 256812,
+      "title": "The Darknet Chronicles: The Cryptic Cipher",
+      "genre": "Techno-Thriller"
+    },
+    "the world of mirrors": {
+      "id": 622247,
+      "title": "The World of Mirrors",
+      "genre": "Alternate Reality"
+    },
+    "the dreamland of equality": {
+      "id": 778330,
+      "title": "The Dreamland of Equality",
+      "genre": "Utopian"
+    },
+    "the mystery of the misplaced masterpiece": {
+      "id": 630879,
+      "title": "The Mystery of the Misplaced Masterpiece",
+      "genre": "Mystery Comedy"
+    },
+    "the chronicles of amara a love entwined in time": {
+      "id": 269339,
+      "title": "The Chronicles of Amara: A Love Entwined in Time",
+      "genre": "Historical Romance"
+    },
+    "the celestial frontier": {
+      "id": 119061,
+      "title": "The Celestial Frontier",
+      "genre": "Space Western"
+    },
+    "stellar shadows": {
+      "id": 273681,
+      "title": "Stellar Shadows",
+      "genre": "Hard Science Fiction"
+    },
+    "the chronicles of gaia the awakening": {
+      "id": 662804,
+      "title": "The Chronicles of Gaia: The Awakening",
+      "genre": "Soft Science Fiction"
+    },
+    "the desert escape": {
+      "id": 533031,
+      "title": "The Desert Escape",
+      "genre": "Survival"
+    },
+    "the quest for serenity": {
+      "id": 357896,
+      "title": "The Quest for Serenity",
+      "genre": "Philosophical Fiction"
+    },
+    "tales of the unseen realm": {
+      "id": 587007,
+      "title": "Tales of the Unseen Realm",
+      "genre": "Anthology"
+    },
+    "the chronicles of aurora a quest for hope": {
+      "id": 630877,
+      "title": "The Chronicles of Aurora: A Quest for Hope",
+      "genre": "Futuristic"
+    },
+    "the chronicles of faith the sacred covenant": {
+      "id": 83346,
+      "title": "The Chronicles of Faith: The Sacred Covenant",
+      "genre": "Religious Fiction"
+    },
+    "the iron legionnaire": {
+      "id": 258672,
+      "title": "The Iron Legionnaire",
+      "genre": "Military Fiction"
+    },
+    "the voyage of the oceans embrace": {
+      "id": 446530,
+      "title": "The Voyage of the Oceans Embrace",
+      "genre": "Nautical Fiction"
+    },
+    "the chronicles of the interstellar voyagers": {
+      "id": 318275,
+      "title": "The Chronicles of the Interstellar Voyagers",
+      "genre": "Alternate Dimension"
+    },
+    "the haunting of windridge manor": {
+      "id": 172433,
+      "title": "The Haunting of Windridge Manor",
+      "genre": "Psychological Horror"
+    },
+    "second chances unveiled": {
+      "id": 917897,
+      "title": "Second Chances Unveiled",
+      "genre": "Domestic Fiction"
+    },
+    "the journey to middleage": {
+      "id": 268298,
+      "title": "The Journey to Middle-Age",
+      "genre": "Coming-of-Middle-Age"
+    },
+    "the enigma of the emerald eye": {
+      "id": 397921,
+      "title": "The Enigma of the Emerald Eye",
+      "genre": "Medical Mystery"
+    },
+    "the dancing shadows": {
+      "id": 558540,
+      "title": "The Dancing Shadows",
+      "genre": "Existential Drama"
+    },
+    "the shadow of the serpent": {
+      "id": 579533,
+      "title": "The Shadow of the Serpent",
+      "genre": "Detective Fiction"
+    },
+    "the battle for the boardroom": {
+      "id": 340385,
+      "title": "The Battle for the Boardroom",
+      "genre": "Workplace Drama"
+    },
+    "operation golden falcon": {
+      "id": 104516,
+      "title": "Operation Golden Falcon",
+      "genre": "Spy Fiction"
+    },
+    "the rise of the unseen": {
+      "id": 551089,
+      "title": "The Rise of The Unseen",
+      "genre": "Technological Thriller"
+    },
+    "the quest for the lost locket": {
+      "id": 172574,
+      "title": "The Quest for the Lost Locket",
+      "genre": "Romantic Fantasy"
+    },
+    "the eternal hourglass": {
+      "id": 606596,
+      "title": "The Eternal Hourglass",
+      "genre": "Time-Loop"
+    },
+    "the unheard melodies of yesteryears": {
+      "id": 168054,
+      "title": "The Unheard Melodies of Yesteryears",
+      "genre": "Generation Gap"
+    },
+    "the tale of the dwindling democracy": {
+      "id": 75108,
+      "title": "The Tale of the Dwindling Democracy",
+      "genre": "Political Satire"
+    },
+    "the enchanted kingdom": {
+      "id": 427288,
+      "title": "The Enchanted Kingdom",
+      "genre": "Supernatural Drama"
+    },
+    "the chronicles of the forgotten land": {
+      "id": 594491,
+      "title": "The Chronicles of the Forgotten Land",
+      "genre": "Mythic Fiction"
+    },
+    "the chronicles of evolia": {
+      "id": 476899,
+      "title": "The Chronicles of Evolia",
+      "genre": "Evolutionary Fiction"
+    },
+    "the enchanted realm of evermore": {
+      "id": 251212,
+      "title": "The Enchanted Realm of Evermore",
+      "genre": "Dreamlike"
+    },
+    "the chronicles of the philosophers stone": {
+      "id": 959200,
+      "title": "The Chronicles of the Philosophers Stone",
+      "genre": "Philosophical Comedy"
+    },
+    "the chronicles of lunas café a supernatural comedy": {
+      "id": 157222,
+      "title": "The Chronicles of Lunas Café: A Supernatural Comedy",
+      "genre": "Supernatural Comedy"
+    },
+    "the chronicles of the furry kingdom": {
+      "id": 266814,
+      "title": "The Chronicles of the Furry Kingdom",
+      "genre": "Animal Fantasy"
+    },
+    "quantum entanglement the chronicles of the timekeeper": {
+      "id": 379120,
+      "title": "Quantum Entanglement: The Chronicles of the Time-Keeper",
+      "genre": "Quantum Fiction"
+    },
+    "the multiverse chronicles the battle for existence": {
+      "id": 982848,
+      "title": "The Multiverse Chronicles: The Battle for Existence",
+      "genre": "Multiverse"
+    },
+    "the awakening of the ai revolution": {
+      "id": 337955,
+      "title": "The Awakening of the AI Revolution",
+      "genre": "Artificial Intelligence"
+    },
+    "emerald crypts secret unveiling": {
+      "id": 553875,
+      "title": "Emerald Crypt's Secret Unveiling",
+      "genre": "Mystery Thriller"
+    },
+    "a tale of love and redemption in regency england": {
+      "id": 478872,
+      "title": "A Tale of Love and Redemption in Regency England",
+      "genre": "Regency Romance"
+    },
+    "astral odyssey the battle for orion": {
+      "id": 780555,
+      "title": "Astral Odyssey: The Battle for Orion",
+      "genre": "Space Thriller"
+    },
+    "the humors finale": {
+      "id": 169099,
+      "title": "The Humor's Finale",
+      "genre": "Apocalyptic Comedy"
+    },
+    "the virtuous reality": {
+      "id": 215243,
+      "title": "The Virtuous Reality",
+      "genre": "Virtual Reality"
+    },
+    "a symphony of suburbia": {
+      "id": 682677,
+      "title": "A Symphony of Suburbia",
+      "genre": "Suburban Drama"
+    },
+    "the enchanted crystals of aurelia": {
+      "id": 611122,
+      "title": "The Enchanted Crystals of Aurelia",
+      "genre": "Magical Girl"
+    },
+    "battle laughs tales of the unlikely heroes": {
+      "id": 573823,
+      "title": "Battle Laughs: Tales of the Unlikely Heroes",
+      "genre": "War Comedy"
+    },
+    "the odyssey of the galaxy explorer": {
+      "id": 962250,
+      "title": "The Odyssey of the Galaxy Explorer",
+      "genre": "Space Exploration"
+    },
+    "the chronicles of steam and sorcery the perilous voyage of the dawnseeker": {
+      "id": 283781,
+      "title": "The Chronicles of Steam and Sorcery: The Perilous Voyage of the Dawnseeker",
+      "genre": "Steampunk Fantasy"
+    },
+    "the twisted comedy of mr luck": {
+      "id": 630450,
+      "title": "The Twisted Comedy of Mr. Luck",
+      "genre": "Noir Comedy"
+    },
+    "the unspoken truth": {
+      "id": 531374,
+      "title": "The Unspoken Truth",
+      "genre": "Social Commentary"
+    },
+    "the enigma of the quantum code": {
+      "id": 785082,
+      "title": "The Enigma of the Quantum Code",
+      "genre": "Techno-Mystery"
+    },
+    "galactic odyssey the battle for the cosmos": {
+      "id": 331172,
+      "title": "Galactic Odyssey: The Battle for the Cosmos",
+      "genre": "Science Fiction"
+    },
+    "the chronicles of the emerald amulet": {
+      "id": 555818,
+      "title": "The Chronicles of the Emerald Amulet",
+      "genre": "Fantasy"
+    },
+    "the enigma of emerald hill": {
+      "id": 251638,
+      "title": "The Enigma of Emerald Hill",
+      "genre": "Mystery"
+    },
+    "scepter chronicles revealed": {
+      "id": 970247,
+      "title": "Scepter Chronicles Revealed",
+      "genre": "Historical Adventure"
+    },
+    "the shadows of darkness": {
+      "id": 891965,
+      "title": "The Shadows of Darkness",
+      "genre": "Thriller"
+    },
+    "the sands of time": {
+      "id": 204942,
+      "title": "The Sands of Time",
+      "genre": "Historical Fiction"
+    },
+    "the lost treasures of aztlan": {
+      "id": 828589,
+      "title": "The Lost Treasures of Aztlan",
+      "genre": "Adventure"
+    },
+    "the dark secret of hollow creek": {
+      "id": 471783,
+      "title": "The Dark Secret of Hollow Creek",
+      "genre": "Horror"
+    },
+    "the unlikely heroes of the soda fountain": {
+      "id": 992366,
+      "title": "The Unlikely Heroes of the Soda Fountain",
+      "genre": "Comedy"
+    },
+    "the unraveling of justice": {
+      "id": 91005,
+      "title": "The Unraveling of Justice",
+      "genre": "Crime"
+    },
+    "the echoes of tomorrows dawn": {
+      "id": 657922,
+      "title": "The Echoes of Tomorrows Dawn",
+      "genre": "Dystopian"
+    },
+    "the digital metropolis": {
+      "id": 983207,
+      "title": "The Digital Metropolis",
+      "genre": "Cyberpunk"
+    },
+    "the chronicles of the steam empire the fall of the iron queen": {
+      "id": 337040,
+      "title": "The Chronicles of the Steam Empire: The Fall of the Iron Queen",
+      "genre": "Steampunk"
+    },
+    "the last ember": {
+      "id": 660563,
+      "title": "The Last Ember",
+      "genre": "Post-Apocalyptic"
+    },
+    "the enchanted eldorian quest": {
+      "id": 828130,
+      "title": "The Enchanted Eldorian Quest",
+      "genre": "Fairy Tale"
+    },
+    "the tale of the celestial phoenix": {
+      "id": 858229,
+      "title": "The Tale of the Celestial Phoenix",
+      "genre": "Mythology"
+    },
+    "the vengeance of the desert wind": {
+      "id": 367786,
+      "title": "The Vengeance of the Desert Wind",
+      "genre": "Western"
+    },
+    "the iron brigade a war saga": {
+      "id": 811461,
+      "title": "The Iron Brigade: A War Saga",
+      "genre": "War"
+    },
+    "shadows of deceit": {
+      "id": 854947,
+      "title": "Shadows of Deceit",
+      "genre": "Espionage"
+    },
+    "the chronicles of the vigilant guardian the rise of the shadow": {
+      "id": 91114,
+      "title": "The Chronicles of The Vigilant Guardian: The Rise of The Shadow",
+      "genre": "Superhero"
+    },
+    "the garden of life": {
+      "id": 449407,
+      "title": "The Garden of Life",
+      "genre": "Slice of Life"
+    },
+    "the whispers of nature": {
+      "id": 8325,
+      "title": "The Whispers of Nature",
+      "genre": "Magical Realism"
+    },
+    "a world of difference": {
+      "id": 410509,
+      "title": "A World of Difference",
+      "genre": "Alternate History"
+    },
+    "the chronicles of time the adventures of alex and lila": {
+      "id": 196204,
+      "title": "The Chronicles of Time: The Adventures of Alex and Lila",
+      "genre": "Time Travel"
+    },
+    "the haunting of willow valley": {
+      "id": 756026,
+      "title": "The Haunting of Willow Valley",
+      "genre": "Paranormal"
+    },
+    "the chronicles of ember shadows of the ancient city": {
+      "id": 909204,
+      "title": "The Chronicles of Ember: Shadows of the Ancient City",
+      "genre": "Urban Fantasy"
+    },
+    "the great adventure of captain flounder and the mystery of the lost treasure": {
+      "id": 494795,
+      "title": "The Great Adventure of Captain Flounder and the Mystery of the Lost Treasure",
+      "genre": "Satire"
+    },
+    "the shadows of power": {
+      "id": 662692,
+      "title": "The Shadows of Power",
+      "genre": "Political Drama"
+    },
+    "the journey of a thousand smiles": {
+      "id": 464649,
+      "title": "The Journey of a Thousand Smiles",
+      "genre": "Coming-of-Age"
+    },
+    "the hearts reckoning": {
+      "id": 495199,
+      "title": "The Hearts Reckoning",
+      "genre": "Family Drama"
+    },
+    "the starship chronicles the battle for the crystal galaxy": {
+      "id": 188157,
+      "title": "The Starship Chronicles: The Battle for the Crystal Galaxy",
+      "genre": "Space Opera"
+    },
+    "the last breath": {
+      "id": 393194,
+      "title": "The Last Breath",
+      "genre": "Apocalyptic"
+    },
+    "nightfall whispers": {
+      "id": 914871,
+      "title": "Nightfall Whispers",
+      "genre": "Noir"
+    },
+    "the legend of the emerald forest": {
+      "id": 859047,
+      "title": "The Legend of the Emerald Forest",
+      "genre": "Folklore"
+    },
+    "a tale of redemption the case of the missing fortune": {
+      "id": 321707,
+      "title": "A Tale of Redemption: The Case of the Missing Fortune",
+      "genre": "Legal Drama"
+    },
+    "the unbroken spirit the triumph of a champion": {
+      "id": 118780,
+      "title": "The Unbroken Spirit: The Triumph of a Champion",
+      "genre": "Sports"
+    },
+    "the great walrus adventure": {
+      "id": 22929,
+      "title": "The Great Walrus Adventure",
+      "genre": "Humor"
+    },
+    "the extraordinary life of benjamin stanton": {
+      "id": 409219,
+      "title": "The Extraordinary Life of Benjamin Stanton",
+      "genre": "Biographical"
+    },
+    "echoes of fate": {
+      "id": 216737,
+      "title": "Echoes of Fate",
+      "genre": "Psychological Thriller"
+    },
+    "the heart of a champion": {
+      "id": 953845,
+      "title": "The Heart of a Champion",
+      "genre": "Medical Drama"
+    },
+    "the chronicles of the golden scepter": {
+      "id": 600012,
+      "title": "The Chronicles of the Golden Scepter",
+      "genre": "Historical Adventure"
+    },
+    "disaster strikes the struggle for survival": {
+      "id": 592388,
+      "title": "Disaster Strikes: The Struggle for Survival",
+      "genre": "Disaster"
+    },
+    "the unseen hero": {
+      "id": 726465,
+      "title": "The Unseen Hero",
+      "genre": "Inspirational"
+    },
+    "the dark manor": {
+      "id": 791443,
+      "title": "The Dark Manor",
+      "genre": "Gothic"
+    },
+    "the chronicles of ember": {
+      "id": 118848,
+      "title": "The Chronicles of Ember",
+      "genre": "Experimental"
+    },
+    "a symphony of souls": {
+      "id": 980426,
+      "title": "A Symphony of Souls",
+      "genre": "Artistic Drama"
+    },
+    "the chronicles of whiskerton the great adventure": {
+      "id": 917964,
+      "title": "The Chronicles of Whiskerton: The Great Adventure",
+      "genre": "Animal Fiction"
+    },
+    "final murmurs of the rainforest": {
+      "id": 571386,
+      "title": "Final Murmurs of the Rainforest",
+      "genre": "Environmental"
+    },
+    "the technothriller of quantum entanglement": {
+      "id": 54842,
+      "title": "The Techno-Thriller of Quantum Entanglement",
+      "genre": "Techno-Thriller"
+    },
+    "the chronicles of the realm of illusions": {
+      "id": 588995,
+      "title": "The Chronicles of the Realm of Illusions",
+      "genre": "Alternate Reality"
+    },
+    "the city of elysium": {
+      "id": 496954,
+      "title": "The City of Elysium",
+      "genre": "Utopian"
+    },
+    "the great mystery of the missing tulips": {
+      "id": 822981,
+      "title": "The Great Mystery of the Missing Tulips",
+      "genre": "Mystery Comedy"
+    },
+    "the rose of spain": {
+      "id": 438183,
+      "title": "The Rose of Spain",
+      "genre": "Historical Romance"
+    },
+    "galactic marshal the battle for the wild frontier": {
+      "id": 796325,
+      "title": "Galactic Marshal: The Battle for the Wild Frontier",
+      "genre": "Space Western"
+    },
+    "heist beyond quantum realms": {
+      "id": 599016,
+      "title": "Heist Beyond Quantum Realms",
+      "genre": "Hard Science Fiction"
+    },
+    "the time travelers quest": {
+      "id": 441294,
+      "title": "The Time Travelers Quest",
+      "genre": "Soft Science Fiction"
+    },
+    "the unseen peril": {
+      "id": 303411,
+      "title": "The Unseen Peril",
+      "genre": "Survival"
+    },
+    "enlightenments quest beyond": {
+      "id": 258973,
+      "title": "Enlightenment's Quest Beyond",
+      "genre": "Philosophical Fiction"
+    },
+    "tales from the neighborhood": {
+      "id": 610670,
+      "title": "Tales from the Neighborhood",
+      "genre": "Anthology"
+    },
+    "the dusk of eternal sunshine": {
+      "id": 258750,
+      "title": "The Dusk of Eternal Sunshine",
+      "genre": "Futuristic"
+    },
+    "the unseen miracle": {
+      "id": 651032,
+      "title": "The Unseen Miracle",
+      "genre": "Religious Fiction"
+    },
+    "the unseen battle": {
+      "id": 349093,
+      "title": "The Unseen Battle",
+      "genre": "Military Fiction"
+    },
+    "the chronicles of captain william grey the treacherous voyage": {
+      "id": 55029,
+      "title": "The Chronicles of Captain William Grey: The Treacherous Voyage",
+      "genre": "Nautical Fiction"
+    },
+    "the chronicles of the elysian realm": {
+      "id": 502507,
+      "title": "The Chronicles of the Elysian Realm",
+      "genre": "Alternate Dimension"
+    },
+    "the echoes of the damned": {
+      "id": 801004,
+      "title": "The Echoes of the Damned",
+      "genre": "Psychological Horror"
+    },
+    "the unraveled threads": {
+      "id": 972362,
+      "title": "The Unraveled Threads",
+      "genre": "Domestic Fiction"
+    },
+    "the unexpected encore": {
+      "id": 540592,
+      "title": "The Unexpected Encore",
+      "genre": "Coming-of-Middle-Age"
+    },
+    "the enigma of the eternal heart": {
+      "id": 165514,
+      "title": "The Enigma of the Eternal Heart",
+      "genre": "Medical Mystery"
+    },
+    "the path of choice": {
+      "id": 366724,
+      "title": "The Path of Choice",
+      "genre": "Existential Drama"
+    },
+    "the enigma of elm street": {
+      "id": 159792,
+      "title": "The Enigma of Elm Street",
+      "genre": "Detective Fiction"
+    },
+    "the unlikely heroes of techcorp": {
+      "id": 351068,
+      "title": "The Unlikely Heroes of TechCorp",
+      "genre": "Workplace Drama"
+    },
+    "the tangled web of deceit": {
+      "id": 528326,
+      "title": "The Tangled Web of Deceit",
+      "genre": "Spy Fiction"
+    },
+    "the dark net": {
+      "id": 405131,
+      "title": "The Dark Net",
+      "genre": "Technological Thriller"
+    },
+    "whispers of the enchanted forest": {
+      "id": 886999,
+      "title": "Whispers of the Enchanted Forest",
+      "genre": "Romantic Fantasy"
+    },
+    "the timeless loop of destiny": {
+      "id": 871634,
+      "title": "The Timeless Loop of Destiny",
+      "genre": "Time-Loop"
+    },
+    "the unspoken truths a story of generation gap": {
+      "id": 422848,
+      "title": "The Unspoken Truths: A Story of Generation Gap",
+      "genre": "Generation Gap"
+    },
+    "the chronicles of the great descent": {
+      "id": 199302,
+      "title": "The Chronicles of the Great Descent",
+      "genre": "Political Satire"
+    },
+    "echoes of the veil": {
+      "id": 277755,
+      "title": "Echoes of the Veil",
+      "genre": "Supernatural Drama"
+    },
+    "the chronicles of the azure dragon": {
+      "id": 706943,
+      "title": "The Chronicles of the Azure Dragon",
+      "genre": "Mythic Fiction"
+    },
+    "the chronicles of evolution rise of the species": {
+      "id": 482664,
+      "title": "The Chronicles of Evolution: Rise of the Species",
+      "genre": "Evolutionary Fiction"
+    },
+    "the dreamland of the ages": {
+      "id": 652914,
+      "title": "The Dreamland of the Ages",
+      "genre": "Dreamlike"
+    },
+    "the unlikely philosophers odyssey": {
+      "id": 816358,
+      "title": "The Unlikely Philosophers Odyssey",
+      "genre": "Philosophical Comedy"
+    },
+    "the chronicles of the enchanted lamp": {
+      "id": 937554,
+      "title": "The Chronicles of the Enchanted Lamp",
+      "genre": "Supernatural Comedy"
+    },
+    "the chronicles of the enchanted woodland the legend of the four guardians": {
+      "id": 147197,
+      "title": "The Chronicles of the Enchanted Woodland: The Legend of the Four Guardians",
+      "genre": "Animal Fantasy"
+    },
+    "quantum faith journey": {
+      "id": 134684,
+      "title": "Quantum Faith Journey",
+      "genre": "Quantum Fiction"
+    },
+    "the chronicles of the multiverse the great merge": {
+      "id": 759561,
+      "title": "The Chronicles of the Multiverse: The Great Merge",
+      "genre": "Multiverse"
+    },
+    "the awakening of ai": {
+      "id": 377725,
+      "title": "The Awakening of A.I.",
+      "genre": "Artificial Intelligence"
+    },
+    "the secrets of whispering woods": {
+      "id": 804185,
+      "title": "The Secrets of Whispering Woods",
+      "genre": "Mystery Thriller"
+    },
+    "the dukes dilemma": {
+      "id": 718025,
+      "title": "The Dukes Dilemma",
+      "genre": "Regency Romance"
+    },
+    "the chronicles of the starship astraea": {
+      "id": 790647,
+      "title": "The Chronicles of the Starship Astraea",
+      "genre": "Space Thriller"
+    },
+    "the last guffaw": {
+      "id": 200828,
+      "title": "The Last Guffaw",
+      "genre": "Apocalyptic Comedy"
+    },
+    "the quest for the virtual grail": {
+      "id": 529423,
+      "title": "The Quest for the Virtual Grail",
+      "genre": "Virtual Reality"
+    },
+    "neighbors at odds": {
+      "id": 637435,
+      "title": "Neighbors at Odds",
+      "genre": "Suburban Drama"
+    },
+    "the enchanted gemstone": {
+      "id": 461264,
+      "title": "The Enchanted Gemstone",
+      "genre": "Magical Girl"
+    },
+    "the unlikely heroes of the battlefield": {
+      "id": 617904,
+      "title": "The Unlikely Heroes of the Battlefield",
+      "genre": "War Comedy"
+    },
+    "the voyage to the celestial abyss": {
+      "id": 636968,
+      "title": "The Voyage to the Celestial Abyss",
+      "genre": "Space Exploration"
+    },
+    "destinys gear unleashed": {
+      "id": 15600,
+      "title": "Destiny's Gear Unleashed",
+      "genre": "Steampunk Fantasy"
+    },
+    "the caper in coney island": {
+      "id": 141782,
+      "title": "The Caper in Coney Island",
+      "genre": "Noir Comedy"
+    },
+    "the unseen struggle": {
+      "id": 268128,
+      "title": "The Unseen Struggle",
+      "genre": "Social Commentary"
+    },
+    "the technomystery of the cryptic code": {
+      "id": 229314,
+      "title": "The Techno-Mystery of The Cryptic Code",
+      "genre": "Techno-Mystery"
+    },
+    "the chronicles of elysium rise of the galactic defenders": {
+      "id": 661488,
+      "title": "The Chronicles of Elysium: Rise of the Galactic Defenders",
+      "genre": "Science Fiction"
+    },
+    "the chronicles of eldoria the legacy of the dragons eye": {
+      "id": 378143,
+      "title": "The Chronicles of Eldoria: The Legacy of the Dragons Eye",
+      "genre": "Fantasy"
+    },
+    "the enigma of the emerald amulet": {
+      "id": 142067,
+      "title": "The Enigma of the Emerald Amulet",
+      "genre": "Mystery"
+    },
+    "the chronicles of the lost kingdom vol 2": {
+      "id": 632633,
+      "title": "The Chronicles of The Lost Kingdom - Vol 2",
+      "genre": "Historical Adventure"
+    },
+    "the shadows of the night": {
+      "id": 355585,
+      "title": "The Shadows of the Night",
+      "genre": "Thriller"
+    },
+    "the chronicles of the forgotten kingdom": {
+      "id": 983437,
+      "title": "The Chronicles of the Forgotten Kingdom",
+      "genre": "Historical Fiction"
+    },
+    "lost riches revealed": {
+      "id": 874340,
+      "title": "Lost Riches Revealed",
+      "genre": "Adventure"
+    },
+    "the haunting of willow house": {
+      "id": 647813,
+      "title": "The Haunting of Willow House",
+      "genre": "Horror"
+    },
+    "the great caper of the funny four": {
+      "id": 740528,
+      "title": "The Great Caper of the Funny Four",
+      "genre": "Comedy"
+    },
+    "the nightmare of neon valley": {
+      "id": 794662,
+      "title": "The Nightmare of Neon Valley",
+      "genre": "Crime"
+    },
+    "fading horizons": {
+      "id": 616953,
+      "title": "Fading Horizons",
+      "genre": "Dystopian"
+    },
+    "the neural nexus chronicles the shadow of the cybersamurai": {
+      "id": 481003,
+      "title": "The Neural Nexus Chronicles: The Shadow of the Cyber-Samurai",
+      "genre": "Cyberpunk"
+    },
+    "the adventures of captain cogsworth the perilous journey to the lost city of gold": {
+      "id": 244736,
+      "title": "The Adventures of Captain Cogsworth: The Perilous Journey to the Lost City of Gold",
+      "genre": "Steampunk"
+    },
+    "the last survivors": {
+      "id": 341266,
+      "title": "The Last Survivors",
+      "genre": "Post-Apocalyptic"
+    },
+    "the enchanted forest of eldoria": {
+      "id": 768600,
+      "title": "The Enchanted Forest of Eldoria",
+      "genre": "Fairy Tale"
+    },
+    "the legend of the phoenix and the serpent": {
+      "id": 737363,
+      "title": "The Legend of the Phoenix and the Serpent",
+      "genre": "Mythology"
+    },
+    "the vengeance of the frontier": {
+      "id": 828885,
+      "title": "The Vengeance of the Frontier",
+      "genre": "Western"
+    },
+    "the unyielding flame of courage": {
+      "id": 450273,
+      "title": "The Unyielding Flame of Courage",
+      "genre": "War"
+    },
+    "the labyrinth of shadows": {
+      "id": 70710,
+      "title": "The Labyrinth of Shadows",
+      "genre": "Espionage"
+    },
+    "the chronicles of valor and vengeance": {
+      "id": 720178,
+      "title": "The Chronicles of Valor and Vengeance",
+      "genre": "Superhero"
+    },
+    "the unlikely heroes of willowbrook": {
+      "id": 745385,
+      "title": "The Unlikely Heroes of Willowbrook",
+      "genre": "Slice of Life"
+    },
+    "the enchanted haven": {
+      "id": 185870,
+      "title": "The Enchanted Haven",
+      "genre": "Magical Realism"
+    },
+    "the world of tomorrow": {
+      "id": 52346,
+      "title": "The World of Tomorrow",
+      "genre": "Alternate History"
+    },
+    "the time traveling chronicles of tom and sarah": {
+      "id": 523159,
+      "title": "The Time Traveling Chronicles of Tom and Sarah",
+      "genre": "Time Travel"
+    },
+    "whispers of the unseen": {
+      "id": 831189,
+      "title": "Whispers of the Unseen",
+      "genre": "Paranormal"
+    },
+    "the enigmatic chronicles of the crimson mage": {
+      "id": 14444,
+      "title": "The Enigmatic Chronicles of the Crimson Mage",
+      "genre": "Urban Fantasy"
+    },
+    "the grand illusion": {
+      "id": 862766,
+      "title": "The Grand Illusion",
+      "genre": "Satire"
+    },
+    "the struggle for power": {
+      "id": 561898,
+      "title": "The Struggle for Power",
+      "genre": "Political Drama"
+    },
+    "a summer to remember": {
+      "id": 738701,
+      "title": "A Summer to Remember",
+      "genre": "Coming-of-Age"
+    },
+    "the unshakable connection": {
+      "id": 935249,
+      "title": "The Unshakable Connection",
+      "genre": "Family Drama"
+    },
+    "stardust and shadows the chronicles of the orions voyagers": {
+      "id": 308589,
+      "title": "Stardust and Shadows: The Chronicles of the Orions Voyagers",
+      "genre": "Space Opera"
+    },
+    "the last days of earth": {
+      "id": 884823,
+      "title": "The Last Days of Earth",
+      "genre": "Apocalyptic"
+    },
+    "shadows of the night": {
+      "id": 919144,
+      "title": "Shadows of the Night",
+      "genre": "Noir"
+    },
+    "the enchanted forest of whispering pines": {
+      "id": 806974,
+      "title": "The Enchanted Forest of Whispering Pines",
+      "genre": "Folklore"
+    },
+    "the unlikely heroes of justice court": {
+      "id": 150289,
+      "title": "The Unlikely Heroes of Justice Court",
+      "genre": "Legal Drama"
+    },
+    "the unstoppable spirit of victory": {
+      "id": 957874,
+      "title": "The Unstoppable Spirit of Victory",
+      "genre": "Sports"
+    },
+    "the adventures of the laughing loonies": {
+      "id": 113796,
+      "title": "The Adventures of The Laughing Loonies",
+      "genre": "Humor"
+    },
+    "the unraveling threads of destiny the life and times of emily williams": {
+      "id": 623454,
+      "title": "The Unraveling Threads of Destiny: The Life and Times of Emily Williams",
+      "genre": "Biographical"
+    },
+    "whispers of deception": {
+      "id": 794666,
+      "title": "Whispers of Deception",
+      "genre": "Psychological Thriller"
+    },
+    "the hearts decision": {
+      "id": 398709,
+      "title": "The Hearts Decision",
+      "genre": "Medical Drama"
+    },
+    "the chronicles of the iron phoenix a tale of valor and betrayal": {
+      "id": 853098,
+      "title": "The Chronicles of the Iron Phoenix: A Tale of Valor and Betrayal",
+      "genre": "Historical Adventure"
+    },
+    "the catastrophic floods of mumbai": {
+      "id": 221511,
+      "title": "The Catastrophic Floods of Mumbai",
+      "genre": "Disaster"
+    },
+    "the unbreakable bond": {
+      "id": 79583,
+      "title": "The Unbreakable Bond",
+      "genre": "Inspirational"
+    },
+    "the darkness of shadowwood manor": {
+      "id": 715624,
+      "title": "The Darkness of Shadowwood Manor",
+      "genre": "Gothic"
+    },
+    "the chronicles of the lost city": {
+      "id": 604429,
+      "title": "The Chronicles of the Lost City",
+      "genre": "Experimental"
+    },
+    "the unveiling of destiny": {
+      "id": 915704,
+      "title": "The Unveiling of Destiny",
+      "genre": "Artistic Drama"
+    },
+    "the chronicles of whiskers creek a tale of friendship adventure and mystery": {
+      "id": 226189,
+      "title": "The Chronicles of Whiskers Creek: A Tale of Friendship, Adventure, and Mystery",
+      "genre": "Animal Fiction"
+    },
+    "rainforests last song": {
+      "id": 173546,
+      "title": "Rainforest's Last Song",
+      "genre": "Environmental"
+    },
+    "quantum secrets decoded": {
+      "id": 833610,
+      "title": "Quantum Secrets Decoded",
+      "genre": "Techno-Thriller"
+    },
+    "the chronicles of the forgotten realm": {
+      "id": 423229,
+      "title": "The Chronicles of the Forgotten Realm",
+      "genre": "Alternate Reality"
+    },
+    "the new horizon": {
+      "id": 503729,
+      "title": "The New Horizon",
+      "genre": "Utopian"
+    },
+    "the curious case of the vanishing vegetables": {
+      "id": 297638,
+      "title": "The Curious Case of the Vanishing Vegetables",
+      "genre": "Mystery Comedy"
+    },
+    "a timeless love": {
+      "id": 513453,
+      "title": "A Timeless Love",
+      "genre": "Historical Romance"
+    },
+    "the stars of the lone ranger": {
+      "id": 22450,
+      "title": "The Stars of the Lone Ranger",
+      "genre": "Space Western"
+    },
+    "the cosmic odyssey": {
+      "id": 293725,
+      "title": "The Cosmic Odyssey",
+      "genre": "Hard Science Fiction"
+    },
+    "the chronicles of aetheria": {
+      "id": 164732,
+      "title": "The Chronicles of Aetheria",
+      "genre": "Soft Science Fiction"
+    },
+    "the desolate islands": {
+      "id": 641918,
+      "title": "The Desolate Islands",
+      "genre": "Survival"
+    },
+    "the quest for enlightenment": {
+      "id": 59650,
+      "title": "The Quest for Enlightenment",
+      "genre": "Philosophical Fiction"
+    },
+    "whispers from the past": {
+      "id": 705331,
+      "title": "Whispers from the Past",
+      "genre": "Anthology"
+    },
+    "the dawn of neurolink": {
+      "id": 2591,
+      "title": "The Dawn of NeuroLink",
+      "genre": "Futuristic"
+    },
+    "the light in the darkness": {
+      "id": 47000,
+      "title": "The Light in the Darkness",
+      "genre": "Religious Fiction"
+    },
+    "the last stand of the iron brigade": {
+      "id": 607402,
+      "title": "The Last Stand of the Iron Brigade",
+      "genre": "Military Fiction"
+    },
+    "the voyage of the sea serpent vol 2": {
+      "id": 623181,
+      "title": "The Voyage of the Sea Serpent - Vol 2",
+      "genre": "Nautical Fiction"
+    },
+    "the chronicles of the quantum realm": {
+      "id": 506051,
+      "title": "The Chronicles of the Quantum Realm",
+      "genre": "Alternate Dimension"
+    },
+    "the eternal nightmare": {
+      "id": 476006,
+      "title": "The Eternal Nightmare",
+      "genre": "Psychological Horror"
+    },
+    "a tale of two neighbors": {
+      "id": 866893,
+      "title": "A Tale of Two Neighbors",
+      "genre": "Domestic Fiction"
+    },
+    "the second innocence": {
+      "id": 428172,
+      "title": "The Second Innocence",
+      "genre": "Coming-of-Middle-Age"
+    },
+    "the enigma of amber heights": {
+      "id": 366739,
+      "title": "The Enigma of Amber Heights",
+      "genre": "Medical Mystery"
+    },
+    "the labyrinthine existence": {
+      "id": 125976,
+      "title": "The Labyrinthine Existence",
+      "genre": "Existential Drama"
+    },
+    "the enigma of elysium fields": {
+      "id": 557098,
+      "title": "The Enigma of Elysium Fields",
+      "genre": "Detective Fiction"
+    },
+    "breaking barriers": {
+      "id": 86025,
+      "title": "Breaking Barriers",
+      "genre": "Workplace Drama"
+    },
+    "the shadow of the red rose": {
+      "id": 973956,
+      "title": "The Shadow of the Red Rose",
+      "genre": "Spy Fiction"
+    },
+    "the dawn of hyperintelligence": {
+      "id": 304227,
+      "title": "The Dawn of Hyperintelligence",
+      "genre": "Technological Thriller"
+    },
+    "the secrets of sylvan realm": {
+      "id": 665628,
+      "title": "The Secrets of Sylvan Realm",
+      "genre": "Romantic Fantasy"
+    },
+    "echoes of the past": {
+      "id": 732016,
+      "title": "Echoes of the Past",
+      "genre": "Time-Loop"
+    },
+    "two worlds apart a story of generation gap": {
+      "id": 245230,
+      "title": "Two Worlds Apart: A Story of Generation Gap",
+      "genre": "Generation Gap"
+    },
+    "the grand scheme of things": {
+      "id": 611862,
+      "title": "The Grand Scheme of Things",
+      "genre": "Political Satire"
+    },
+    "the veil between worlds": {
+      "id": 557335,
+      "title": "The Veil Between Worlds",
+      "genre": "Supernatural Drama"
+    },
+    "the legacy of the celestial sword": {
+      "id": 491242,
+      "title": "The Legacy of the Celestial Sword",
+      "genre": "Mythic Fiction"
+    },
+    "the eternal struggle": {
+      "id": 594510,
+      "title": "The Eternal Struggle",
+      "genre": "Evolutionary Fiction"
+    },
+    "the ethereal wilderness": {
+      "id": 961180,
+      "title": "The Ethereal Wilderness",
+      "genre": "Dreamlike"
+    },
+    "the quest for the lost manuscript": {
+      "id": 928789,
+      "title": "The Quest for the Lost Manuscript",
+      "genre": "Philosophical Comedy"
+    },
+    "the chronicles of the ghostly gourmet": {
+      "id": 845340,
+      "title": "The Chronicles of the Ghostly Gourmet",
+      "genre": "Supernatural Comedy"
+    },
+    "the chronicles of whispering woods": {
+      "id": 365936,
+      "title": "The Chronicles of Whispering Woods",
+      "genre": "Animal Fantasy"
+    },
+    "the quantum heist": {
+      "id": 386611,
+      "title": "The Quantum Heist",
+      "genre": "Quantum Fiction"
+    },
+    "beyond the known multiverse the chronicles of aether": {
+      "id": 545785,
+      "title": "Beyond the Known Multiverse: The Chronicles of Aether",
+      "genre": "Multiverse"
+    },
+    "the rise of echo": {
+      "id": 276776,
+      "title": "The Rise of ECHO",
+      "genre": "Artificial Intelligence"
+    },
+    "the enigma of the crimson mansion": {
+      "id": 575239,
+      "title": "The Enigma of the Crimson Mansion",
+      "genre": "Mystery Thriller"
+    },
+    "the heart of a duke": {
+      "id": 121941,
+      "title": "The Heart of a Duke",
+      "genre": "Regency Romance"
+    },
+    "a cosmic betrayal": {
+      "id": 886711,
+      "title": "A Cosmic Betrayal",
+      "genre": "Space Thriller"
+    },
+    "the laughing shadows": {
+      "id": 645479,
+      "title": "The Laughing Shadows",
+      "genre": "Apocalyptic Comedy"
+    },
+    "the virtuosos quest": {
+      "id": 761668,
+      "title": "The Virtuosos Quest",
+      "genre": "Virtual Reality"
+    },
+    "neighbors of hope": {
+      "id": 615686,
+      "title": "Neighbors of Hope",
+      "genre": "Suburban Drama"
+    },
+    "the enchanted crystals of saphira": {
+      "id": 195698,
+      "title": "The Enchanted Crystals of Saphira",
+      "genre": "Magical Girl"
+    },
+    "the comrades of fortune": {
+      "id": 306753,
+      "title": "The Comrades of Fortune",
+      "genre": "War Comedy"
+    },
+    "the odyssey of the starship perseverance": {
+      "id": 5669,
+      "title": "The Odyssey of the Starship Perseverance",
+      "genre": "Space Exploration"
+    },
+    "the ironwood chronicles the cogs of fate": {
+      "id": 694278,
+      "title": "The Ironwood Chronicles: The Cogs of Fate",
+      "genre": "Steampunk Fantasy"
+    },
+    "the jazzmans dilemma": {
+      "id": 615467,
+      "title": "The Jazzmans Dilemma",
+      "genre": "Noir Comedy"
+    },
+    "the struggle for hope": {
+      "id": 787792,
+      "title": "The Struggle for Hope",
+      "genre": "Social Commentary"
+    },
+    "the secret chronicles of sigma1": {
+      "id": 201154,
+      "title": "The Secret Chronicles of Sigma-1",
+      "genre": "Techno-Mystery"
+    },
+    "the galactic odyssey a tale of two planets": {
+      "id": 788500,
+      "title": "The Galactic Odyssey: A Tale of Two Planets",
+      "genre": "Science Fiction"
+    },
+    "the chronicles of the golden sceptre": {
+      "id": 130493,
+      "title": "The Chronicles of the Golden Sceptre",
+      "genre": "Fantasy"
+    },
+    "the enigma of the emerald crypt": {
+      "id": 468292,
+      "title": "The Enigma of the Emerald Crypt",
+      "genre": "Mystery"
+    },
+    "the saga of the scarlet swordsman a tale of adventure and heroism": {
+      "id": 500117,
+      "title": "The Saga of the Scarlet Swordsman: A Tale of Adventure and Heroism",
+      "genre": "Historical Adventure"
+    },
+    "the dark secret of mosswood manor": {
+      "id": 48105,
+      "title": "The Dark Secret of Mosswood Manor",
+      "genre": "Thriller"
+    },
+    "the chronicles of king arthur a tale of valor and betrayal": {
+      "id": 110407,
+      "title": "The Chronicles of King Arthur: A Tale of Valor and Betrayal",
+      "genre": "Historical Fiction"
+    },
+    "the chronicles of the lost treasure of zambara": {
+      "id": 23923,
+      "title": "The Chronicles of the Lost Treasure of Zambara",
+      "genre": "Adventure"
+    },
+    "the haunting of oakwood manor": {
+      "id": 442196,
+      "title": "The Haunting of Oakwood Manor",
+      "genre": "Horror"
+    },
+    "the great pasta heist": {
+      "id": 834422,
+      "title": "The Great Pasta Heist",
+      "genre": "Comedy"
+    },
+    "the unraveling web": {
+      "id": 179081,
+      "title": "The Unraveling Web",
+      "genre": "Crime"
+    },
+    "the last city": {
+      "id": 808416,
+      "title": "The Last City",
+      "genre": "Dystopian"
+    },
+    "the last bit": {
+      "id": 649338,
+      "title": "The Last Bit",
+      "genre": "Cyberpunk"
+    },
+    "the clockwork chronicles the gears of fate": {
+      "id": 86912,
+      "title": "The Clockwork Chronicles: The Gears of Fate",
+      "genre": "Steampunk"
+    },
+    "the last light": {
+      "id": 992935,
+      "title": "The Last Light",
+      "genre": "Post-Apocalyptic"
+    },
+    "the enchanted forest of eternal dreams": {
+      "id": 177773,
+      "title": "The Enchanted Forest of Eternal Dreams",
+      "genre": "Fairy Tale"
+    },
+    "the chronicles of aetheria the legend of the celestial blade": {
+      "id": 866302,
+      "title": "The Chronicles of Aetheria: The Legend of the Celestial Blade",
+      "genre": "Mythology"
+    },
+    "the vengeance of the dusty trail": {
+      "id": 113867,
+      "title": "The Vengeance of the Dusty Trail",
+      "genre": "Western"
+    },
+    "the battle for independence": {
+      "id": 56413,
+      "title": "The Battle for Independence",
+      "genre": "War"
+    },
+    "the shadow of the red phoenix": {
+      "id": 977256,
+      "title": "The Shadow of the Red Phoenix",
+      "genre": "Espionage"
+    },
+    "the chronicles of lightning storm a tale of heroism and villainy": {
+      "id": 354266,
+      "title": "The Chronicles of Lightning Storm: A Tale of Heroism and Villainy",
+      "genre": "Superhero"
+    },
+    "a tale of unlikely heroes": {
+      "id": 528724,
+      "title": "A Tale of Unlikely Heroes",
+      "genre": "Slice of Life"
+    },
+    "willows whispering secrets": {
+      "id": 710247,
+      "title": "Willows' Whispering Secrets",
+      "genre": "Magical Realism"
+    },
+    "the chronicles of the unseen realm": {
+      "id": 513612,
+      "title": "The Chronicles of the Unseen Realm",
+      "genre": "Alternate History"
+    },
+    "the chronicles of time the journey to save the future": {
+      "id": 352666,
+      "title": "The Chronicles of Time: The Journey to Save the Future",
+      "genre": "Time Travel"
+    },
+    "the haunting of willowbrook manor": {
+      "id": 119880,
+      "title": "The Haunting of Willowbrook Manor",
+      "genre": "Paranormal"
+    },
+    "the veil between": {
+      "id": 59952,
+      "title": "The Veil Between",
+      "genre": "Urban Fantasy"
+    },
+    "the tale of the unlikely heroes": {
+      "id": 845194,
+      "title": "The Tale of the Unlikely Heroes",
+      "genre": "Satire"
+    },
+    "the unyielding resolve": {
+      "id": 140331,
+      "title": "The Unyielding Resolve",
+      "genre": "Political Drama"
+    },
+    "the unraveling threads of destiny": {
+      "id": 416395,
+      "title": "The Unraveling Threads of Destiny",
+      "genre": "Coming-of-Age"
+    },
+    "soulful whispers": {
+      "id": 189231,
+      "title": "Soulful Whispers",
+      "genre": "Family Drama"
+    },
+    "galactic odyssey the quest for the celestial key": {
+      "id": 176006,
+      "title": "Galactic Odyssey: The Quest for the Celestial Key",
+      "genre": "Space Opera"
+    },
+    "the last day": {
+      "id": 177017,
+      "title": "The Last Day",
+      "genre": "Apocalyptic"
+    },
+    "the shadow of the midnight sun": {
+      "id": 299978,
+      "title": "The Shadow of the Midnight Sun",
+      "genre": "Noir"
+    },
+    "the legend of the whispering willows": {
+      "id": 896637,
+      "title": "The Legend of the Whispering Willows",
+      "genre": "Folklore"
+    },
+    "the verdict of justice": {
+      "id": 859889,
+      "title": "The Verdict of Justice",
+      "genre": "Legal Drama"
+    },
+    "a diamond in the rough the legend of matt the hammer johnson": {
+      "id": 875593,
+      "title": "A Diamond in the Rough: The Legend of Matt The Hammer Johnson",
+      "genre": "Sports"
+    },
+    "the great tortoise heist a tale of wits wackiness and whimsy": {
+      "id": 462524,
+      "title": "The Great Tortoise Heist: A Tale of Wits, Wackiness, and Whimsy",
+      "genre": "Humor"
+    },
+    "the unlikely hero the story of tom anderson": {
+      "id": 211396,
+      "title": "The Unlikely Hero: The Story of Tom Anderson",
+      "genre": "Biographical"
+    },
+    "the shadows of the past": {
+      "id": 670374,
+      "title": "The Shadows of the Past",
+      "genre": "Psychological Thriller"
+    },
+    "the hearts resilience": {
+      "id": 26776,
+      "title": "The Hearts Resilience",
+      "genre": "Medical Drama"
+    },
+    "the chronicles of the golden scroll": {
+      "id": 665360,
+      "title": "The Chronicles of the Golden Scroll",
+      "genre": "Historical Adventure"
+    },
+    "the unseen calamity": {
+      "id": 995391,
+      "title": "The Unseen Calamity",
+      "genre": "Disaster"
+    },
+    "the unbreakable spirit": {
+      "id": 788226,
+      "title": "The Unbreakable Spirit",
+      "genre": "Inspirational"
+    },
+    "the whispering manor": {
+      "id": 705478,
+      "title": "The Whispering Manor",
+      "genre": "Gothic"
+    },
+    "the chronicles of elara the quest for the lost relic": {
+      "id": 242904,
+      "title": "The Chronicles of Elara: The Quest for the Lost Relic",
+      "genre": "Experimental"
+    },
+    "whispers of the heart": {
+      "id": 556409,
+      "title": "Whispers of the Heart",
+      "genre": "Artistic Drama"
+    },
+    "the chronicles of whiskerton a tale of brave mice and fearsome cats": {
+      "id": 80574,
+      "title": "The Chronicles of Whiskerton: A Tale of Brave Mice and Fearsome Cats",
+      "genre": "Animal Fiction"
+    },
+    "the last whisper of the rainforest": {
+      "id": 104693,
+      "title": "The Last Whisper of the Rainforest",
+      "genre": "Environmental"
+    },
+    "the cyber war": {
+      "id": 969944,
+      "title": "The Cyber War",
+      "genre": "Techno-Thriller"
+    },
+    "the chronicles of the redwood forest": {
+      "id": 975337,
+      "title": "The Chronicles of the Redwood Forest",
+      "genre": "Alternate Reality"
+    },
+    "the utopian paradise": {
+      "id": 339885,
+      "title": "The Utopian Paradise",
+      "genre": "Utopian"
+    },
+    "the enigmatic case of the missing paintings": {
+      "id": 620759,
+      "title": "The Enigmatic Case of the Missing Paintings",
+      "genre": "Mystery Comedy"
+    },
+    "love in the time of kings and queens": {
+      "id": 840991,
+      "title": "Love in the Time of Kings and Queens",
+      "genre": "Historical Romance"
+    },
+    "galactic desperadoes the vengeance of zephyr": {
+      "id": 154602,
+      "title": "Galactic Desperadoes: The Vengeance of Zephyr",
+      "genre": "Space Western"
+    },
+    "the quantum odyssey": {
+      "id": 771740,
+      "title": "The Quantum Odyssey",
+      "genre": "Hard Science Fiction"
+    },
+    "the chronicles of aurora the quest for the lost stars": {
+      "id": 89985,
+      "title": "The Chronicles of Aurora: The Quest for the Lost Stars",
+      "genre": "Soft Science Fiction"
+    },
+    "the desolate dawn": {
+      "id": 848533,
+      "title": "The Desolate Dawn",
+      "genre": "Survival"
+    },
+    "the journey of wisdom": {
+      "id": 762203,
+      "title": "The Journey of Wisdom",
+      "genre": "Philosophical Fiction"
+    },
+    "tales of the unlikely heroes": {
+      "id": 487585,
+      "title": "Tales of the Unlikely Heroes",
+      "genre": "Anthology"
+    },
+    "the chronicles of elysium the rise of the unseen": {
+      "id": 983561,
+      "title": "The Chronicles of Elysium: The Rise of the Unseen",
+      "genre": "Futuristic"
+    },
+    "the chronicles of the celestial order": {
+      "id": 754553,
+      "title": "The Chronicles of the Celestial Order",
+      "genre": "Religious Fiction"
+    },
+    "the unwavering vanguard": {
+      "id": 3894,
+      "title": "The Unwavering Vanguard",
+      "genre": "Military Fiction"
+    },
+    "the voyage of the dauntless dreamer": {
+      "id": 704387,
+      "title": "The Voyage of the Dauntless Dreamer",
+      "genre": "Nautical Fiction"
+    },
+    "the chronicles of the fractured realm": {
+      "id": 146528,
+      "title": "The Chronicles of the Fractured Realm",
+      "genre": "Alternate Dimension"
+    },
+    "whispers among the trees": {
+      "id": 998783,
+      "title": "Whispers Among the Trees",
+      "genre": "Psychological Horror"
+    },
+    "the secrets of willowbrook lane": {
+      "id": 663357,
+      "title": "The Secrets of Willowbrook Lane",
+      "genre": "Domestic Fiction"
+    },
+    "the unraveling threads of middle age": {
+      "id": 765106,
+      "title": "The Unraveling Threads of Middle Age",
+      "genre": "Coming-of-Middle-Age"
+    },
+    "the enigma of the emerald heart": {
+      "id": 1789,
+      "title": "The Enigma of the Emerald Heart",
+      "genre": "Medical Mystery"
+    },
+    "the whispering willows": {
+      "id": 588128,
+      "title": "The Whispering Willows",
+      "genre": "Existential Drama"
+    },
+    "the case of the missing heirloom": {
+      "id": 308378,
+      "title": "The Case of the Missing Heirloom",
+      "genre": "Detective Fiction"
+    },
+    "the office intrigue": {
+      "id": 638596,
+      "title": "The Office Intrigue",
+      "genre": "Workplace Drama"
+    },
+    "the enigma of shadow valley": {
+      "id": 755329,
+      "title": "The Enigma of Shadow Valley",
+      "genre": "Spy Fiction"
+    },
+    "the cryptic codes": {
+      "id": 534747,
+      "title": "The Cryptic Codes",
+      "genre": "Technological Thriller"
+    },
+    "the enchanted realm": {
+      "id": 168401,
+      "title": "The Enchanted Realm",
+      "genre": "Romantic Fantasy"
+    },
+    "the timeloop chronicles echoes of fate": {
+      "id": 939455,
+      "title": "The Time-Loop Chronicles: Echoes of Fate",
+      "genre": "Time-Loop"
+    },
+    "the bridge between generations": {
+      "id": 319464,
+      "title": "The Bridge Between Generations",
+      "genre": "Generation Gap"
+    },
+    "the tale of the puppet president": {
+      "id": 465131,
+      "title": "The Tale of the Puppet President",
+      "genre": "Political Satire"
+    },
+    "the shadows of the veil": {
+      "id": 187256,
+      "title": "The Shadows of the Veil",
+      "genre": "Supernatural Drama"
+    },
+    "the chronicles of the golden amulet": {
+      "id": 411772,
+      "title": "The Chronicles of the Golden Amulet",
+      "genre": "Mythic Fiction"
+    },
+    "the eternal dance of life": {
+      "id": 413372,
+      "title": "The Eternal Dance of Life",
+      "genre": "Evolutionary Fiction"
+    },
+    "the dreamweavers secret": {
+      "id": 31953,
+      "title": "The Dreamweavers Secret",
+      "genre": "Dreamlike"
+    },
+    "the curious case of the missing lemonade stand": {
+      "id": 975046,
+      "title": "The Curious Case of the Missing Lemonade Stand",
+      "genre": "Philosophical Comedy"
+    },
+    "the chronicles of the supernatural comedy": {
+      "id": 610650,
+      "title": "The Chronicles of the Supernatural Comedy",
+      "genre": "Supernatural Comedy"
+    },
+    "the chronicles of whiskerton a tale of tails and triumph": {
+      "id": 338376,
+      "title": "The Chronicles of Whiskerton: A Tale of Tails and Triumph",
+      "genre": "Animal Fantasy"
+    },
+    "quantum leap of faith": {
+      "id": 651505,
+      "title": "Quantum Leap of Faith",
+      "genre": "Quantum Fiction"
+    },
+    "the chronicles of the multiverse the quest for the cosmic keystones": {
+      "id": 368668,
+      "title": "The Chronicles of the Multiverse: The Quest for the Cosmic Keystones",
+      "genre": "Multiverse"
+    },
+    "the awakening of ai chronicles": {
+      "id": 396078,
+      "title": "The Awakening of AI Chronicles",
+      "genre": "Artificial Intelligence"
+    },
+    "the unraveling threads": {
+      "id": 387572,
+      "title": "The Unraveling Threads",
+      "genre": "Mystery Thriller"
+    },
+    "the elegant enchantress": {
+      "id": 891788,
+      "title": "The Elegant Enchantress",
+      "genre": "Regency Romance"
+    },
+    "the starship chronicles the hunt for the dark star": {
+      "id": 844581,
+      "title": "The Starship Chronicles: The Hunt for the Dark Star",
+      "genre": "Space Thriller"
+    },
+    "the last laugh": {
+      "id": 933775,
+      "title": "The Last Laugh",
+      "genre": "Apocalyptic Comedy"
+    },
+    "the virtuosphere": {
+      "id": 310623,
+      "title": "The Virtuosphere",
+      "genre": "Virtual Reality"
+    },
+    "neighbors of willowbrook": {
+      "id": 479352,
+      "title": "Neighbors of Willowbrook",
+      "genre": "Suburban Drama"
+    },
+    "the enchanted realm of the celestial unicorns": {
+      "id": 706746,
+      "title": "The Enchanted Realm of the Celestial Unicorns",
+      "genre": "Magical Girl"
+    },
+    "war of the humorous kind": {
+      "id": 288458,
+      "title": "War of the Humorous Kind",
+      "genre": "War Comedy"
+    },
+    "the odyssey of the starship endeavor": {
+      "id": 606858,
+      "title": "The Odyssey of the Starship Endeavor",
+      "genre": "Space Exploration"
+    },
+    "the chronicles of ironweaver": {
+      "id": 154576,
+      "title": "The Chronicles of Ironweaver",
+      "genre": "Steampunk Fantasy"
+    },
+    "the curious case of the disappearing diamonds": {
+      "id": 948393,
+      "title": "The Curious Case of the Disappearing Diamonds",
+      "genre": "Noir Comedy"
+    },
+    "the struggle for equality": {
+      "id": 964868,
+      "title": "The Struggle for Equality",
+      "genre": "Social Commentary"
+    },
+    "codebreakers chronicles": {
+      "id": 831025,
+      "title": "Codebreaker's Chronicles",
+      "genre": "Techno-Mystery"
+    },
+    "cosmic leap into the unknown": {
+      "id": 734908,
+      "title": "Cosmic Leap into the Unknown",
+      "genre": "Science Fiction"
+    },
+    "the verdant spell": {
+      "id": 961666,
+      "title": "The Verdant Spell",
+      "genre": "Fantasy"
+    },
+    "the vanishing treasure": {
+      "id": 533303,
+      "title": "The Vanishing Treasure",
+      "genre": "Mystery"
+    },
+    "the sword of valor": {
+      "id": 335314,
+      "title": "The Sword of Valor",
+      "genre": "Historical Adventure"
+    },
+    "the strangers secret": {
+      "id": 80251,
+      "title": "The Strangers Secret",
+      "genre": "Thriller"
+    },
+    "the gift of time": {
+      "id": 701443,
+      "title": "The Gift of Time",
+      "genre": "Historical Fiction"
+    },
+    "the treasure of lost canyon": {
+      "id": 97512,
+      "title": "The Treasure of Lost Canyon",
+      "genre": "Adventure"
+    },
+    "the dark corner": {
+      "id": 552359,
+      "title": "The Dark Corner",
+      "genre": "Horror"
+    },
+    "the great pretzel heist": {
+      "id": 286480,
+      "title": "The Great Pretzel Heist",
+      "genre": "Comedy"
+    },
+    "the night of the stolen gems": {
+      "id": 77278,
+      "title": "The Night of the Stolen Gems",
+      "genre": "Crime"
+    },
+    "sunsets last glow": {
+      "id": 806796,
+      "title": "Sunset's Last Glow",
+      "genre": "Dystopian"
+    },
+    "neon eclipse": {
+      "id": 443109,
+      "title": "Neon Eclipse",
+      "genre": "Cyberpunk"
+    },
+    "the brass goggles": {
+      "id": 688927,
+      "title": "The Brass Goggles",
+      "genre": "Steampunk"
+    },
+    "last sunset": {
+      "id": 969822,
+      "title": "Last Sunset",
+      "genre": "Post-Apocalyptic"
+    },
+    "the enchanted flute": {
+      "id": 461804,
+      "title": "The Enchanted Flute",
+      "genre": "Fairy Tale"
+    },
+    "the cave of whispers": {
+      "id": 439674,
+      "title": "The Cave of Whispers",
+      "genre": "Mythology"
+    },
+    "the gunslingers redemption": {
+      "id": 452488,
+      "title": "The Gunslingers Redemption",
+      "genre": "Western"
+    },
+    "the final battle": {
+      "id": 166845,
+      "title": "The Final Battle",
+      "genre": "War"
+    },
+    "the secret deal": {
+      "id": 90115,
+      "title": "The Secret Deal",
+      "genre": "Espionage"
+    },
+    "the shining star": {
+      "id": 710800,
+      "title": "The Shining Star",
+      "genre": "Superhero"
+    },
+    "a day in the park": {
+      "id": 984293,
+      "title": "A Day in the Park",
+      "genre": "Slice of Life"
+    },
+    "the whispering wind": {
+      "id": 288748,
+      "title": "The Whispering Wind",
+      "genre": "Magical Realism"
+    },
+    "the timeless clock": {
+      "id": 390933,
+      "title": "The Timeless Clock",
+      "genre": "Alternate History"
+    },
+    "the time keeper": {
+      "id": 175866,
+      "title": "The Time Keeper",
+      "genre": "Time Travel"
+    },
+    "the shadowy visitor": {
+      "id": 642739,
+      "title": "The Shadowy Visitor",
+      "genre": "Paranormal"
+    },
+    "the enchanted city": {
+      "id": 359094,
+      "title": "The Enchanted City",
+      "genre": "Urban Fantasy"
+    },
+    "the emperors new clothes": {
+      "id": 917485,
+      "title": "The Emperors New Clothes",
+      "genre": "Satire"
+    },
+    "the great compromise": {
+      "id": 810884,
+      "title": "The Great Compromise",
+      "genre": "Political Drama"
+    },
+    "the first bicycle": {
+      "id": 403205,
+      "title": "The First Bicycle",
+      "genre": "Coming-of-Age"
+    },
+    "a fathers compassion": {
+      "id": 352251,
+      "title": "A Fathers Compassion",
+      "genre": "Family Drama"
+    },
+    "the starfarers dilemma": {
+      "id": 313112,
+      "title": "The Starfarers Dilemma",
+      "genre": "Space Opera"
+    },
+    "the last sunrise": {
+      "id": 64414,
+      "title": "The Last Sunrise",
+      "genre": "Apocalyptic"
+    },
+    "the shadow of midnight": {
+      "id": 228442,
+      "title": "The Shadow of Midnight",
+      "genre": "Noir"
+    },
+    "the enchanted forest": {
+      "id": 416623,
+      "title": "The Enchanted Forest",
+      "genre": "Folklore"
+    },
+    "the final verdict": {
+      "id": 957704,
+      "title": "The Final Verdict",
+      "genre": "Legal Drama"
+    },
+    "the unbeatable striker": {
+      "id": 509386,
+      "title": "The Unbeatable Striker",
+      "genre": "Sports"
+    },
+    "the great pet swap": {
+      "id": 896668,
+      "title": "The Great Pet Swap",
+      "genre": "Humor"
+    },
+    "the painters dream": {
+      "id": 15638,
+      "title": "The Painters Dream",
+      "genre": "Biographical"
+    },
+    "the whispering shadows": {
+      "id": 119315,
+      "title": "The Whispering Shadows",
+      "genre": "Psychological Thriller"
+    },
+    "a second chance": {
+      "id": 401854,
+      "title": "A Second Chance",
+      "genre": "Medical Drama"
+    },
+    "the quest for the lost treasure": {
+      "id": 783503,
+      "title": "The Quest for the Lost Treasure",
+      "genre": "Historical Adventure"
+    },
+    "the great flood": {
+      "id": 82963,
+      "title": "The Great Flood",
+      "genre": "Disaster"
+    },
+    "the unlikely hero": {
+      "id": 571525,
+      "title": "The Unlikely Hero",
+      "genre": "Inspirational"
+    },
+    "the house of shadows": {
+      "id": 173873,
+      "title": "The House of Shadows",
+      "genre": "Gothic"
+    },
+    "the red balloon": {
+      "id": 191474,
+      "title": "The Red Balloon",
+      "genre": "Experimental"
+    },
+    "the painters canvas": {
+      "id": 939362,
+      "title": "The Painters Canvas",
+      "genre": "Artistic Drama"
+    },
+    "the great elephant race": {
+      "id": 915274,
+      "title": "The Great Elephant Race",
+      "genre": "Animal Fiction"
+    },
+    "the last tree": {
+      "id": 307829,
+      "title": "The Last Tree",
+      "genre": "Environmental"
+    },
+    "the digital fortress": {
+      "id": 71620,
+      "title": "The Digital Fortress",
+      "genre": "Techno-Thriller"
+    },
+    "the clockwork city": {
+      "id": 673610,
+      "title": "The Clockwork City",
+      "genre": "Alternate Reality"
+    },
+    "the land of harmony": {
+      "id": 635663,
+      "title": "The Land of Harmony",
+      "genre": "Utopian"
+    },
+    "the mystery of the missing cake": {
+      "id": 764757,
+      "title": "The Mystery of the Missing Cake",
+      "genre": "Mystery Comedy"
+    },
+    "the moonlit serenade": {
+      "id": 365812,
+      "title": "The Moonlit Serenade",
+      "genre": "Historical Romance"
+    },
+    "galactic marshal": {
+      "id": 577686,
+      "title": "Galactic Marshal",
+      "genre": "Space Western"
+    },
+    "the quantum cipher": {
+      "id": 204600,
+      "title": "The Quantum Cipher",
+      "genre": "Hard Science Fiction"
+    },
+    "the celestial artist": {
+      "id": 780246,
+      "title": "The Celestial Artist",
+      "genre": "Soft Science Fiction"
+    },
+    "the desert odyssey": {
+      "id": 613059,
+      "title": "The Desert Odyssey",
+      "genre": "Survival"
+    },
+    "the choice": {
+      "id": 773005,
+      "title": "The Choice",
+      "genre": "Philosophical Fiction"
+    },
+    "the golden butterfly": {
+      "id": 329622,
+      "title": "The Golden Butterfly",
+      "genre": "Anthology"
+    },
+    "the last sunset": {
+      "id": 62051,
+      "title": "The Last Sunset",
+      "genre": "Futuristic"
+    },
+    "the miracle of faith": {
+      "id": 955225,
+      "title": "The Miracle of Faith",
+      "genre": "Religious Fiction"
+    },
+    "the last stand": {
+      "id": 113548,
+      "title": "The Last Stand",
+      "genre": "Military Fiction"
+    },
+    "the wreck of the lighthouse": {
+      "id": 560800,
+      "title": "The Wreck of the Lighthouse",
+      "genre": "Nautical Fiction"
+    },
+    "the shifted reality": {
+      "id": 774128,
+      "title": "The Shifted Reality",
+      "genre": "Alternate Dimension"
+    },
+    "the shadows": {
+      "id": 836024,
+      "title": "The Shadows",
+      "genre": "Psychological Horror"
+    },
+    "the little library": {
+      "id": 944938,
+      "title": "The Little Library",
+      "genre": "Domestic Fiction"
+    },
+    "the new beginning": {
+      "id": 762868,
+      "title": "The New Beginning",
+      "genre": "Coming-of-Middle-Age"
+    },
+    "the enigmatic illness": {
+      "id": 637806,
+      "title": "The Enigmatic Illness",
+      "genre": "Medical Mystery"
+    },
+    "the unanswered question": {
+      "id": 854239,
+      "title": "The Unanswered Question",
+      "genre": "Existential Drama"
+    },
+    "the vanishing violinist": {
+      "id": 57985,
+      "title": "The Vanishing Violinist",
+      "genre": "Detective Fiction"
+    },
+    "the meeting": {
+      "id": 966267,
+      "title": "The Meeting",
+      "genre": "Workplace Drama"
+    },
+    "the invisible hand": {
+      "id": 506286,
+      "title": "The Invisible Hand",
+      "genre": "Spy Fiction"
+    },
+    "the unseen invasion": {
+      "id": 41405,
+      "title": "The Unseen Invasion",
+      "genre": "Technological Thriller"
+    },
+    "the enchanted garden": {
+      "id": 789489,
+      "title": "The Enchanted Garden",
+      "genre": "Romantic Fantasy"
+    },
+    "the eternal day": {
+      "id": 68052,
+      "title": "The Eternal Day",
+      "genre": "Time-Loop"
+    },
+    "the old radio and the new headphones": {
+      "id": 568507,
+      "title": "The Old Radio and The New Headphones",
+      "genre": "Generation Gap"
+    },
+    "the election of the century": {
+      "id": 723776,
+      "title": "The Election of the Century",
+      "genre": "Political Satire"
+    },
+    "the haunting melody": {
+      "id": 468071,
+      "title": "The Haunting Melody",
+      "genre": "Supernatural Drama"
+    },
+    "the celestial riddle": {
+      "id": 400975,
+      "title": "The Celestial Riddle",
+      "genre": "Mythic Fiction"
+    },
+    "the seeds of change": {
+      "id": 704453,
+      "title": "The Seeds of Change",
+      "genre": "Evolutionary Fiction"
+    },
+    "the whispering trees": {
+      "id": 794808,
+      "title": "The Whispering Trees",
+      "genre": "Dreamlike"
+    },
+    "the philosophers capers": {
+      "id": 794386,
+      "title": "The Philosophers Capers",
+      "genre": "Philosophical Comedy"
+    },
+    "the spectral barber": {
+      "id": 736115,
+      "title": "The Spectral Barber",
+      "genre": "Supernatural Comedy"
+    },
+    "the lions roar": {
+      "id": 662254,
+      "title": "The Lions Roar",
+      "genre": "Animal Fantasy"
+    },
+    "the quantum leap": {
+      "id": 414660,
+      "title": "The Quantum Leap",
+      "genre": "Quantum Fiction"
+    },
+    "the multiverse mirror": {
+      "id": 736179,
+      "title": "The Multiverse Mirror",
+      "genre": "Multiverse"
+    },
+    "the dawn of cognition": {
+      "id": 891147,
+      "title": "The Dawn of Cognition",
+      "genre": "Artificial Intelligence"
+    },
+    "the vanishing painter": {
+      "id": 958073,
+      "title": "The Vanishing Painter",
+      "genre": "Mystery Thriller"
+    },
+    "a sparkling encounter": {
+      "id": 587988,
+      "title": "A Sparkling Encounter",
+      "genre": "Regency Romance"
+    },
+    "the black hole chronicles": {
+      "id": 56702,
+      "title": "The Black Hole Chronicles",
+      "genre": "Space Thriller"
+    },
+    "the final countdown": {
+      "id": 317312,
+      "title": "The Final Countdown",
+      "genre": "Apocalyptic Comedy"
+    },
+    "the virtual escape": {
+      "id": 77833,
+      "title": "The Virtual Escape",
+      "genre": "Virtual Reality"
+    },
+    "neighborly tensions": {
+      "id": 638246,
+      "title": "Neighborly Tensions",
+      "genre": "Suburban Drama"
+    },
+    "the enchanted scepter": {
+      "id": 52242,
+      "title": "The Enchanted Scepter",
+      "genre": "Magical Girl"
+    },
+    "the unlikely heroes of fort bumble": {
+      "id": 397513,
+      "title": "The Unlikely Heroes of Fort Bumble",
+      "genre": "War Comedy"
+    },
+    "the asteroids secret": {
+      "id": 489018,
+      "title": "The Asteroids Secret",
+      "genre": "Space Exploration"
+    },
+    "the gears of destiny": {
+      "id": 689389,
+      "title": "The Gears of Destiny",
+      "genre": "Steampunk Fantasy"
+    },
+    "the great heist": {
+      "id": 157117,
+      "title": "The Great Heist",
+      "genre": "Noir Comedy"
+    },
+    "the unseen world": {
+      "id": 170613,
+      "title": "The Unseen World",
+      "genre": "Social Commentary"
+    },
+    "the cryptic code": {
+      "id": 850546,
+      "title": "The Cryptic Code",
+      "genre": "Techno-Mystery"
+    }
+  },
+  "genres": [
+    "Adventure",
+    "Alternate Dimension",
+    "Alternate History",
+    "Alternate Reality",
+    "Animal Fantasy",
+    "Animal Fiction",
+    "Anthology",
+    "Apocalyptic",
+    "Apocalyptic Comedy",
+    "Artificial Intelligence",
+    "Artistic Drama",
+    "Biographical",
+    "Comedy",
+    "Coming-of-Age",
+    "Coming-of-Middle-Age",
+    "Crime",
+    "Cyberpunk",
+    "Detective Fiction",
+    "Disaster",
+    "Domestic Fiction",
+    "Dreamlike",
+    "Dystopian",
+    "Environmental",
+    "Espionage",
+    "Evolutionary Fiction",
+    "Existential Drama",
+    "Experimental",
+    "Fairy Tale",
+    "Family Drama",
+    "Fantasy",
+    "Folklore",
+    "Futuristic",
+    "Generation Gap",
+    "Gothic",
+    "Hard Science Fiction",
+    "Historical Adventure",
+    "Historical Fiction",
+    "Historical Romance",
+    "Horror",
+    "Humor",
+    "Inspirational",
+    "Legal Drama",
+    "Magical Girl",
+    "Magical Realism",
+    "Medical Drama",
+    "Medical Mystery",
+    "Military Fiction",
+    "Multiverse",
+    "Mystery",
+    "Mystery Comedy",
+    "Mystery Thriller",
+    "Mythic Fiction",
+    "Mythology",
+    "Nautical Fiction",
+    "Noir",
+    "Noir Comedy",
+    "Paranormal",
+    "Philosophical Comedy",
+    "Philosophical Fiction",
+    "Political Drama",
+    "Political Satire",
+    "Post-Apocalyptic",
+    "Psychological Horror",
+    "Psychological Thriller",
+    "Quantum Fiction",
+    "Regency Romance",
+    "Religious Fiction",
+    "Romantic Fantasy",
+    "Satire",
+    "Science Fiction",
+    "Slice of Life",
+    "Social Commentary",
+    "Soft Science Fiction",
+    "Space Exploration",
+    "Space Opera",
+    "Space Thriller",
+    "Space Western",
+    "Sports",
+    "Spy Fiction",
+    "Steampunk",
+    "Steampunk Fantasy",
+    "Suburban Drama",
+    "Superhero",
+    "Supernatural Comedy",
+    "Supernatural Drama",
+    "Survival",
+    "Techno-Mystery",
+    "Techno-Thriller",
+    "Technological Thriller",
+    "Thriller",
+    "Time Travel",
+    "Time-Loop",
+    "Urban Fantasy",
+    "Utopian",
+    "Virtual Reality",
+    "War",
+    "War Comedy",
+    "Western",
+    "Workplace Drama"
+  ]
+}

@@ -1,0 +1,7 @@
+# pip install -r requirements.txt   (installs storybot itself in editable mode)
+-e .
+torch
+transformers>=4.48      # ModernBERT support starts at 4.48
+datasets                # first download of the dataset only
+qdrant-client[fastembed]>=1.12
+pytest
