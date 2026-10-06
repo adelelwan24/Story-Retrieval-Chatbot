@@ -4,9 +4,8 @@ __pycache__/
 .ipynb_checkpoints/
 # big or generated files live on Google Drive, not in git
 artifacts/
-qdrant_data/
+# qdrant_data/
 *.parquet
 *.gguf
 *.onnx
 *.safetensors
-.venv

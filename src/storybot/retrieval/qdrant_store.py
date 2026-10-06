@@ -86,12 +86,13 @@ def create_collections(client: QdrantClient, dim: int, chunks: str = "story_chun
         client.create_payload_index(chunks, "story_id",
                                     m.PayloadSchemaType.INTEGER if int_ids else m.PayloadSchemaType.KEYWORD)
         client.create_payload_index(chunks, "chunk_index", m.PayloadSchemaType.INTEGER)
+        client.create_payload_index(chunks, "title", m.PayloadSchemaType.KEYWORD)
 
     if not client.collection_exists(stories):
         client.create_collection(stories, vectors_config={})   # payload only
         client.create_payload_index(stories, "genre", m.PayloadSchemaType.KEYWORD)
-        # client.create_payload_index(stories, "title_lower", m.PayloadSchemaType.KEYWORD)
-        client.create_payload_index(stories, "title", m.PayloadSchemaType.KEYWORD)
+        client.create_payload_index(stories, "title", m.PayloadSchemaType.KEYWORD)   # exact original-title lookups
+        client.create_payload_index(stories, "title_lower", m.PayloadSchemaType.KEYWORD)
 
 
 def upsert_chunks(client: QdrantClient, collection: str, payloads: Sequence[dict],
@@ -115,8 +116,7 @@ def upsert_chunks(client: QdrantClient, collection: str, payloads: Sequence[dict
 def upsert_stories(client: QdrantClient, collection: str, df, batch: int = 256) -> int:
     points = [
         m.PointStruct(id=story_point_id(r.id), vector={},
-                      payload={"story_id": _py(r.id), "title": r.title, 
-                            #    "title_lower": r.title.strip().lower(),
+                      payload={"story_id": _py(r.id), "title": r.title, "title_lower": r.title.strip().lower(),
                                "genre": r.genre, "full_text": r.story})
         for r in df.itertuples()
     ]

@@ -13,10 +13,12 @@ dependencies = [
     "pyarrow",
     "pyyaml",
     "qdrant-client[fastembed]>=1.12",
+    "rapidfuzz>=3",
+    "truststore>=0.10.4",
 ]
 
 [project.optional-dependencies]
-gpu = ["torch", "transformers>=4.48", "datasets", "accelerate"]
+gpu = ["torch", "transformers>=4.51", "datasets", "accelerate", "bitsandbytes"]
 dev = ["pytest"]
 
 [tool.setuptools.packages.find]

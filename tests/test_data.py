@@ -3,6 +3,7 @@ import json
 import pandas as pd
 import pytest
 
+from storybot.data.load import load_story_metadata
 from storybot.data import attach_split, load_or_create_split, load_stories, make_split, save_stories
 
 
@@ -35,3 +36,17 @@ def test_split_is_stratified_frozen_and_complete(tmp_path):
     assert attach_split(df, s1)["split"].notna().all()
     with pytest.raises(ValueError):
         attach_split(pd.concat([df, df.head(1).assign(id=5000)]), s1)
+
+
+def test_similar_titles_get_vol_suffix_and_metadata(tmp_path, metadata_in_tmp):
+    df = pd.DataFrame({"id": [1, 2, 3, 4], "genre": ["A", "A", "B", "B"], "story": "s",
+                       "title": ["The Ship", "the ship!", "The  Ship", "Other"]})
+    out = load_stories(save_stories(df, tmp_path / "s.parquet"))
+    assert out["title"].tolist() == ["The Ship", "the ship! - Vol 2", "The  Ship - Vol 3", "Other"]
+    meta = load_story_metadata()
+    assert meta["genres"] == {"A", "B"}
+    assert meta["title_map"]["the ship vol 2"] == {"id": 2, "title": "the ship! - Vol 2", "genre": "A"}
+    assert len(meta["title_map"]) == 4
+    # loading the saved (already renamed) copy again does not add a second suffix
+    again = load_stories(save_stories(out, tmp_path / "s2.parquet"))
+    assert again["title"].tolist() == out["title"].tolist()

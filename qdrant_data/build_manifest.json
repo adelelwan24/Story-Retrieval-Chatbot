@@ -1,0 +1,19 @@
+{
+ "embedding_model": "nomic-ai/modernbert-embed-base",
+ "dim": 768,
+ "chunking": {
+  "chunk_tokens": 400,
+  "overlap_tokens": 50,
+  "whole_story_max": 1000
+ },
+ "n_stories": 1000,
+ "n_chunks": 4041,
+ "late_chunk_fallbacks": 0,
+ "seconds": {
+  "late": 2880.5,
+  "prefix": 6350.0,
+  "sparse": 2.2,
+  "total": 9261.5
+ },
+ "built_at": "2026-10-05 17:06:34"
+}

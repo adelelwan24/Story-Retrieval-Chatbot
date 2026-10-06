@@ -20,6 +20,12 @@ def load_config(path: str | Path = PROJECT_ROOT / "configs" / "retrieval.yaml", 
     with open(path) as f:
         raw = yaml.safe_load(f)
     raw.update({k: v for k, v in overrides.items() if v is not None})
+    # data.*_path entries become absolute here, so code that reads them directly
+    # (e.g. cfg.data.metadata_path) does not depend on the working directory
+    root = Path(raw.get("root") or PROJECT_ROOT)
+    for k, v in (raw.get("data") or {}).items():
+        if k.endswith("_path") and v and not Path(v).is_absolute():
+            raw["data"][k] = str(root / v)
     return _ns(raw)
 
 

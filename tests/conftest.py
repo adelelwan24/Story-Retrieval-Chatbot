@@ -24,6 +24,17 @@ def make_stories(n=8, long_every=3):
     return pd.DataFrame(rows)
 
 
+@pytest.fixture(autouse=True)
+def metadata_in_tmp(tmp_path, monkeypatch):
+    """load_stories() writes story_metadata.json to a default path fixed at import time;
+    point it at the test's tmp dir so tests never touch the project's data/ folder."""
+    import storybot.data.load as load
+    path = str(tmp_path / "data" / "story_metadata.json")
+    monkeypatch.setattr(load.save_story_metadata, "__defaults__", (path,))
+    monkeypatch.setattr(load.load_story_metadata, "__defaults__", (path,))
+    return path
+
+
 @pytest.fixture
 def stories():
     return make_stories()

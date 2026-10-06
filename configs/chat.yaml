@@ -1,0 +1,36 @@
+# Story agent settings (scripts/chat.py, storybot.chat.build_agent).
+# Retrieval settings (Qdrant path, embedding model, metadata file) stay in retrieval.yaml.
+
+llm:
+  backend: openai                          # hf = transformers on this machine (GPU); openai = OpenAI-compatible server
+  model: Qwen/Qwen3-4B-Instruct-2507   # hf backend
+  load_in_4bit: true                   # NF4 via bitsandbytes, CUDA only; CPU loads full precision
+  base_url: https://openrouter.ai/api/v1   # openai backend: llama-server --jinja, vLLM or Ollama
+  # server_model: google/gemma-4-26b-a4b-it     # model name the server expects
+  server_model: Qwen/Qwen3.5-9B     # model name the server expects
+
+  api_key: sk-or-v1-add-yours
+
+
+  max_new_tokens: 768
+  temperature: 0.0                     # greedy: tool choice and arguments stay reproducible
+
+agent:
+  max_steps: 6                         # tool rounds before the agent must answer
+  max_observation_chars: 12000         # tool results longer than this are cut before the LLM sees them
+  history_turns: 4                     # past user/answer pairs kept for follow-ups ("summarize it")
+
+tools:
+  title_threshold: 85                  # fuzzy title score (0-100) needed to accept a title match
+  genre_threshold: 80                  # fuzzy genre score needed to use the genre as a filter
+  dense_vector: dense_late             # dense_late (late chunking) or dense_prefix (baseline)
+  prefetch_limit: 100                  # candidates per retriever (dense, BM25) before RRF fusion
+  default_num_stories: 6               # theme searches return at least this many different stories
+  max_num_stories: 20
+  passages_per_story: 2                # best chunks shown per story in search results
+  snippet_chars: 300                   # passage preview length in search results
+  num_passages: 4                      # passages returned by ask_about_story for long stories
+  full_story_chars: 6000               # ask_about_story gives stories up to this size whole
+  max_story_chars: 12000               # cap on story text inside one observation
+  summary_chunk_chars: 10000           # longer stories are summarised part by part, then merged
+  list_limit: 50
