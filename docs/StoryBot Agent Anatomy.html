@@ -1,0 +1,399 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>StoryBot Agent Anatomy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column; diagram and tables break out to a wider track and scroll inside themselves */
+:root {
+  --bg: #f3f5f7;
+  --surface: #ffffff;
+  --ink: #17212b;
+  --muted: #5a6876;
+  --line: #d3dbe3;
+  --accent: #0f6e7a;
+  --thought: #6b4fb8;
+  --action: #0f6e7a;
+  --obs: #a3620a;
+  --answer: #2f7a3a;
+  --tint-thought: #efeafb;
+  --tint-action: #e3f2f3;
+  --tint-obs: #fbf0dd;
+  --tint-answer: #e6f3e7;
+  --code-bg: #eaeef2;
+  --f-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --f-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11171d; --surface: #18212a; --ink: #e4eaf0; --muted: #9aa8b5; --line: #2c3946;
+    --accent: #4fc0cc; --thought: #b39cf0; --action: #4fc0cc; --obs: #e9a84a; --answer: #7fcb88;
+    --tint-thought: #251f3a; --tint-action: #13303a; --tint-obs: #33270f; --tint-answer: #17301b;
+    --code-bg: #1f2a35; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11171d; --surface: #18212a; --ink: #e4eaf0; --muted: #9aa8b5; --line: #2c3946;
+  --accent: #4fc0cc; --thought: #b39cf0; --action: #4fc0cc; --obs: #e9a84a; --answer: #7fcb88;
+  --tint-thought: #251f3a; --tint-action: #13303a; --tint-obs: #33270f; --tint-answer: #17301b;
+  --code-bg: #1f2a35; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 16px/1.6 var(--f-body); padding-inline: 16px; padding-block: 0 64px; }
+.wrap { max-width: 980px; margin: 0 auto; display: grid; gap: 56px; }
+.col { max-width: 700px; }
+header { padding-top: 48px; display: grid; gap: 14px; }
+.eyebrow { font: 500 12px/1 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+h1 { font: 700 clamp(34px, 6vw, 54px)/1.05 var(--f-display); margin: 0; text-wrap: balance; letter-spacing: -.01em; }
+h2 { font: 600 clamp(24px, 3.4vw, 30px)/1.15 var(--f-display); margin: 0 0 6px; text-wrap: balance; }
+h3 { font: 600 17px/1.3 var(--f-body); margin: 0; }
+p { margin: 0; }
+section { display: grid; gap: 18px; min-width: 0; }
+.lede { font-size: 18px; color: var(--muted); max-width: 680px; }
+code, .mono { font-family: var(--f-mono); font-size: .86em; }
+code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font: 500 12px/1 var(--f-mono); padding: 6px 10px; border-radius: 999px; border: 1px solid currentColor; }
+.c-thought { color: var(--thought); } .c-action { color: var(--action); } .c-obs { color: var(--obs); } .c-answer { color: var(--answer); }
+
+.scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+svg.diagram { display: block; width: 100%; min-width: 760px; height: auto; }
+svg .box { fill: var(--surface); stroke: var(--line); stroke-width: 1.5; }
+svg .box.key { stroke: var(--accent); stroke-width: 2; }
+svg .store { fill: var(--code-bg); stroke: var(--line); stroke-width: 1.5; }
+svg .t { fill: var(--ink); font: 600 14px var(--f-body); }
+svg .s { fill: var(--muted); font: 400 11.5px var(--f-mono); }
+svg .lbl { fill: var(--muted); font: 500 11px var(--f-mono); }
+svg .arr { stroke: var(--muted); stroke-width: 1.5; fill: none; }
+svg .arr.dash { stroke-dasharray: 5 4; }
+svg .arr.act { stroke: var(--action); } svg .arr.obs { stroke: var(--obs); } svg .arr.th { stroke: var(--thought); }
+svg .head { fill: var(--muted); } svg .head.act { fill: var(--action); } svg .head.obs { fill: var(--obs); } svg .head.th { fill: var(--thought); }
+.caption { font-size: 14px; color: var(--muted); }
+
+ol.loop { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; counter-reset: s; }
+ol.loop li { counter-increment: s; display: grid; grid-template-columns: 34px 1fr; gap: 12px; align-items: start; }
+ol.loop li::before { content: counter(s); font: 600 14px/34px var(--f-mono); text-align: center; width: 34px; height: 34px; border-radius: 50%; background: var(--surface); border: 1px solid var(--line); color: var(--accent); }
+ol.loop li > div { min-width: 0; padding-top: 5px; }
+
+pre { margin: 0; background: var(--code-bg); border-radius: 8px; padding: 16px; overflow-x: auto; font: 13px/1.55 var(--f-mono); }
+
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+.tabs button { font: 500 14px var(--f-body); color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 8px 14px; cursor: pointer; }
+.tabs button[aria-selected="true"] { border-color: var(--accent); color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.tabs button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.trace { display: grid; gap: 8px; }
+.q { font: 600 16px/1.4 var(--f-body); padding: 12px 14px; border: 1px dashed var(--line); border-radius: 8px; }
+.row { display: grid; grid-template-columns: 112px 1fr; gap: 12px; padding: 10px 14px; border-radius: 8px; align-items: start; }
+.row > span { font: 600 11px/1.9 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; }
+.row > div { min-width: 0; overflow-wrap: anywhere; font-size: 15px; }
+.row .mono { font-size: 13px; }
+.r-thought { background: var(--tint-thought); } .r-thought > span { color: var(--thought); }
+.r-action { background: var(--tint-action); } .r-action > span { color: var(--action); }
+.r-obs { background: var(--tint-obs); } .r-obs > span { color: var(--obs); }
+.r-answer { background: var(--tint-answer); } .r-answer > span { color: var(--answer); }
+.note { font-size: 14px; color: var(--muted); }
+
+table { border-collapse: collapse; width: 100%; min-width: 640px; font-size: 14.5px; }
+th, td { text-align: left; vertical-align: top; padding: 11px 14px; border-bottom: 1px solid var(--line); }
+th { font: 600 11.5px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); background: var(--surface); }
+td:first-child { white-space: nowrap; }
+tr:last-child td { border-bottom: 0; }
+
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 14px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.card p { font-size: 15px; color: var(--muted); }
+
+.flow { display: grid; gap: 8px; }
+.flow .step { display: grid; grid-template-columns: 22px 1fr; gap: 10px; font-size: 15px; }
+.flow .step b { font: 600 13px/1.6 var(--f-mono); color: var(--accent); }
+@media (max-width: 520px) {
+  .row { grid-template-columns: 1fr; gap: 2px; }
+  header { padding-top: 28px; }
+}
+@media (prefers-reduced-motion: no-preference) { .tabs button { transition: border-color .15s, color .15s; } }
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Story Retrieval Chatbot · Task 1</div>
+  <h1>How the StoryBot agent works</h1>
+  <p class="lede">The agent is a small ReAct loop. An LLM reads the question, decides which story tool to call and with which arguments, reads the tool's JSON result, and repeats until it can answer from what the tools returned. The tools do the actual retrieval: fuzzy matching on titles and genres, then Qdrant lookups and hybrid search.</p>
+  <div class="legend" aria-label="Colour key used on this page">
+    <span class="chip c-thought">Thought</span><span class="chip c-action">Action (tool call)</span><span class="chip c-obs">Observation (tool result)</span><span class="chip c-answer">Answer</span>
+  </div>
+</header>
+
+<section>
+  <div class="col">
+    <h2>The components</h2>
+    <p>Six parts, each in its own file under <code>src/storybot/</code>. The agent only talks to the LLM and to the tools; the tools are the only part that touches Qdrant.</p>
+  </div>
+  <div class="scroll">
+  <svg class="diagram" viewBox="0 0 900 500" role="img" aria-label="Architecture: the user sends a question to StoryAgent; StoryAgent exchanges messages with the LLM backend and calls StoryTools; StoryTools use MetadataMatcher and StoryRetriever; StoryRetriever embeds the query and queries the two Qdrant collections.">
+    <defs>
+      <marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="head" d="M0,0 L10,5 L0,10 z"/></marker>
+      <marker id="ha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="head act" d="M0,0 L10,5 L0,10 z"/></marker>
+      <marker id="ho" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="head obs" d="M0,0 L10,5 L0,10 z"/></marker>
+      <marker id="ht" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="head th" d="M0,0 L10,5 L0,10 z"/></marker>
+    </defs>
+
+    <!-- user -->
+    <rect class="box" x="20" y="205" width="120" height="70" rx="10"/>
+    <text class="t" x="80" y="236" text-anchor="middle">User</text>
+    <text class="s" x="80" y="256" text-anchor="middle">chat.py / notebook</text>
+
+    <!-- agent -->
+    <rect class="box key" x="200" y="160" width="200" height="160" rx="12"/>
+    <text class="t" x="300" y="190" text-anchor="middle">StoryAgent</text>
+    <text class="s" x="300" y="208" text-anchor="middle">chat/agent.py</text>
+    <text class="s" x="218" y="236">• system prompt</text>
+    <text class="s" x="218" y="254">• last 4 Q&amp;A turns</text>
+    <text class="s" x="218" y="272">• loop, max 6 steps</text>
+    <text class="s" x="218" y="290">• trace of every step</text>
+
+    <!-- llm -->
+    <rect class="box" x="460" y="24" width="230" height="86" rx="10"/>
+    <text class="t" x="575" y="52" text-anchor="middle">LLM backend</text>
+    <text class="s" x="575" y="72" text-anchor="middle">chat/llm.py</text>
+    <text class="s" x="575" y="92" text-anchor="middle">OpenAICompatLLM | HFChatLLM</text>
+
+    <!-- tools -->
+    <rect class="box key" x="460" y="185" width="230" height="110" rx="12"/>
+    <text class="t" x="575" y="213" text-anchor="middle">StoryTools</text>
+    <text class="s" x="575" y="231" text-anchor="middle">chat/tools.py · 7 tools</text>
+    <text class="s" x="575" y="253" text-anchor="middle">validates args, runs tool,</text>
+    <text class="s" x="575" y="270" text-anchor="middle">returns JSON or {"error"}</text>
+
+    <!-- matcher -->
+    <rect class="box" x="740" y="130" width="145" height="78" rx="10"/>
+    <text class="t" x="812" y="157" text-anchor="middle">MetadataMatcher</text>
+    <text class="s" x="812" y="176" text-anchor="middle">fuzzy title/genre</text>
+    <text class="s" x="812" y="194" text-anchor="middle">matching.py</text>
+
+    <!-- retriever -->
+    <rect class="box" x="740" y="262" width="145" height="78" rx="10"/>
+    <text class="t" x="812" y="289" text-anchor="middle">StoryRetriever</text>
+    <text class="s" x="812" y="308" text-anchor="middle">lookups + hybrid</text>
+    <text class="s" x="812" y="326" text-anchor="middle">search.py</text>
+
+    <!-- metadata file -->
+    <rect class="store" x="740" y="34" width="145" height="58" rx="8"/>
+    <text class="s" x="812" y="58" text-anchor="middle">data/</text>
+    <text class="s" x="812" y="76" text-anchor="middle">story_metadata.json</text>
+
+    <!-- embedders -->
+    <rect class="box" x="740" y="400" width="145" height="70" rx="10"/>
+    <text class="t" x="812" y="427" text-anchor="middle">Query encoders</text>
+    <text class="s" x="812" y="447" text-anchor="middle">ModernBERT + BM25</text>
+
+    <!-- qdrant -->
+    <rect class="store" x="460" y="375" width="230" height="100" rx="10"/>
+    <text class="t" x="575" y="402" text-anchor="middle">Qdrant · qdrant_data/</text>
+    <text class="s" x="575" y="426" text-anchor="middle">stories: full text by id/title</text>
+    <text class="s" x="575" y="446" text-anchor="middle">story_chunks: dense_late +</text>
+    <text class="s" x="575" y="462" text-anchor="middle">sparse BM25, RRF fusion</text>
+
+    <!-- arrows: user <-> agent -->
+    <path class="arr" d="M140,228 L196,228" marker-end="url(#h)"/>
+    <text class="lbl" x="146" y="220">question</text>
+    <path class="arr" d="M200,258 L144,258" marker-end="url(#h)"/>
+    <text class="lbl" x="146" y="276">answer +</text>
+    <text class="lbl" x="146" y="290">full stories</text>
+
+    <!-- agent <-> llm -->
+    <path class="arr th" d="M340,160 L340,70 L456,70" marker-end="url(#ht)"/>
+    <text class="lbl" x="350" y="62">messages + tool schemas</text>
+    <path class="arr th" d="M460,96 L380,96 L380,156" marker-end="url(#ht)"/>
+    <text class="lbl" x="390" y="126">Thought + tool calls</text>
+    <text class="lbl" x="390" y="140">(or final answer)</text>
+
+    <!-- agent <-> tools -->
+    <path class="arr act" d="M400,218 L456,218" marker-end="url(#ha)"/>
+    <text class="lbl" x="404" y="210">call</text>
+    <path class="arr obs" d="M460,268 L404,268" marker-end="url(#ho)"/>
+    <text class="lbl" x="404" y="286">JSON</text>
+
+    <!-- tools -> matcher, retriever -->
+    <path class="arr" d="M690,210 L736,175" marker-end="url(#h)"/>
+    <path class="arr" d="M690,268 L736,295" marker-end="url(#h)"/>
+    <path class="arr dash" d="M812,130 L812,96" marker-end="url(#h)"/>
+    <!-- tools -> llm (summaries) -->
+    <path class="arr dash" d="M640,185 L640,114" marker-end="url(#h)"/>
+    <text class="lbl" x="646" y="152">summaries</text>
+
+    <!-- retriever -> encoders, qdrant -->
+    <path class="arr" d="M812,340 L812,396" marker-end="url(#h)"/>
+    <path class="arr" d="M740,320 L694,385" marker-end="url(#h)"/>
+  </svg>
+  </div>
+  <p class="caption">Dashed lines: reading the metadata file, and <code>summarize_story</code> asking the same LLM for a summary.</p>
+
+  <div class="grid2">
+    <div class="card"><h3>StoryAgent</h3><p><code>chat/agent.py</code>. Runs the ReAct loop, keeps a short history of past questions and answers for follow-ups, stops repeated calls, and returns an <code>AgentResult</code> with the answer, every step, and any full stories fetched.</p></div>
+    <div class="card"><h3>LLM backend</h3><p><code>chat/llm.py</code>. One <code>chat(messages, tools)</code> method, two implementations: an OpenAI-compatible endpoint (what you use) and transformers on a GPU. Both return the text plus parsed tool calls.</p></div>
+    <div class="card"><h3>Prompts</h3><p><code>chat/prompts.py</code>. The system prompt holds the rules for choosing tools and parameters (6+ stories for a theme, one story for character questions) and for grounded answers that cite title and id.</p></div>
+    <div class="card"><h3>StoryTools</h3><p><code>chat/tools.py</code>. The 7 tools, their JSON schemas, argument checking and fallbacks. A failing tool returns <code>{"error": ...}</code> as its observation, so the agent can try again instead of crashing.</p></div>
+    <div class="card"><h3>MetadataMatcher</h3><p><code>retrieval/matching.py</code>. Fuzzy-matches what the user typed against titles and genres in <code>story_metadata.json</code>, using your <code>_normalize_title</code>, and returns the original spelling for the Qdrant filter.</p></div>
+    <div class="card"><h3>StoryRetriever</h3><p><code>retrieval/search.py</code>. Reads full stories by id or exact title, and runs hybrid search (ModernBERT late-chunk vectors + BM25, fused with RRF), either grouped by story or restricted to one story.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="col">
+    <h2>One turn of the ReAct loop</h2>
+    <p>What happens inside <code>StoryAgent.run(question)</code>, in order.</p>
+  </div>
+  <ol class="loop col">
+    <li><div><b>Build the messages.</b> System prompt, the last 4 question/answer pairs (no tool traffic), then the new question.</div></li>
+    <li><div><b>Ask the LLM</b> with the 7 tool schemas attached. It replies with a <span class="c-thought">Thought:</span> line and one or more <span class="c-action">tool calls</span>, or with a plain answer.</div></li>
+    <li><div><b>No tool call?</b> That text is the answer. The loop ends.</div></li>
+    <li><div><b>Run each tool call</b> through <code>StoryTools.call(name, args)</code>. A call identical to an earlier one is not re-run; the agent gets a note to answer or change the arguments.</div></li>
+    <li><div><b>Append the <span class="c-obs">observation</span></b> (the tool's JSON, cut at 12,000 characters) as a <code>tool</code> message, and go back to step 2.</div></li>
+    <li><div><b>After 6 rounds</b>, the agent is told to stop calling tools and answer from what it has.</div></li>
+    <li><div><b>Return</b> the answer, the trace, and any full stories fetched by id or title. The CLI prints those stories verbatim, so the LLM never has to retype a whole story.</div></li>
+  </ol>
+<pre class="col" aria-label="Simplified code of the loop">messages = [system, *history[-8:], {"role": "user", "content": question}]
+for _ in range(max_steps):                       # 6
+    turn = llm.chat(messages, tools=SCHEMAS)     # Thought + tool calls, or an answer
+    if not turn.tool_calls:
+        return turn.content                      # final answer
+    messages.append(assistant_message(turn))
+    for call in turn.tool_calls:
+        obs = tools.call(call.name, call.arguments)   # JSON dict
+        messages.append({"role": "tool", "content": json.dumps(obs)[:12000]})
+return llm.chat(messages + [stop_and_answer], tools=None).content</pre>
+</section>
+
+<section>
+  <div class="col">
+    <h2>Three example runs</h2>
+    <p>Each shows the trace the agent prints with <code>--trace</code>. The titles are invented for illustration, and the observations are shortened.</p>
+  </div>
+  <div class="tabs" role="tablist" aria-label="Example runs">
+    <button role="tab" id="tab-theme" aria-selected="true" aria-controls="ex-theme">Several stories on a theme</button>
+    <button role="tab" id="tab-char" aria-selected="false" aria-controls="ex-char">A character in one story</button>
+    <button role="tab" id="tab-miss" aria-selected="false" aria-controls="ex-miss">A title that isn't found</button>
+  </div>
+
+  <div class="trace" role="tabpanel" id="ex-theme" aria-labelledby="tab-theme">
+    <div class="q">“I want mistery stories about a missing sister.”</div>
+    <div class="row r-thought"><span>Thought</span><div>The user wants several stories on a theme in one genre, so I search with at least 6 stories.</div></div>
+    <div class="row r-action"><span>Action</span><div class="mono">search_stories(query="missing sister", genre="mistery", num_stories=6)</div></div>
+    <div class="row r-obs"><span>Observation</span><div class="mono">{"genre_filter": "Mystery", "num_results": 6, "results": [{"story_id": 412, "title": "The Empty Room", "passages": [...]}, ... 5 more distinct stories]}</div></div>
+    <div class="row r-answer"><span>Answer</span><div>Here are 6 Mystery stories about a missing sister: 1. The Empty Room (id 412), where … 2. …</div></div>
+    <p class="note">“mistery” scored above the genre threshold of 80 against “Mystery”, so the search was filtered to that genre. Results are grouped by <code>story_id</code>, so the 6 hits are 6 different stories.</p>
+  </div>
+
+  <div class="trace" role="tabpanel" id="ex-char" aria-labelledby="tab-char" hidden>
+    <div class="q">“In The Clockmakers Daughter, who helps Elsa fix the tower clock?”</div>
+    <div class="row r-thought"><span>Thought</span><div>This is about one character in one named story, so I ask that story only.</div></div>
+    <div class="row r-action"><span>Action</span><div class="mono">ask_about_story(question="who helps Elsa fix the tower clock?", title="The Clockmakers Daughter")</div></div>
+    <div class="row r-obs"><span>Observation</span><div class="mono">{"story_id": 87, "title": "The Clockmaker's Daughter", "resolved_by": "title", "match_score": 100.0, "full_story": false, "passages": [{"chunk_index": 2, "text": "..."}, {"chunk_index": 3, ...}]}</div></div>
+    <div class="row r-answer"><span>Answer</span><div>In The Clockmaker's Daughter (id 87, Fantasy), the old bell-ringer Tomas helps Elsa …</div></div>
+    <p class="note">The title matches after normalisation (the apostrophe is dropped on both sides). Qdrant is then filtered on <code>story_id = 87</code>, so every passage comes from this story and nothing else.</p>
+  </div>
+
+  <div class="trace" role="tabpanel" id="ex-miss" aria-labelledby="tab-miss" hidden>
+    <div class="q">“Show me the story called The Moon That Forgot To Shine.”</div>
+    <div class="row r-thought"><span>Thought</span><div>The user names a title, so I look it up by title.</div></div>
+    <div class="row r-action"><span>Action</span><div class="mono">get_story_by_title(title="The Moon That Forgot To Shine")</div></div>
+    <div class="row r-obs"><span>Observation</span><div class="mono">{"found": false, "fallback": "semantic_search", "message": "No story title matched ... (best title score 61, threshold 85). Closest stories by meaning:", "results": [{"story_id": 233, "title": "Where the Moonlight Sleeps"}, ...]}</div></div>
+    <div class="row r-answer"><span>Answer</span><div>I couldn't find a story with that exact title. The closest ones are Where the Moonlight Sleeps (id 233) and … Which one did you mean?</div></div>
+    <p class="note">No title reached 85, so the tool ran a semantic search with the title as the query instead of returning nothing.</p>
+  </div>
+</section>
+
+<section>
+  <div class="col">
+    <h2>The tools</h2>
+    <p>The LLM sees each tool's name, description and JSON schema, and picks one from the rules in the system prompt.</p>
+  </div>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Tool</th><th>Chosen when the user…</th><th>What it does</th><th>If nothing matches</th></tr></thead>
+    <tbody>
+      <tr><td><code>get_story_by_id</code></td><td>gives a story id</td><td>Reads the story from the <code>stories</code> collection.</td><td>Says no story has that id.</td></tr>
+      <tr><td><code>get_story_by_title</code></td><td>names a title and wants the story</td><td>Fuzzy-matches the title, then filters <code>stories</code> on the original title. Lists other volumes with the same name.</td><td>Score under 85: semantic search, 5 closest stories.</td></tr>
+      <tr><td><code>search_stories</code></td><td>wants stories on a theme, or describes one it can't name</td><td>Hybrid search over chunks, grouped by story. 6 stories by default (3 to find one story), up to 20. Optional genre filter.</td><td>Genre under 80: searches all genres and adds a note.</td></tr>
+      <tr><td><code>ask_about_story</code></td><td>asks about a character, event or detail in one story</td><td>Finds the story by id or title, then returns the best passages of that story only. Stories up to 6,000 characters are returned whole.</td><td>Unknown title: takes the closest story by meaning and says so.</td></tr>
+      <tr><td><code>summarize_story</code></td><td>asks for a summary or the gist</td><td>Sends the story to the LLM with a summary prompt, short or detailed. Long stories are summarised part by part, then merged. Results are cached.</td><td>Same as <code>ask_about_story</code>.</td></tr>
+      <tr><td><code>list_genres</code></td><td>asks which genres exist</td><td>Returns the genre list from the metadata file.</td><td>n/a</td></tr>
+      <tr><td><code>list_stories_by_genre</code></td><td>asks for the stories in a genre</td><td>Fuzzy-matches the genre, then lists titles and ids.</td><td>Semantic search with the genre as the query.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <div class="col">
+    <h2>Fuzzy matching, then the Qdrant filter</h2>
+    <p>Used by every tool that takes a title or a genre.</p>
+  </div>
+  <div class="flow col">
+    <div class="step"><b>1</b><div>Normalise the input with <code>_normalize_title</code>: lowercase, no punctuation, single spaces. The keys in <code>story_metadata.json</code> were written the same way.</div></div>
+    <div class="step"><b>2</b><div>An exact key match scores 100. Otherwise each title or genre is scored with RapidFuzz as the higher of <code>ratio</code> and <code>token_sort_ratio</code>, which tolerates typos and word order. Partial-substring scoring is not used, so “the night” does not match a long title that contains it.</div></div>
+    <div class="step"><b>3</b><div>At or above the threshold (85 for titles, 80 for genres), take the <em>original</em> title or genre from the metadata and filter Qdrant on it.</div></div>
+    <div class="step"><b>4</b><div>Below the threshold, fall back to semantic search, and say so in the observation so the agent can tell the user.</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="col">
+    <h2>Guardrails</h2>
+  </div>
+  <div class="grid2">
+    <div class="card"><h3>Grounded answers</h3><p>The system prompt allows answers only from tool results, and asks for the title and id of every story mentioned.</p></div>
+    <div class="card"><h3>Bounded loop</h3><p>At most 6 tool rounds. A repeated identical call isn't run again. Observations are cut at 12,000 characters.</p></div>
+    <div class="card"><h3>Errors as observations</h3><p>Unknown tools, missing arguments and exceptions come back as <code>{"error": ...}</code>, so the agent can correct itself.</p></div>
+    <div class="card"><h3>Reproducible</h3><p>Temperature 0 by default, so the same question gives the same tool choices and arguments.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="col">
+    <h2>Settings you can change</h2>
+    <p>All in <code>configs/chat.yaml</code>. Retrieval settings stay in <code>configs/retrieval.yaml</code>.</p>
+  </div>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Setting</th><th>Default</th><th>Effect</th></tr></thead>
+    <tbody>
+      <tr><td><code>llm.backend</code></td><td class="mono">hf</td><td><code>openai</code> for an OpenAI-compatible endpoint, with <code>base_url</code>, <code>server_model</code>, <code>LLM_API_KEY</code>, and <code>ca_bundle</code> if needed</td></tr>
+      <tr><td><code>agent.max_steps</code></td><td class="mono">6</td><td>Tool rounds before the agent must answer</td></tr>
+      <tr><td><code>agent.history_turns</code></td><td class="mono">4</td><td>Past question/answer pairs kept for follow-ups like “summarize it”</td></tr>
+      <tr><td><code>tools.title_threshold</code></td><td class="mono">85</td><td>Fuzzy score needed to accept a title</td></tr>
+      <tr><td><code>tools.genre_threshold</code></td><td class="mono">80</td><td>Fuzzy score needed to filter on a genre</td></tr>
+      <tr><td><code>tools.default_num_stories</code></td><td class="mono">6</td><td>Stories returned by a theme search when the LLM doesn't specify</td></tr>
+      <tr><td><code>tools.dense_vector</code></td><td class="mono">dense_late</td><td><code>dense_prefix</code> switches to the baseline vectors for the A/B</td></tr>
+      <tr><td><code>tools.full_story_chars</code></td><td class="mono">6000</td><td>Stories this short go whole to <code>ask_about_story</code></td></tr>
+      <tr><td><code>tools.summary_chunk_chars</code></td><td class="mono">10000</td><td>Longer stories are summarised in parts</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+</div>
+
+<script>
+(function () {
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  function select(tab) {
+    tabs.forEach(function (t) {
+      var on = t === tab;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { select(t); });
+    t.addEventListener('keydown', function (e) {
+      var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (d) { var n = tabs[(i + d + tabs.length) % tabs.length]; select(n); n.focus(); }
+    });
+  });
+  select(tabs[0]);
+})();
+</script>
+
+</body></html>
