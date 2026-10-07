@@ -38,7 +38,7 @@ if __name__ == "__main__":
            "--host", "0.0.0.0", "--port", str(a.port),
            "-c", str(a.ctx_size), "--parallel", str(a.parallel),
            "--jinja",                                                  # model's own chat template + tool calls
-           "--chat-template-kwargs", '{"enable_thinking": false}',     # same as vLLM's default
+           "--reasoning", "off",                                       # thinking off, same as vLLM's default
            "--temp", "0"]
     if a.threads:
         cmd += ["--threads", str(a.threads)]

@@ -28,12 +28,12 @@ if __name__ == "__main__":
     ap.add_argument("--mtp", action="store_true",
                     help="MTP speculative decoding (faster chat). Off by default: vLLM only documents LoRA + EAGLE3 "
                          "as tested, so compare eval_genre.py with and without it before keeping it")
+    ap.add_argument("--no-adapter", action="store_true", help="base model only (the Task 1 before/after comparison)")
     ap.add_argument("--background", action="store_true")
     ap.add_argument("--log", default=str(PROJECT_ROOT / "results" / "vllm.log"))
     ap.add_argument("--dry-run", action="store_true")
     a, extra = ap.parse_known_args()                 # anything else is passed to vllm serve unchanged
 
-    rank = json.loads(open(f"{a.adapter}/adapter_config.json").read())["r"]
     cmd = ["vllm", "serve", a.model,
            "--port", str(a.port),
            "--max-model-len", str(a.max_model_len),
@@ -42,10 +42,12 @@ if __name__ == "__main__":
            # Task 1: thinking off by default, Qwen3.5 tool calls parsed into OpenAI tool_calls
            "--reasoning-parser", "qwen3",
            "--default-chat-template-kwargs", '{"enable_thinking": false}',
-           "--enable-auto-tool-choice", "--tool-call-parser", "qwen3_coder",
-           # Task 2: one LoRA, rank buffers sized to the adapter (not 64)
-           "--enable-lora", "--max-loras", "1", "--max-lora-rank", str(rank),
-           "--lora-modules", f"{a.adapter_name}={a.adapter}"]
+           "--enable-auto-tool-choice", "--tool-call-parser", "qwen3_coder"]
+    if not a.no_adapter:
+        # Task 2: one LoRA, rank buffers sized to the adapter (not 64)
+        rank = json.loads(open(f"{a.adapter}/adapter_config.json").read())["r"]
+        cmd += ["--enable-lora", "--max-loras", "1", "--max-lora-rank", str(rank),
+                "--lora-modules", f"{a.adapter_name}={a.adapter}"]
     if a.mtp:
         cmd += ["--speculative-config", '{"method": "mtp", "num_speculative_tokens": 1}']
     launch(cmd + extra, a.background, a.log, f"http://localhost:{a.port}/health", a.dry_run)
