@@ -18,6 +18,27 @@ from storybot.config import PROJECT_ROOT, load_config, resolve
 from storybot.eval import load_cases
 from storybot.eval.report import GROUPS, render_html, run_examples
 
+def check_endpoint(llm):
+    """One plain call and one call with tools before the run, so a bad endpoint fails once, clearly."""
+    from storybot.chat.tools import SCHEMAS
+    where = f"{getattr(llm.http, 'base_url', '')} (model {getattr(llm, 'model', '?')})" if hasattr(llm, "http") else ""
+    for label, tools in [("plain chat", None), ("chat with tools", SCHEMAS)]:
+        try:
+            llm.chat([{"role": "user", "content": "Reply with the word OK."}], tools=tools)
+        except Exception as ex:
+            print(f"\nEndpoint check failed on {label} {where}:\n  {type(ex).__name__}: {ex}\n")
+            print("Common causes:\n"
+                  "  404  --base-url must end in /v1 (the script adds /chat/completions)\n"
+                  "  401/403  set $env:LLM_API_KEY\n"
+                  "  400/404 mentioning the model  --model must match a name from <base-url>/models\n"
+                  "  400 only on 'chat with tools'  the server must support tool calling\n"
+                  "         (llama-server needs --jinja; vLLM needs --enable-auto-tool-choice --tool-call-parser hermes)\n"
+                  "  SSL / certificate  set $env:LLM_CA_BUNDLE to your CA file\n"
+                  "  ConnectError  the server is not running or the URL/port is wrong")
+            raise SystemExit(1)
+    print("endpoint ok:", where)
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--backend", choices=["hf", "openai"], default=None)
@@ -60,6 +81,7 @@ if __name__ == "__main__":
             cases = keep
         from storybot.chat import build_agent
         agent = build_agent(retrieval_cfg=rcfg, chat_cfg=ccfg)
+        check_endpoint(agent.llm)
         runs = run_examples(agent, cases)
         raw = out.with_name(out.stem + "_runs.json")
         raw.write_text(json.dumps({"model": model, "runs": runs}, ensure_ascii=False, indent=1), encoding="utf-8")

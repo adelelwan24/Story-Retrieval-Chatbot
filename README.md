@@ -1,5 +1,7 @@
 # Story Retrieval Chatbot
 
+Take-home for `FareedKhan/1k_stories_100_genre` (1,000 stories, 100 genres):
+Task 1 story chatbot (RAG), Task 2 genre classifier on the same LLM, Task 3 CPU deployment.
 
 Status: data preparation, the Qdrant index and the ReAct story agent are in place. Classifier and deployment come next
 (see `../structure/project_structure.md` for the full plan).
@@ -9,6 +11,7 @@ Status: data preparation, the Qdrant index and the ReAct story agent are in plac
 ```
 configs/retrieval.yaml      all data/embedding/chunking/Qdrant settings
 configs/chat.yaml           LLM backend, agent loop and tool settings (fuzzy thresholds, result counts)
+configs/classify.yaml       genre classifier: server URLs, adapter name, label restriction, GGUF file names
 src/storybot/
   config.py                 YAML loader; relative paths resolve against this project folder
   data/                     load.py (Hub or local copy), splits.py (7/1/2 stratified, seed 42), prepare.py
@@ -16,8 +19,11 @@ src/storybot/
                             search.py (lookups + hybrid search), matching.py (fuzzy title/genre matching)
   chat/                     tools.py (agent tools), agent.py (ReAct loop), llm.py (HF / OpenAI-compatible), prompts.py
   eval/                     agent_eval.py (runs the test cases, checks trace + answer)
-  classify/ deploy/         to be filled
-scripts/                    prepare_data.py, build_index.py, chat.py, eval_agent.py, make_examples_html.py
+  classify/genre.py         Task 2 client: same server as the chatbot, adapter per request, answer restricted to the labels
+  deploy/server.py          start vLLM / llama-server in the foreground or background (waits for /health)
+scripts/                    prepare_data.py, build_index.py, chat.py, eval_agent.py, make_examples_html.py,
+                            serve_vllm.py, build_gguf.py, serve_llamacpp.py, eval_genre.py
+models/                     genre_lora_qwen35/ (unzipped notebook output) and gguf/ (git-ignored)
 eval/                       agent_qa.csv (the 51 test questions with reference answers), agent_test_cases.json
                             (same cases with the checks the scorer runs), stories_sample.csv (the 15 stories they use)
 notebooks/02_build_index.ipynb   same steps as the scripts, with a search check at the end
@@ -114,3 +120,32 @@ one tab per example type, and for each example the question, every Thought / Act
 answer (trimmed to 500 words, `--max-words`) and the expected answer. The raw traces go to
 `results/agent_examples_runs.json`; `--from-json` re-renders the page from them without calling the LLM.
 Step-by-step instructions (Windows): `docs/run_examples.md`.
+
+## Serving Task 1 + Task 2 from one model
+
+One `Qwen/Qwen3.5-4B` serves both tasks. The chatbot uses the base model; the genre classifier uses the same
+weights plus the LoRA adapter from `task2-training/task2_genre_lora_qwen35.ipynb`, switched on per request.
+Unzip the notebook's `genre_lora_qwen35.zip` into `models/genre_lora_qwen35/` first.
+
+| | GPU (vLLM) | CPU (llama.cpp, Q8_0) |
+|---|---|---|
+| start | `python scripts/serve_vllm.py --background` | `python scripts/build_gguf.py --llama-cpp ~/llama.cpp` once, then `python scripts/serve_llamacpp.py --background` |
+| chatbot request | `model="Qwen/Qwen3.5-4B"` | no `lora` field (adapter loaded with default scale 0) |
+| classifier request | `model="genre-lora"` | `"lora": [{"id": 0, "scale": 1.0}]` |
+| answer restricted to the labels by | `structured_outputs: {"choice": labels}` | GBNF `grammar: root ::= "Adventure" \| ...` |
+
+Both restrictions turn `labels.json` into a grammar and mask every token that would leave it, so the answer is always
+exactly one genre. The prompt (`prompt.json`) is the one used in training: the genre list in the system prompt, the
+story cut to its first 2048 tokens with the server's own tokenizer, thinking off.
+
+```python
+from storybot.classify import build_classifier
+from storybot.config import PROJECT_ROOT, load_config
+clf = build_classifier(load_config(PROJECT_ROOT / "configs" / "classify.yaml"))          # backend: vllm | llamacpp
+clf.predict("The Last Signal", story_text)   # GenrePrediction(genre='Science Fiction', raw=..., valid=True, seconds=...)
+```
+
+`python scripts/eval_genre.py [--backend llamacpp]` runs the test split three ways (adapter + restriction,
+adapter unrestricted, base model + restriction), plus a probe that asks for a non-genre answer, and writes
+`results/genre_eval_<backend>.json`.
+

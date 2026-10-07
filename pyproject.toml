@@ -14,7 +14,7 @@ dependencies = [
     "pyyaml",
     "qdrant-client[fastembed]>=1.12",
     "rapidfuzz>=3",
-    "truststore>=0.10.4",
+    "truststore",
 ]
 
 [project.optional-dependencies]

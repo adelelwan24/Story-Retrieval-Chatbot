@@ -57,7 +57,7 @@ def run_examples(agent, cases, verbose: bool = True) -> list[dict]:
                      "failed_checks": [k for k, v in checks.items() if not v],
                      "seconds": round(time.time() - t0, 1)})
         if verbose:
-            print(f"{case['id']:10} {'error' if error else 'ok'} {runs[-1]['seconds']}s")
+            print(f"{case['id']:10} {'error: ' + error if error else 'ok'} {runs[-1]['seconds']}s")
     return runs
 
 

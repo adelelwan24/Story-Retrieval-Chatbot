@@ -1,0 +1,19 @@
+# Task 2 genre classifier (storybot.classify.build_classifier, scripts/eval_genre.py, scripts/serve_*.py).
+# Relative paths are resolved against the project root.
+
+classifier:
+  artifacts_dir: models/genre_lora_qwen35   # unzipped notebook output: adapter/, labels.json, prompt.json
+  backend: vllm                             # vllm | llamacpp (same prompt, same restriction to the labels)
+  vllm_url: http://localhost:8000/v1        # or set GENRE_BASE_URL
+  llamacpp_url: http://localhost:8080/v1
+  base_model: Qwen/Qwen3.5-4B               # vLLM name of the base model (no adapter), = chat.yaml llm.server_model
+  adapter_name: genre-lora                  # vLLM --lora-modules name
+  lora_id: 0                                # llama-server adapter id (order of --lora)
+  constrain: true                           # restrict the answer to labels.json (structured_outputs / GBNF)
+  max_tokens: 16                            # longest genre name is ~7 tokens
+  timeout: 300
+
+gguf:                                       # scripts/build_gguf.py and scripts/serve_llamacpp.py
+  dir: models/gguf
+  base_file: qwen3.5-4b-q8_0.gguf
+  lora_file: genre-lora-f16.gguf

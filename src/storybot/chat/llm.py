@@ -160,7 +160,8 @@ class OpenAICompatLLM:
         if tools:
             body["tools"] = tools
         r = self.http.post("/chat/completions", json=body)
-        r.raise_for_status()
+        if r.status_code >= 400:   # keep the server's message; raise_for_status() drops it
+            raise RuntimeError(f"HTTP {r.status_code} from {r.request.url}: {r.text[:800]}")
         msg = r.json()["choices"][0]["message"]
         calls = [ToolCall(tc["function"]["name"], _loads(tc["function"].get("arguments")), tc.get("id") or None)
                  for tc in msg.get("tool_calls") or []]
