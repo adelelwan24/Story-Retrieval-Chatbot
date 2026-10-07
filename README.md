@@ -88,6 +88,10 @@ models/genre_lora_qwen35/
   labels.json, prompt.json, results.json, training_curves.png, confusion_matrix.png
 ```
 
+The adapter is not in git (`models/` and `*.safetensors` are git-ignored), so a fresh clone, for example on Colab,
+needs this unzip again: `unzip -o /content/drive/MyDrive/<folder>/genre_lora_qwen35.zip -d models/genre_lora_qwen35`.
+`serve_vllm.py` and `build_gguf.py` stop with this hint when `adapter_model.safetensors` is missing.
+
 ### 5A. Serve both tasks on a GPU with vLLM
 
 On the GPU machine, with this folder and `models/genre_lora_qwen35/` on it:

@@ -17,6 +17,7 @@ import sys
 from pathlib import Path
 
 from storybot.config import PROJECT_ROOT, load_config, resolve
+from storybot.deploy.server import require_adapter
 
 
 def run(cmd):
@@ -35,6 +36,7 @@ if __name__ == "__main__":
     ap.add_argument("--skip-base", action="store_true", help="only convert the adapter")
     a, extra = ap.parse_known_args()                 # anything else goes to convert_hf_to_gguf.py
 
+    require_adapter(a.adapter)
     a.out_dir.mkdir(parents=True, exist_ok=True)
     model_dir = Path(a.model).expanduser()
     if not model_dir.is_dir():

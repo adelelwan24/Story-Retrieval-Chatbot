@@ -12,7 +12,7 @@ import argparse
 import json
 
 from storybot.config import PROJECT_ROOT, load_config, resolve
-from storybot.deploy.server import launch
+from storybot.deploy.server import launch, require_adapter
 
 if __name__ == "__main__":
     cfg = load_config(PROJECT_ROOT / "configs" / "classify.yaml")
@@ -45,7 +45,8 @@ if __name__ == "__main__":
            "--enable-auto-tool-choice", "--tool-call-parser", "qwen3_coder"]
     if not a.no_adapter:
         # Task 2: one LoRA, rank buffers sized to the adapter (not 64)
-        rank = json.loads(open(f"{a.adapter}/adapter_config.json").read())["r"]
+        adapter = require_adapter(a.adapter)
+        rank = json.loads((adapter / "adapter_config.json").read_text())["r"]
         cmd += ["--enable-lora", "--max-loras", "1", "--max-lora-rank", str(rank),
                 "--lora-modules", f"{a.adapter_name}={a.adapter}"]
     if a.mtp:
