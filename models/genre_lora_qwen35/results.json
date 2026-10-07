@@ -1,0 +1,67 @@
+{
+ "model": "Qwen/Qwen3.5-4B",
+ "lora": {
+  "r": 16,
+  "alpha": 32,
+  "dropout": 0.05,
+  "target_modules": [
+   "q_proj",
+   "k_proj",
+   "v_proj",
+   "o_proj",
+   "in_proj_qkv",
+   "in_proj_z",
+   "out_proj",
+   "gate_proj",
+   "up_proj",
+   "down_proj"
+  ]
+ },
+ "training": {
+  "epochs_run": 3,
+  "lr": 0.0001,
+  "effective_batch": 16,
+  "minutes": 28.7,
+  "gpu": "NVIDIA A100-SXM4-40GB"
+ },
+ "history": [
+  {
+   "epoch": 0,
+   "train_loss": null,
+   "val_accuracy": 0.39,
+   "val_macro_f1": 0.3353382307927762,
+   "val_invalid_rate": 0.01
+  },
+  {
+   "epoch": 1,
+   "train_loss": 0.4151693172483439,
+   "val_accuracy": 0.73,
+   "val_macro_f1": 0.663973063973064,
+   "val_invalid_rate": 0.01
+  },
+  {
+   "epoch": 2,
+   "train_loss": 0.22626851933534323,
+   "val_accuracy": 0.72,
+   "val_macro_f1": 0.6574314574314575,
+   "val_invalid_rate": 0.0
+  },
+  {
+   "epoch": 3,
+   "train_loss": 0.13707832159228148,
+   "val_accuracy": 0.71,
+   "val_macro_f1": 0.6494949494949495,
+   "val_invalid_rate": 0.0
+  }
+ ],
+ "test_base": {
+  "accuracy": 0.385,
+  "macro_f1": 0.34011443102352196,
+  "invalid_rate": 0.0
+ },
+ "test_lora": {
+  "accuracy": 0.65,
+  "macro_f1": 0.6156354307869459,
+  "invalid_rate": 0.005
+ }
+}

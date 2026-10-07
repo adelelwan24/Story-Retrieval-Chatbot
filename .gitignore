@@ -11,4 +11,4 @@ qdrant_data/
 *.safetensors
 
 # trained adapters and GGUF files (scripts/build_gguf.py)
-models/
+# models/
