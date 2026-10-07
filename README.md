@@ -15,9 +15,13 @@ src/storybot/
   retrieval/                chunking.py, embed.py (ModernBERT late chunking + BM25), qdrant_store.py, indexing.py,
                             search.py (lookups + hybrid search), matching.py (fuzzy title/genre matching)
   chat/                     tools.py (agent tools), agent.py (ReAct loop), llm.py (HF / OpenAI-compatible), prompts.py
-  classify/ eval/ deploy/   to be filled
-scripts/                    prepare_data.py, build_index.py, chat.py
+  eval/                     agent_eval.py (runs the test cases, checks trace + answer)
+  classify/ deploy/         to be filled
+scripts/                    prepare_data.py, build_index.py, chat.py, eval_agent.py, make_examples_html.py
+eval/                       agent_qa.csv (the 51 test questions with reference answers), agent_test_cases.json
+                            (same cases with the checks the scorer runs), stories_sample.csv (the 15 stories they use)
 notebooks/02_build_index.ipynb   same steps as the scripts, with a search check at the end
+notebooks/03_story_agent.ipynb   loads the collections, runs the agent on 12 example questions via an OpenAI-compatible endpoint
 tests/                      offline tests (tiny random ModernBERT, fake stories, toy BM25)
 data/                       stories.parquet (git-ignored) and splits.json, created by prepare_data
 qdrant_data/                the Qdrant database, created by build_index (git-ignored)
@@ -38,6 +42,9 @@ this folder; an absolute path also works). Set `qdrant.url` instead to use a Qdr
 Embedding uses the GPU when one is available and the CPU otherwise.
 
 ## Retrieval design (index side)
+
+`docs/data_pipeline.html` walks through every step from loading the dataset to the finished index (open it in a browser).
+
 
 | Choice | Value | Why |
 |---|---|---|
@@ -76,3 +83,34 @@ grab an unrelated long title. Thresholds live in `configs/chat.yaml`.
 LLM backends (`llm.backend` in `configs/chat.yaml`):
 * `hf`: `Qwen/Qwen3-4B-Instruct-2507` through transformers, 4-bit NF4 on a CUDA GPU (Colab T4).
 * `openai`: any OpenAI-compatible server, e.g. the CPU build `llama-server -m qwen3-4b-instruct-q4_k_m.gguf --jinja`.
+  Set `LLM_API_KEY` for the key. HTTPS certificates are checked against the OS certificate store (`truststore`), so a
+  company proxy trusted by Windows/macOS works as is. Otherwise set `llm.ca_bundle` or `LLM_CA_BUNDLE` to the CA's PEM file.
+
+## Agent test cases
+
+`eval/agent_test_cases.json` holds 51 cases written from the 15 stories in `eval/stories_sample.csv`, one group per
+behaviour: lookups by id and by title (exact, typo, partial, missing), theme searches (6+ distinct stories),
+genre filters with typos and a missing genre, finding one story from a description, questions about one story
+(including names shared across stories: Sarah, Jack, Victor), a question the story cannot answer, summaries,
+follow-ups, browsing and out-of-scope questions. Each case states what the trace and the answer must show.
+
+```bash
+python scripts/eval_agent.py --backend openai                 # all cases -> results/agent_eval.json
+python scripts/eval_agent.py --backend openai --ids ask-15 ask-16
+```
+
+A case passes when all its checks pass. "Expected story found" is reported separately: on the full index,
+other stories can rightly outrank the sample ones in a theme search. The "says not found" check is a keyword heuristic.
+
+## Examples page
+
+```bash
+python scripts/make_examples_html.py --base-url https://your-endpoint/v1 --model your-model --per-type 2
+python scripts/make_examples_html.py --backend openai                # all 51 test cases
+```
+
+Runs the questions from `eval/agent_test_cases.json` through the agent and writes `results/agent_examples.html`:
+one tab per example type, and for each example the question, every Thought / Action / Observation step, the
+answer (trimmed to 500 words, `--max-words`) and the expected answer. The raw traces go to
+`results/agent_examples_runs.json`; `--from-json` re-renders the page from them without calling the LLM.
+Step-by-step instructions (Windows): `docs/run_examples.md`.

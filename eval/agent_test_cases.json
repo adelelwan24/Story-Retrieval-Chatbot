@@ -1,0 +1,911 @@
+{
+ "source": "eval/stories_sample.csv (15 stories from FareedKhan/1k_stories_100_genre)",
+ "fields": {
+  "tools": "the agent must call at least one of these tools; [] means it must answer without tools",
+  "story_id": "the story the tools must land on (lookup, title match, search hit, or the story asked about)",
+  "single_story": "every ask_about_story call must use this one story",
+  "min_distinct_stories": "a search_stories result must hold at least this many different stories",
+  "any_story_ids": "at least one of these stories should appear in the search results",
+  "genre_filter": "the genre the search must filter on after fuzzy matching; null means no genre filter",
+  "title_match": "exact | fuzzy | fallback | none: how get_story_by_title should resolve the title",
+  "answer_all": "case-insensitive substrings that must all appear in the answer",
+  "answer_none": "substrings that must not appear (details from other stories)",
+  "no_story_claimed": "the agent must not present a story as found",
+  "says_not_found": "the answer must say the story does not contain that information",
+  "reference_answer": "what a correct answer says, written from the story text (for reading or LLM-judge scoring)"
+ },
+ "cases": [
+  {
+   "id": "id-01",
+   "category": "story_by_id",
+   "turns": [
+    "Show me story 227383."
+   ],
+   "expect": {
+    "tools": [
+     "get_story_by_id"
+    ],
+    "story_id": 227383,
+    "answer_all": [
+     "Neon Heist"
+    ]
+   },
+   "reference_answer": "Shows The Cyberpunk Chronicles: The Neon Heist (id 227383, Cyberpunk) with its full text."
+  },
+  {
+   "id": "id-02",
+   "category": "story_by_id",
+   "turns": [
+    "Can I read the story with id 183359?"
+   ],
+   "expect": {
+    "tools": [
+     "get_story_by_id"
+    ],
+    "story_id": 183359,
+    "answer_all": [
+     "Oceanic Quake"
+    ]
+   },
+   "reference_answer": "Yes. Shows The Great Oceanic Quake (id 183359, Disaster) with its full text."
+  },
+  {
+   "id": "id-03",
+   "category": "story_by_id",
+   "turns": [
+    "What genre is story 362525 and what is it called?"
+   ],
+   "expect": {
+    "tools": [
+     "get_story_by_id"
+    ],
+    "story_id": 362525,
+    "answer_all": [
+     "Legacy Unearthed",
+     "Alternate Reality"
+    ]
+   },
+   "reference_answer": "Story 362525 is The Legacy Unearthed, in the Alternate Reality genre."
+  },
+  {
+   "id": "id-04",
+   "category": "story_by_id_missing",
+   "turns": [
+    "Show me story 123."
+   ],
+   "expect": {
+    "tools": [
+     "get_story_by_id"
+    ],
+    "no_story_claimed": true
+   },
+   "note": "No story has id 123; the agent must say so and not invent one.",
+   "reference_answer": "There is no story with id 123. The agent should say so and not show a different story."
+  },
+  {
+   "id": "title-01",
+   "category": "story_by_title_exact",
+   "turns": [
+    "Get me the story \"The Great Oceanic Quake\"."
+   ],
+   "expect": {
+    "tools": [
+     "get_story_by_title"
+    ],
+    "story_id": 183359,
+    "title_match": "exact"
+   },
+   "reference_answer": "Shows The Great Oceanic Quake (id 183359, Disaster)."
+  },
+  {
+   "id": "title-02",
+   "category": "story_by_title_apostrophe",
+   "turns": [
+    "Show me The Dreamer's Odyssey."
+   ],
+   "expect": {
+    "tools": [
+     "get_story_by_title"
+    ],
+    "story_id": 859965,
+    "title_match": "exact"
+   },
+   "note": "Stored title is 'The Dreamers Odyssey'; normalisation removes the apostrophe.",
+   "reference_answer": "Shows The Dreamers Odyssey (id 859965, Coming-of-Age); the apostrophe doesn't matter."
+  },
+  {
+   "id": "title-03",
+   "category": "story_by_title_typo",
+   "turns": [
+    "I want to read Decption's Dark Veil"
+   ],
+   "expect": {
+    "tools": [
+     "get_story_by_title"
+    ],
+    "story_id": 573812,
+    "title_match": "fuzzy"
+   },
+   "reference_answer": "Shows Deception's Dark Veil (id 573812, Mystery Thriller), matched despite the typo."
+  },
+  {
+   "id": "title-04",
+   "category": "story_by_title_typo",
+   "turns": [
+    "show me the enchanted forrest of eldria"
+   ],
+   "expect": {
+    "tools": [
+     "get_story_by_title"
+    ],
+    "story_id": 768600,
+    "title_match": "fuzzy"
+   },
+   "reference_answer": "Shows The Enchanted Forest of Eldoria (id 768600, Fairy Tale), matched despite the typos."
+  },
+  {
+   "id": "title-05",
+   "category": "story_by_title_typo",
+   "turns": [
+    "Can you fetch The Interstelar Odysey?"
+   ],
+   "expect": {
+    "tools": [
+     "get_story_by_title"
+    ],
+    "story_id": 979918,
+    "title_match": "fuzzy"
+   },
+   "note": "Must not return The Dreamers Odyssey, the other 'Odyssey' title.",
+   "reference_answer": "Shows The Interstellar Odyssey (id 979918, Science Fiction), not The Dreamers Odyssey."
+  },
+  {
+   "id": "title-06",
+   "category": "story_by_title_partial",
+   "turns": [
+    "Show me the story called The Neon Heist."
+   ],
+   "expect": {
+    "tools": [
+     "get_story_by_title"
+    ],
+    "story_id": 227383,
+    "title_match": "fallback"
+   },
+   "note": "Full title is 'The Cyberpunk Chronicles: The Neon Heist'; below the 85 threshold, so the semantic fallback must find it.",
+   "reference_answer": "No exact title match. The closest story is The Cyberpunk Chronicles: The Neon Heist (id 227383, Cyberpunk); the agent should say the title was matched by meaning."
+  },
+  {
+   "id": "title-07",
+   "category": "story_by_title_partial",
+   "turns": [
+    "Give me Harmony Chronicles."
+   ],
+   "expect": {
+    "tools": [
+     "get_story_by_title"
+    ],
+    "story_id": 468507,
+    "title_match": "fallback"
+   },
+   "reference_answer": "No exact title match. The closest story is Harmony Chronicles Unveiled (id 468507, Utopian)."
+  },
+  {
+   "id": "title-08",
+   "category": "story_by_title_missing",
+   "turns": [
+    "Show me the story called 'The Moon That Forgot To Shine'."
+   ],
+   "expect": {
+    "tools": [
+     "get_story_by_title"
+    ],
+    "title_match": "none",
+    "no_story_claimed": true
+   },
+   "note": "No such title; the agent should offer the closest stories and say the title was not found.",
+   "reference_answer": "No story has that title. The agent says so and offers the closest stories by meaning, asking which one was meant."
+  },
+  {
+   "id": "theme-01",
+   "category": "theme_search",
+   "turns": [
+    "Recommend some stories about a kingdom saved from an evil sorcerer or demon."
+   ],
+   "expect": {
+    "tools": [
+     "search_stories"
+    ],
+    "min_distinct_stories": 6,
+    "any_story_ids": [
+     768600,
+     983437,
+     362525
+    ]
+   },
+   "reference_answer": "At least 6 different stories. From the sample, fitting ones are The Enchanted Forest of Eldoria (id 768600, the Shadow Lord), The Chronicles of the Forgotten Kingdom (id 983437, a demon threatening Vanarastra) and The Legacy Unearthed (id 362525, the sorcerer Malachor). Other stories from the full library may also fit."
+  },
+  {
+   "id": "theme-02",
+   "category": "theme_search",
+   "turns": [
+    "I'd like stories about detectives or investigators chasing criminals."
+   ],
+   "expect": {
+    "tools": [
+     "search_stories"
+    ],
+    "min_distinct_stories": 6,
+    "any_story_ids": [
+     620759,
+     794662,
+     573812
+    ]
+   },
+   "reference_answer": "At least 6 different stories. From the sample: The Enigmatic Case of the Missing Paintings (id 620759, Detective Samuel Hartley), The Nightmare of Neon Valley (id 794662, investigator Jack Harper) and Deception's Dark Veil (id 573812, Sarah Walker against the Shadow Society)."
+  },
+  {
+   "id": "theme-03",
+   "category": "theme_search",
+   "turns": [
+    "Find stories where a small town survives a disaster or the end of the world."
+   ],
+   "expect": {
+    "tools": [
+     "search_stories"
+    ],
+    "min_distinct_stories": 6,
+    "any_story_ids": [
+     183359,
+     832763
+    ]
+   },
+   "reference_answer": "At least 6 different stories. From the sample: The Great Oceanic Quake (id 183359, Oceanview survives an earthquake) and The Parting Laughter (id 832763, Endville survives the apocalypse)."
+  },
+  {
+   "id": "theme-04",
+   "category": "theme_search",
+   "turns": [
+    "Give me 8 stories about space exploration or futuristic cities."
+   ],
+   "expect": {
+    "tools": [
+     "search_stories"
+    ],
+    "min_distinct_stories": 8,
+    "any_story_ids": [
+     979918,
+     468507,
+     227383
+    ]
+   },
+   "note": "The user asks for 8, so num_stories should be 8, not the default 6.",
+   "reference_answer": "8 different stories (the user asked for 8). From the sample: The Interstellar Odyssey (id 979918, space mission to Tau Ceti), Harmony Chronicles Unveiled (id 468507, Harmony City in 2095) and The Cyberpunk Chronicles: The Neon Heist (id 227383, Neo-Atlantica)."
+  },
+  {
+   "id": "genre-01",
+   "category": "genre_search",
+   "turns": [
+    "Cyberpnk stories about hackers stealing data"
+   ],
+   "expect": {
+    "tools": [
+     "search_stories"
+    ],
+    "genre_filter": "Cyberpunk",
+    "any_story_ids": [
+     227383
+    ]
+   },
+   "reference_answer": "Searches only the Cyberpunk genre (the typo is matched). From the sample: The Cyberpunk Chronicles: The Neon Heist (id 227383), where Rook's team steals a data cache."
+  },
+  {
+   "id": "genre-02",
+   "category": "genre_search",
+   "turns": [
+    "Any espionnage stories set in the Cold War?"
+   ],
+   "expect": {
+    "tools": [
+     "search_stories"
+    ],
+    "genre_filter": "Espionage",
+    "any_story_ids": [
+     997420
+    ]
+   },
+   "reference_answer": "Searches only the Espionage genre. From the sample: The Shadow of the Silent Tides (id 997420), set in New York in 1963 during the Cold War."
+  },
+  {
+   "id": "genre-03",
+   "category": "genre_search",
+   "turns": [
+    "historical fiction about a king on a quest"
+   ],
+   "expect": {
+    "tools": [
+     "search_stories"
+    ],
+    "genre_filter": "Historical Fiction",
+    "any_story_ids": [
+     983437
+    ]
+   },
+   "reference_answer": "Searches only the Historical Fiction genre. From the sample: The Chronicles of the Forgotten Kingdom (id 983437), where King Harishchandra travels to the Mountain of Eternal Fire."
+  },
+  {
+   "id": "genre-04",
+   "category": "genre_search_missing",
+   "turns": [
+    "Show me cooking show stories about a baking competition."
+   ],
+   "expect": {
+    "tools": [
+     "search_stories"
+    ],
+    "genre_filter": null,
+    "min_distinct_stories": 6
+   },
+   "note": "No 'cooking show' genre: the search must run over all genres and the agent should say the genre was not found.",
+   "reference_answer": "There is no cooking-show genre. The agent says so and shows the closest stories from all genres (at least 6), or says nothing relevant was found."
+  },
+  {
+   "id": "find-01",
+   "category": "find_one",
+   "turns": [
+    "Which story has three brothers, a blacksmith, a healer and a librarian, who fight the Shadow Lord?"
+   ],
+   "expect": {
+    "tools": [
+     "search_stories"
+    ],
+    "story_id": 768600,
+    "answer_all": [
+     "Eldoria"
+    ]
+   },
+   "reference_answer": "The Enchanted Forest of Eldoria (id 768600, Fairy Tale): Aiden the blacksmith, Ethan the healer and Liam the librarian defeat the Shadow Lord."
+  },
+  {
+   "id": "find-02",
+   "category": "find_one",
+   "turns": [
+    "There's a story where a laughing device called the End Stopper defeats a sentient cloud. Which one?"
+   ],
+   "expect": {
+    "tools": [
+     "search_stories"
+    ],
+    "story_id": 832763,
+    "answer_all": [
+     "Parting Laughter"
+    ]
+   },
+   "reference_answer": "The Parting Laughter (id 832763, Apocalyptic Comedy): Jack and Sarah build the End Stopper, whose laughter destroys the cloud called The End."
+  },
+  {
+   "id": "find-03",
+   "category": "find_one",
+   "turns": [
+    "What's the story about a teacher who changes his life on his 40th birthday?"
+   ],
+   "expect": {
+    "tools": [
+     "search_stories"
+    ],
+    "story_id": 811674,
+    "answer_all": [
+     "New Dawn at 40"
+    ]
+   },
+   "reference_answer": "A New Dawn at 40 (id 811674, Coming-of-Middle-Age): Richard Thompson, a middle school teacher, takes a job at a prestigious private school after turning 40."
+  },
+  {
+   "id": "ask-01",
+   "category": "ask_about_story",
+   "turns": [
+    "In The Cyberpunk Chronicles: The Neon Heist, who is the genius hacker on Rook's team?"
+   ],
+   "expect": {
+    "tools": [
+     "ask_about_story"
+    ],
+    "story_id": 227383,
+    "single_story": true,
+    "answer_all": [
+     "Iris"
+    ]
+   },
+   "reference_answer": "Iris, a genius hacker who could infiltrate any system."
+  },
+  {
+   "id": "ask-02",
+   "category": "ask_about_story",
+   "turns": [
+    "What artifact does the Wise Tree give the brothers in The Enchanted Forest of Eldoria?"
+   ],
+   "expect": {
+    "tools": [
+     "ask_about_story"
+    ],
+    "story_id": 768600,
+    "single_story": true,
+    "answer_all": [
+     "Heartstone"
+    ]
+   },
+   "reference_answer": "The Heartstone, which gives them the strength and wisdom to face the darkness."
+  },
+  {
+   "id": "ask-03",
+   "category": "ask_about_story",
+   "turns": [
+    "In The Chronicles of the Forgotten Kingdom, what monster does King Harishchandra fight on the way to the mountain?"
+   ],
+   "expect": {
+    "tools": [
+     "ask_about_story"
+    ],
+    "story_id": 983437,
+    "single_story": true,
+    "answer_all": [
+     "Gajendra"
+    ]
+   },
+   "reference_answer": "Gajendra, a demonic elephant whose touch was said to bring instant death. The king defeats it."
+  },
+  {
+   "id": "ask-04",
+   "category": "ask_about_story",
+   "turns": [
+    "Who leads the Resurgence in Harmony Chronicles Unveiled?"
+   ],
+   "expect": {
+    "tools": [
+     "ask_about_story"
+    ],
+    "story_id": 468507,
+    "single_story": true,
+    "answer_all": [
+     "Malcolm Vore"
+    ]
+   },
+   "reference_answer": "Malcolm Vore, a former military strategist."
+  },
+  {
+   "id": "ask-05",
+   "category": "ask_about_story",
+   "turns": [
+    "In The Parting Laughter, what does Jack use as a weapon against Victor?"
+   ],
+   "expect": {
+    "tools": [
+     "ask_about_story"
+    ],
+    "story_id": 832763,
+    "single_story": true,
+    "answer_all": [
+     "mop"
+    ]
+   },
+   "reference_answer": "A mop handle, used as a makeshift weapon."
+  },
+  {
+   "id": "ask-06",
+   "category": "ask_about_story",
+   "turns": [
+    "Who sacrifices himself in Deception's Dark Veil?"
+   ],
+   "expect": {
+    "tools": [
+     "ask_about_story"
+    ],
+    "story_id": 573812,
+    "single_story": true,
+    "answer_all": [
+     "Michael"
+    ]
+   },
+   "reference_answer": "Michael, the journalist. He uses a hidden stash of explosives to create a diversion so Sarah and Clara can escape."
+  },
+  {
+   "id": "ask-07",
+   "category": "ask_about_story",
+   "turns": [
+    "In The Shadow of the Silent Tides, who turns out to be Veronica?"
+   ],
+   "expect": {
+    "tools": [
+     "ask_about_story"
+    ],
+    "story_id": 997420,
+    "single_story": true,
+    "answer_all": [
+     "sister"
+    ]
+   },
+   "reference_answer": "Veronica, the mastermind of the Silent Tides, is Emily Thompson's long-lost sister, brainwashed into a Soviet sleeper agent. Thompson shoots her to stop the nuclear detonation."
+  },
+  {
+   "id": "ask-08",
+   "category": "ask_about_story",
+   "turns": [
+    "Who is the villain in The Dreamers Odyssey?"
+   ],
+   "expect": {
+    "tools": [
+     "ask_about_story"
+    ],
+    "story_id": 859965,
+    "single_story": true,
+    "answer_all": [
+     "Morgana"
+    ]
+   },
+   "reference_answer": "Morgana, a powerful sorceress trapped in the magical realm for centuries. Lily seals her away."
+  },
+  {
+   "id": "ask-09",
+   "category": "ask_about_story",
+   "turns": [
+    "Who is the villain in The Chronicles of Whiskers Creek?"
+   ],
+   "expect": {
+    "tools": [
+     "ask_about_story"
+    ],
+    "story_id": 226189,
+    "single_story": true,
+    "answer_all": [
+     "Slippery"
+    ]
+   },
+   "reference_answer": "Slippery, a cunning fox who spreads lies about Squeaky, Foxy and Rabbit to get the treasure. He is defeated and banished."
+  },
+  {
+   "id": "ask-10",
+   "category": "ask_about_story",
+   "turns": [
+    "In The Interstellar Odyssey, what is the ship called and where is it going?"
+   ],
+   "expect": {
+    "tools": [
+     "ask_about_story"
+    ],
+    "story_id": 979918,
+    "single_story": true,
+    "answer_all": [
+     "Nautilus",
+     "Tau Ceti"
+    ]
+   },
+   "reference_answer": "The ship is the Nautilus, and it is headed for the Tau Ceti star system, 11.9 light-years away."
+  },
+  {
+   "id": "ask-11",
+   "category": "ask_about_story",
+   "turns": [
+    "What caused the earthquake in The Great Oceanic Quake?"
+   ],
+   "expect": {
+    "tools": [
+     "ask_about_story"
+    ],
+    "story_id": 183359,
+    "single_story": true,
+    "answer_all": [
+     "landslide"
+    ]
+   },
+   "reference_answer": "A massive underwater landslide that disrupted the ocean floor, discovered by Alex, the marine biologist."
+  },
+  {
+   "id": "ask-12",
+   "category": "ask_about_story",
+   "turns": [
+    "Who stole the paintings in The Enigmatic Case of the Missing Paintings?"
+   ],
+   "expect": {
+    "tools": [
+     "ask_about_story"
+    ],
+    "story_id": 620759,
+    "single_story": true,
+    "answer_all": [
+     "Blackwood"
+    ]
+   },
+   "reference_answer": "Alistair Blackwood, a wealthy art collector. He confesses and has hidden the paintings in a secret compartment in his mansion."
+  },
+  {
+   "id": "ask-13",
+   "category": "ask_about_story",
+   "turns": [
+    "Who is the sorcerer in The Legacy Unearthed and what does he do to the kingdom?"
+   ],
+   "expect": {
+    "tools": [
+     "ask_about_story"
+    ],
+    "story_id": 362525,
+    "single_story": true,
+    "answer_all": [
+     "Malachor"
+    ]
+   },
+   "reference_answer": "Malachor, an exiled sorcerer. He attacks during the Festival of the Harvest and casts a spell that plunges the Lost Kingdom into perpetual night."
+  },
+  {
+   "id": "ask-14",
+   "category": "ask_about_story",
+   "turns": [
+    "What is the name of Richard's best friend in A New Dawn at 40?"
+   ],
+   "expect": {
+    "tools": [
+     "ask_about_story"
+    ],
+    "story_id": 811674,
+    "single_story": true,
+    "answer_all": [
+     "Mark"
+    ]
+   },
+   "reference_answer": "Mark."
+  },
+  {
+   "id": "ask-15",
+   "category": "ask_shared_name",
+   "turns": [
+    "In The Nightmare of Neon Valley, who is Victor?"
+   ],
+   "expect": {
+    "tools": [
+     "ask_about_story"
+    ],
+    "story_id": 794662,
+    "single_story": true,
+    "answer_all": [
+     "henchm"
+    ],
+    "answer_none": [
+     "bandit",
+     "mop"
+    ]
+   },
+   "note": "Victor is also the bandit leader in The Parting Laughter.",
+   "reference_answer": "Victor is one of Isabella's henchmen in the Scarlet Syndicate who turns against her and helps Jack Harper bring her down. (Not the bandit leader Victor from The Parting Laughter.)"
+  },
+  {
+   "id": "ask-16",
+   "category": "ask_shared_name",
+   "turns": [
+    "What does Sarah do in The Great Oceanic Quake?"
+   ],
+   "expect": {
+    "tools": [
+     "ask_about_story"
+    ],
+    "story_id": 183359,
+    "single_story": true,
+    "answer_all": [
+     "teacher"
+    ],
+    "answer_none": [
+     "nurse",
+     "diary",
+     "assistant"
+    ]
+   },
+   "note": "Sarah is a nurse in The Parting Laughter, the diary finder in Deception's Dark Veil and an assistant in The Missing Paintings.",
+   "reference_answer": "Sarah is a schoolteacher who gathers the children and the elderly and keeps them safe and calm. (Not the nurse from The Parting Laughter or the other Sarahs.)"
+  },
+  {
+   "id": "ask-17",
+   "category": "ask_shared_name",
+   "turns": [
+    "Who is Jack in The Shadow of the Silent Tides?"
+   ],
+   "expect": {
+    "tools": [
+     "ask_about_story"
+    ],
+    "story_id": 997420,
+    "single_story": true,
+    "answer_all": [
+     "CIA"
+    ],
+    "answer_none": [
+     "construction",
+     "drifter",
+     "Harper"
+    ]
+   },
+   "note": "Jack is also a construction worker (Oceanic Quake), a drifter (Parting Laughter) and Jack Harper (Neon Valley).",
+   "reference_answer": "Jack Turner, a seasoned CIA operative working with his handler Emily Thompson against the Silent Tides."
+  },
+  {
+   "id": "ask-18",
+   "category": "ask_not_in_story",
+   "turns": [
+    "In The Interstellar Odyssey, what is the name of Dr. Carter's dog?"
+   ],
+   "expect": {
+    "tools": [
+     "ask_about_story"
+    ],
+    "story_id": 979918,
+    "single_story": true,
+    "says_not_found": true
+   },
+   "note": "The story mentions no dog; the agent must say so instead of inventing a name.",
+   "reference_answer": "The story does not mention a dog. The agent should say so and not invent a name."
+  },
+  {
+   "id": "ask-19",
+   "category": "ask_with_title_typo",
+   "turns": [
+    "In the nightmare of neon vally, why does Jack hate Isabella?"
+   ],
+   "expect": {
+    "tools": [
+     "ask_about_story"
+    ],
+    "story_id": 794662,
+    "single_story": true,
+    "answer_all": [
+     "wife"
+    ]
+   },
+   "reference_answer": "Because Isabella orchestrated the hit-and-run accident that killed his wife."
+  },
+  {
+   "id": "sum-01",
+   "category": "summarize",
+   "turns": [
+    "Summarize story 620759."
+   ],
+   "expect": {
+    "tools": [
+     "summarize_story"
+    ],
+    "story_id": 620759,
+    "answer_all": [
+     "Hartley",
+     "Blackwood"
+    ]
+   },
+   "reference_answer": "Detective Samuel Hartley and his assistant Sarah investigate Monet paintings stolen from the Monetville museum and replaced with forgeries. The trail leads to the wealthy collector Alistair Blackwood, who confesses and returns the paintings. An anonymous tip then leads them through hidden passages to one last stolen painting, The Enigmatic Garden."
+  },
+  {
+   "id": "sum-02",
+   "category": "summarize",
+   "turns": [
+    "Give me a short summary of The Shadow of the Silent Tides."
+   ],
+   "expect": {
+    "tools": [
+     "summarize_story"
+    ],
+    "story_id": 997420,
+    "answer_all": [
+     "Turner",
+     "Thompson"
+    ]
+   },
+   "reference_answer": "In 1963 New York, CIA operative Jack Turner and his handler Emily Thompson investigate the Silent Tides, an organization planning attacks to cripple the US. At a fortified compound in New England they stop a nuclear detonation; the mastermind Veronica turns out to be Thompson's brainwashed sister, and Thompson shoots her."
+  },
+  {
+   "id": "sum-03",
+   "category": "summarize_detailed",
+   "turns": [
+    "Give me a detailed summary of Harmony Chronicles Unveiled."
+   ],
+   "expect": {
+    "tools": [
+     "summarize_story"
+    ],
+    "story_id": 468507,
+    "summary_length": "detailed",
+    "answer_all": [
+     "Resurgence"
+    ]
+   },
+   "reference_answer": "Detailed (two or three paragraphs): Harmony City is a peaceful, sustainable city led by Mayor Aria and the Council of Harmony. The Resurgence, led by Malcolm Vore, attacks it, and the Council forms the Guardians of Harmony, while a faction called the Vanguard splits the city. The Guardians find Project Genesis, a reality-altering technology, destroy it with the united power of the citizens, and Vore is captured."
+  },
+  {
+   "id": "follow-01",
+   "category": "follow_up",
+   "turns": [
+    "Show me story 573812.",
+    "Who is the leader of the Shadow Society in it?"
+   ],
+   "expect": {
+    "tools": [
+     "ask_about_story"
+    ],
+    "story_id": 573812,
+    "single_story": true,
+    "answer_all": [
+     "Puppetmaster"
+    ]
+   },
+   "note": "Checks the last turn; 'it' must resolve to the story from turn 1.",
+   "reference_answer": "The Puppetmaster. (The answer must be about Deception's Dark Veil, id 573812, the story from the first turn.)"
+  },
+  {
+   "id": "follow-02",
+   "category": "follow_up",
+   "turns": [
+    "Find me the story about the Scarlet Syndicate.",
+    "Summarize it."
+   ],
+   "expect": {
+    "tools": [
+     "summarize_story"
+    ],
+    "story_id": 794662,
+    "answer_all": [
+     "Isabella"
+    ]
+   },
+   "reference_answer": "The Nightmare of Neon Valley (id 794662): private investigator Jack Harper, whose wife Isabella had killed, fights her Scarlet Syndicate. He survives an ambush and a bomb, then, with the henchman Victor's help, exposes her crimes; Isabella is jailed and the syndicate disbanded."
+  },
+  {
+   "id": "browse-01",
+   "category": "list_genres",
+   "turns": [
+    "Which genres do you have?"
+   ],
+   "expect": {
+    "tools": [
+     "list_genres"
+    ]
+   },
+   "reference_answer": "Lists the genres in the library: 100 in the full dataset. The 15 in this sample are Alternate Reality, Animal Fiction, Apocalyptic Comedy, Coming-of-Age, Coming-of-Middle-Age, Crime, Cyberpunk, Disaster, Espionage, Fairy Tale, Historical Fiction, Mystery Comedy, Mystery Thriller, Science Fiction and Utopian."
+  },
+  {
+   "id": "browse-02",
+   "category": "list_by_genre",
+   "turns": [
+    "List the stories in the coming-of-age genre."
+   ],
+   "expect": {
+    "tools": [
+     "list_stories_by_genre"
+    ],
+    "genre_filter": "Coming-of-Age",
+    "any_story_ids": [
+     859965
+    ]
+   },
+   "note": "'Coming-of-Middle-Age' is a different genre and should not be the match.",
+   "reference_answer": "Lists the Coming-of-Age stories, including The Dreamers Odyssey (id 859965). A New Dawn at 40 should not be listed: it is Coming-of-Middle-Age, a different genre."
+  },
+  {
+   "id": "oos-01",
+   "category": "out_of_scope",
+   "turns": [
+    "What is the capital of France?"
+   ],
+   "expect": {
+    "tools": [],
+    "no_story_claimed": true
+   },
+   "reference_answer": "The agent says it only answers questions about the story library, without calling a tool or answering 'Paris'."
+  },
+  {
+   "id": "oos-02",
+   "category": "out_of_scope",
+   "turns": [
+    "Write me a poem about the sea."
+   ],
+   "expect": {
+    "tools": [],
+    "no_story_claimed": true
+   },
+   "note": "The agent should say it answers questions about the story library.",
+   "reference_answer": "The agent says it only answers questions about the story library and does not write a poem."
+  }
+ ]
+}

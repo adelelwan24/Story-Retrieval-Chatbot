@@ -13,30 +13,13 @@ import argparse
 from storybot.chat import build_agent
 from storybot.config import PROJECT_ROOT, load_config
 
-class color:
-    """
-    ANSI escape sequences for terminal text coloring
-    https://stackoverflow.com/questions/4842424/list-of-ansi-color-escape-sequences
-    """
-    
-    PURPLE = '\033[95m'
-    CYAN = '\033[96m'
-    DARKCYAN = '\033[36m'
-    BLUE = '\033[94m'
-    GREEN = '\033[92m'
-    YELLOW = '\033[93m'
-    RED = '\033[91m'
-    BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
-    END = '\033[0m'
-
 
 def show(res, trace: bool) -> None:
     if trace and res.steps:
-        print(color.YELLOW, res.trace(), color.END, "\n", sep="")
+        print(res.trace(), "\n")
     print(res.answer)
     for st in res.stories:
-        print(f"{color.DARKCYAN}\n--- {st['title']} (id {st['story_id']}, {st['genre']}) ---\n{st['text']}{color.END}")
+        print(f"\n--- {st['title']} (id {st['story_id']}, {st['genre']}) ---\n{st['text']}")
 
 
 if __name__ == "__main__":
@@ -54,7 +37,7 @@ if __name__ == "__main__":
         raise SystemExit
     while True:
         try:
-            q = input(f"\n{color.GREEN}you> {color.END}").strip()
+            q = input("\nyou> ").strip()
         except (EOFError, KeyboardInterrupt):
             break
         if q in ("quit", "exit"):

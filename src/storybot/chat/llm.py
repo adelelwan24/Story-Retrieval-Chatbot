@@ -12,7 +12,9 @@ Messages use the OpenAI shape throughout:
 from __future__ import annotations
 
 import json
+import os
 import re
+import ssl
 import uuid
 from dataclasses import dataclass, field
 
@@ -104,14 +106,38 @@ class HFChatLLM:
         return parse_tool_calls(text)
 
 
+_CA_ENV_VARS = ("LLM_CA_BUNDLE", "SSL_CERT_FILE", "REQUESTS_CA_BUNDLE")
+
+
+def ssl_context(ca_bundle: str | None = None) -> ssl.SSLContext:
+    """TLS settings for the LLM endpoint; certificates are always verified.
+
+    1. `ca_bundle` (or the LLM_CA_BUNDLE / SSL_CERT_FILE / REQUESTS_CA_BUNDLE env var): a PEM file with the CA
+       that signed the endpoint's certificate (a private endpoint or a company proxy).
+    2. Otherwise the operating system's certificate store via `truststore` (Windows / macOS keychain), which
+       already trusts company proxy certificates installed by IT. Python's default bundle (certifi) does not.
+    3. Without truststore installed: Python's default verification.
+    """
+    ca = ca_bundle or next((os.environ[v] for v in _CA_ENV_VARS if os.environ.get(v)), None)
+    if ca:
+        if not os.path.exists(ca):
+            raise FileNotFoundError(f"CA bundle not found: {ca}")
+        return ssl.create_default_context(cafile=ca)
+    try:
+        import truststore
+        return truststore.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
+    except ImportError:
+        return ssl.create_default_context()
+
+
 class OpenAICompatLLM:
     """POST {base_url}/chat/completions with `tools`; works with llama-server --jinja, vLLM and Ollama."""
 
     def __init__(self, base_url: str = "http://localhost:8080/v1", model: str = "qwen3-4b-instruct",
                  api_key: str | None = None, max_new_tokens: int = 768, temperature: float = 0.0,
-                 timeout: float = 300.0):
+                 timeout: float = 300.0, ca_bundle: str | None = None):
         import httpx   # installed with qdrant-client
-        self.http = httpx.Client(base_url=base_url.rstrip("/"), timeout=timeout,
+        self.http = httpx.Client(base_url=base_url.rstrip("/"), timeout=timeout, verify=ssl_context(ca_bundle),
                                  headers={"Authorization": f"Bearer {api_key}"} if api_key else {})
         self.model, self.max_new_tokens, self.temperature = model, max_new_tokens, temperature
 
@@ -151,6 +177,10 @@ def build_llm(cfg_llm):
         return HFChatLLM(cfg_llm.model, load_in_4bit=cfg_llm.load_in_4bit,
                          max_new_tokens=cfg_llm.max_new_tokens, temperature=cfg_llm.temperature)
     if cfg_llm.backend == "openai":
-        return OpenAICompatLLM(cfg_llm.base_url, cfg_llm.server_model, api_key=cfg_llm.api_key,
-                               max_new_tokens=cfg_llm.max_new_tokens, temperature=cfg_llm.temperature)
+        # env vars win over the YAML, so the endpoint can change without editing configs/chat.yaml
+        return OpenAICompatLLM(os.environ.get("LLM_BASE_URL") or cfg_llm.base_url,
+                               os.environ.get("LLM_MODEL") or cfg_llm.server_model,
+                               api_key=cfg_llm.api_key or os.environ.get("LLM_API_KEY"),
+                               max_new_tokens=cfg_llm.max_new_tokens, temperature=cfg_llm.temperature,
+                               ca_bundle=getattr(cfg_llm, "ca_bundle", None) or os.environ.get("LLM_CA_BUNDLE"))
     raise ValueError(f"unknown llm.backend {cfg_llm.backend!r} (use hf or openai)")

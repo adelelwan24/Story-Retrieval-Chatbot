@@ -99,3 +99,19 @@ def test_openai_backend_round_trip():
     assert sent[0]["tools"][0]["function"]["name"] == "get_story_by_id"
     assistant = [m for m in sent[1]["messages"] if m["role"] == "assistant"][0]
     assert assistant["tool_calls"][0]["function"]["arguments"] == "{}"   # JSON string on the wire
+
+
+def test_ssl_context_ca_bundle(tmp_path, monkeypatch):
+    import ssl
+
+    import pytest
+
+    from storybot.chat.llm import ssl_context
+
+    for v in ("LLM_CA_BUNDLE", "SSL_CERT_FILE", "REQUESTS_CA_BUNDLE"):
+        monkeypatch.delenv(v, raising=False)
+    ctx = ssl_context()
+    assert ctx.verify_mode == ssl.CERT_REQUIRED          # verification stays on by default
+    monkeypatch.setenv("LLM_CA_BUNDLE", str(tmp_path / "missing.pem"))
+    with pytest.raises(FileNotFoundError):
+        ssl_context()

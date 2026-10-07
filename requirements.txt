@@ -5,6 +5,7 @@ transformers>=4.51      # ModernBERT needs 4.48, Qwen3 needs 4.51
 datasets                # first download of the dataset only
 qdrant-client[fastembed]>=1.12
 rapidfuzz>=3             # fuzzy title / genre matching
+truststore               # HTTPS to the LLM endpoint trusts the OS certificate store
 accelerate
 bitsandbytes            # 4-bit Qwen3 on a CUDA GPU (Colab)
 pytest
