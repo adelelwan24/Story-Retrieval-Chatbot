@@ -2,10 +2,10 @@
 # Retrieval settings (Qdrant path, embedding model, metadata file) stay in retrieval.yaml.
 
 llm:
-  backend: hf                          # hf = transformers on this machine (GPU); openai = OpenAI-compatible server
+  backend: openai                          # hf = transformers on this machine (GPU); openai = OpenAI-compatible server
   model: Qwen/Qwen3-4B-Instruct-2507   # hf backend
   load_in_4bit: true                   # NF4 via bitsandbytes, CUDA only; CPU loads full precision
-  base_url: http://localhost:8080/v1   # openai backend: llama-server --jinja, vLLM or Ollama
+  base_url: http://localhost:8000/v1   # openai backend: llama-server --jinja, vLLM or Ollama
   server_model: Qwen/Qwen3.5-4B        # model name the server expects (vLLM base model; llama-server ignores it)
   api_key: null                        # or set the LLM_API_KEY env var (keeps the key out of this file)
   ca_bundle: null                      # PEM file of the CA that signs the endpoint (company proxy / private server);
